@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/model-crm
+model-crm.so
+model-crm.dylib
+model-crm.dll
+model-crm.a
+model-crm.lib
+model-crm-test-*
+*.exe
+*.o
+*.obj
+*.lst
