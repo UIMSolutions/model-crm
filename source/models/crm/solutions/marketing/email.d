@@ -4,42 +4,42 @@ module models.crm.solutions.marketing.email;
 import uim.entities;
 
 // 
-class DAPLMarketingEmail : DOOPEntity {
+class DCRMMarketingEmail : DOOPEntity {
   this() { super();
     this.attributes([
-      "createdOnBehalfBy": OOPAttributeString.descriptions(["en":"Shows who created the record on behalf of another user."]),
-      "modifiedOnBehalfBy": OOPAttributeString.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
-      "overriddenCreatedOn": OOPAttributeString.descriptions(["en":"Date and time that the record was migrated."]),
+      "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who created the record on behalf of another user."]),
+      "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
+      "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
       "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-      "ownerId": OOPAttributeString.descriptions(["en":"Owner Id"]),
-      "ownerIdType": OOPAttributeString.descriptions(["en":"The type of owner, either User or Team."]),
+      "ownerId": OOPStringAttribute.descriptions(["en":"Owner Id"]),
+      "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
       "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-      "owningUser": OOPAttributeString.descriptions(["en":"Unique identifier of the user that owns the activity."]),
-      "owningTeam": OOPAttributeString.descriptions(["en":"Unique identifier for the team that owns the record."]),
+      "owningUser": OOPStringAttribute.descriptions(["en":"Unique identifier of the user that owns the activity."]),
+      "owningTeam": OOPStringAttribute.descriptions(["en":"Unique identifier for the team that owns the record."]),
       "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "marketingEmailId": OOPAttributeString.descriptions(["en":"Unique ID for entity instances."]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the Marketing Email"]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Marketing email status reason"]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]),
-      "automaticallyGeneratePlainText": OOPAttributeString.descriptions(["en":""]),
-      "clickMap": OOPAttributeString.descriptions(["en":""]),
-      "designerHTML": OOPAttributeString.descriptions(["en":"Clean email body: HTML with no CSS inlining and no compression"]),
-      "emailBody": OOPAttributeString.descriptions(["en":"The body of the email"]),
-      "fromEmail": OOPAttributeString.descriptions(["en":""]),
-      "fromName": OOPAttributeString.descriptions(["en":""]),
-      "fromUser": OOPAttributeString.descriptions(["en":""]),
-      "insightsPlaceholder": OOPAttributeString.descriptions(["en":""]),
+      "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+      "marketingEmailId": OOPStringAttribute.descriptions(["en":"Unique ID for entity instances."]),
+      "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Marketing Email"]),
+      "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "statusCode": OOPStringAttribute.descriptions(["en":"Marketing email status reason"]),
+      "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "automaticallyGeneratePlainText": OOPStringAttribute.descriptions(["en":""]),
+      "clickMap": OOPStringAttribute.descriptions(["en":""]),
+      "designerHTML": OOPStringAttribute.descriptions(["en":"Clean email body: HTML with no CSS inlining and no compression"]),
+      "emailBody": OOPStringAttribute.descriptions(["en":"The body of the email"]),
+      "fromEmail": OOPStringAttribute.descriptions(["en":""]),
+      "fromName": OOPStringAttribute.descriptions(["en":""]),
+      "fromUser": OOPStringAttribute.descriptions(["en":""]),
+      "insightsPlaceholder": OOPStringAttribute.descriptions(["en":""]),
       "isTemplategalleryNeeded": OOPAttributeBoolean.descriptions(["en":""]),
-      "legalDesignation": OOPAttributeString.descriptions(["en":""]),
-      "legalDesignation_display": OOPAttributeString.descriptions(["en":""]),
-      "replyToEmail": OOPAttributeString.descriptions(["en":""]),
-      "subject": OOPAttributeString.descriptions(["en":"The subject of the marketing email"]),
-      "templateId": OOPAttributeUUID.descriptions(["en":"Template for the Email"]),
-      "plainText": OOPAttributeString.descriptions(["en":""]),
-      "to": OOPAttributeString.descriptions(["en":""]),
-      "UICEntityId": OOPAttributeUUID.descriptions(["en":""]),
+      "legalDesignation": OOPStringAttribute.descriptions(["en":""]),
+      "legalDesignation_display": OOPStringAttribute.descriptions(["en":""]),
+      "replyToEmail": OOPStringAttribute.descriptions(["en":""]),
+      "subject": OOPStringAttribute.descriptions(["en":"The subject of the marketing email"]),
+      "templateId": OOPUUIDAttribute.descriptions(["en":"Template for the Email"]),
+      "plainText": OOPStringAttribute.descriptions(["en":""]),
+      "to": OOPStringAttribute.descriptions(["en":""]),
+      "UICEntityId": OOPUUIDAttribute.descriptions(["en":""]),
     ]);
   }
 
@@ -55,14 +55,14 @@ class DAPLMarketingEmail : DOOPEntity {
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 }
-auto APLMarketingEmail() { return new DAPLMarketingEmail; } 
-auto APLMarketingEmail(Json json) { return new DAPLMarketingEmail(json); } 
+auto CRMMarketingEmail() { return new DCRMMarketingEmail; } 
+auto CRMMarketingEmail(Json json) { return new DCRMMarketingEmail(json); } 
 
 unittest {
   version(uim_entities) {
-    assert(APLMarketingEmail);
+    assert(CRMMarketingEmail);
   
-  auto entity = APLMarketingEmail;
+  auto entity = CRMMarketingEmail;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

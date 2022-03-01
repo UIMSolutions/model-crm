@@ -3,47 +3,38 @@ module models.crm.projects.service_automation.transactions.categories.hierarchy_
 import uim.entities;
 
 // Hierarchical relationship of the transaction category with a root node.
-class DAPLTransactionCategoryHierarchyElement : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "createdOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the record."]),
-      "modifiedOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
-      "organizationId": OOPAttributeLink("aplOrganization").descriptions(["en":"Unique identifier for the organization"]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the Transaction Category Hierarchy Element"]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Reason for the status of the Transaction Category Hierarchy Element"]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]),
-      "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-      "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
-      "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "childCategory": OOPAttributeString.descriptions(["en":""]),
-      "parentCategory": OOPAttributeString.descriptions(["en":""]),
-    ]);
+class DCRMTransactionCategoryHierarchyElement : DOOPEntity {
+  mixin(OOPEntityThis!("CRMTransactionCategoryHierarchyElement"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .attributes([
+        "createdOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the record."]),
+        "modifiedOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
+        "organizationId": OOPAttributeLink("aplOrganization").descriptions(["en":"Unique identifier for the organization"]),
+        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Transaction Category Hierarchy Element"]),
+        "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Transaction Category Hierarchy Element"]),
+        "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
+        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+        "childCategory": OOPStringAttribute.descriptions(["en":""]),
+        "parentCategory": OOPStringAttribute.descriptions(["en":""]),
+      ])
+      .registerPath("crm_transactioncategoryhierarchyelements");
   }
-
-  override string entityClass() { return "aplTransactionCategoryHierarchyElement"; }
-  override string entityClasses() { return "aplTransactionCategoryHierarchyElements"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
-
-  // mixin(GetEntity!("organization", "organizationId", "APLOrganization"));
 }
-auto APLTransactionCategoryHierarchyElement() { return new DAPLTransactionCategoryHierarchyElement; } 
-auto APLTransactionCategoryHierarchyElement(Json json) { return new DAPLTransactionCategoryHierarchyElement(json); } 
+mixin(OOPEntityCalls!("CRMTransactionCategoryHierarchyElement"));
 
 unittest {
   version(uim_entities) {
-    assert(APLTransactionCategoryHierarchyElement);
+    assert(CRMTransactionCategoryHierarchyElement);
 
-  auto entity = APLTransactionCategoryHierarchyElement;
+  auto entity = CRMTransactionCategoryHierarchyElement;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

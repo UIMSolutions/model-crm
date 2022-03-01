@@ -4,33 +4,33 @@ module models.crm.solutions.marketing.form_page;
 import uim.entities;
 
 // 
-  class DAPLFormPage : DOOPEntity {
+  class DCRMFormPage : DOOPEntity {
   this() { super();
     this.attributes([
-      "createdOnBehalfBy": OOPAttributeString.descriptions(["en":"Shows who created the record on behalf of another user."]), 
-      "modifiedOnBehalfBy": OOPAttributeString.descriptions(["en":"Shows who last updated the record on behalf of another user."]), 
-      "overriddenCreatedOn": OOPAttributeString.descriptions(["en":"Date and time that the record was migrated."]), 
+      "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who created the record on behalf of another user."]), 
+      "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who last updated the record on behalf of another user."]), 
+      "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]), 
       "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]), 
-      "ownerId": OOPAttributeString.descriptions(["en":"Owner Id"]), 
-      "ownerIdType": OOPAttributeString.descriptions(["en":"The type of owner, either User or Team."]), 
+      "ownerId": OOPStringAttribute.descriptions(["en":"Owner Id"]), 
+      "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]), 
       "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]), 
-      "owningUser": OOPAttributeString.descriptions(["en":"Unique identifier of the user that owns the activity."]), 
-      "owningTeam": OOPAttributeString.descriptions(["en":"Unique identifier for the team that owns the record."]), 
+      "owningUser": OOPStringAttribute.descriptions(["en":"Unique identifier of the user that owns the activity."]), 
+      "owningTeam": OOPStringAttribute.descriptions(["en":"Unique identifier for the team that owns the record."]), 
       "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]), 
-      "UTCConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]), 
-      "formpageId": OOPAttributeString.descriptions(["en":"Unique ID for entity instances."]), 
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the form page"]), 
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]), 
-      "statusCode": OOPAttributeString.descriptions(["en":"Form page status reason"]), 
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]), 
-      "confirmationMessage": OOPAttributeString.descriptions(["en":""]), 
-      "errorMessage": OOPAttributeString.descriptions(["en":""]), 
-      "marketingFormId": OOPAttributeString.descriptions(["en":"Usage of a marketing form on a marketing page."]), 
-      "limitExceededMessage": OOPAttributeString.descriptions(["en":""]), 
-      "marketingPage": OOPAttributeString.descriptions(["en":"The marketing page contains a marketing form."]), 
-      "webSite": OOPAttributeString.descriptions(["en":"Web site contains Marketing Form"]), 
+      "UTCConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]), 
+      "formpageId": OOPStringAttribute.descriptions(["en":"Unique ID for entity instances."]), 
+      "stateCode": OOPStringAttribute.descriptions(["en":"Status of the form page"]), 
+      "stateCode_display": OOPStringAttribute.descriptions(["en":""]), 
+      "statusCode": OOPStringAttribute.descriptions(["en":"Form page status reason"]), 
+      "statusCode_display": OOPStringAttribute.descriptions(["en":""]), 
+      "confirmationMessage": OOPStringAttribute.descriptions(["en":""]), 
+      "errorMessage": OOPStringAttribute.descriptions(["en":""]), 
+      "marketingFormId": OOPStringAttribute.descriptions(["en":"Usage of a marketing form on a marketing page."]), 
+      "limitExceededMessage": OOPStringAttribute.descriptions(["en":""]), 
+      "marketingPage": OOPStringAttribute.descriptions(["en":"The marketing page contains a marketing form."]), 
+      "webSite": OOPStringAttribute.descriptions(["en":"Web site contains Marketing Form"]), 
       "redirectUrl": OOPAttributeUrl.descriptions(["en":""]), 
-      "javascriptcode": OOPAttributeString.descriptions(["en":""]), 
+      "javascriptcode": OOPStringAttribute.descriptions(["en":""]), 
     ]);
   }
 
@@ -46,14 +46,14 @@ import uim.entities;
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 }
-auto APLFormPage() { return new DAPLFormPage; } 
-auto APLFormPage(Json json) { return new DAPLFormPage(json); } 
+auto CRMFormPage() { return new DCRMFormPage; } 
+auto CRMFormPage(Json json) { return new DCRMFormPage(json); } 
 
 unittest {
   version(uim_entities) {
-    assert(APLFormPage);
+    assert(CRMFormPage);
   
-  auto entity = APLFormPage;
+  auto entity = CRMFormPage;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

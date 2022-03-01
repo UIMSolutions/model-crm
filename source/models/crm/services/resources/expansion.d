@@ -4,19 +4,19 @@ module models.crm.services.resources.expansion;
 import uim.entities;
 
 // 
-class DAPLResourceExpansion : DOOPEntity {
+class DCRMResourceExpansion : DOOPEntity {
   this() { super();
     this.attributes([
-      "resourceGroupExpansionId": OOPAttributeUUID.descriptions(["en":"Unique identifier of the resource expansion record."]),
+      "resourceGroupExpansionId": OOPUUIDAttribute.descriptions(["en":"Unique identifier of the resource expansion record."]),
       "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-      "overriddenCreatedOn": OOPAttributeString.descriptions(["en":"Date and time that the record was migrated."]),
+      "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
       "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "itemId": OOPAttributeUUID.descriptions(["en":"Item that is part of expansion of resource identified by object ID. One object ID can have many item IDs."]),
-      "methodCode": OOPAttributeString.descriptions(["en":"Code for retrieval method."]),
-      "methodCode_display": OOPAttributeString.descriptions(["en":""]),
-      "modifiedOn": OOPAttributeString.descriptions(["en":"Date and time when the record was last modified."]),
-      "objectId": OOPAttributeUUID.descriptions(["en":"Object being expanded."]),
+      "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+      "itemId": OOPUUIDAttribute.descriptions(["en":"Item that is part of expansion of resource identified by object ID. One object ID can have many item IDs."]),
+      "methodCode": OOPStringAttribute.descriptions(["en":"Code for retrieval method."]),
+      "methodCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "modifiedOn": OOPStringAttribute.descriptions(["en":"Date and time when the record was last modified."]),
+      "objectId": OOPUUIDAttribute.descriptions(["en":"Object being expanded."]),
     ]);
   }
 
@@ -32,14 +32,14 @@ class DAPLResourceExpansion : DOOPEntity {
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 }
-auto APLResourceExpansion() { return new DAPLResourceExpansion; } 
-auto APLResourceExpansion(Json json) { return new DAPLResourceExpansion(json); } 
+auto CRMResourceExpansion() { return new DCRMResourceExpansion; } 
+auto CRMResourceExpansion(Json json) { return new DCRMResourceExpansion(json); } 
 
 unittest {
   version(uim_entities) {
-    assert(APLResourceExpansion);
+    assert(CRMResourceExpansion);
   
-  auto entity = APLResourceExpansion;
+  auto entity = CRMResourceExpansion;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

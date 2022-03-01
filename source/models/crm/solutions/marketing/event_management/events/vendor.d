@@ -4,30 +4,30 @@ module models.crm.solutions.marketing.event_management.events.vendor;
 import uim.entities;
 
 // 
-class DAPLEventVendor : DOOPEntity {
+class DCRMEventVendor : DOOPEntity {
   this() { super();
     this.attributes([
-      "createdOnBehalfBy": OOPAttributeString.descriptions(["en":"Shows who created the record on behalf of another user."]),
-      "modifiedOnBehalfBy": OOPAttributeString.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
-      "overriddenCreatedOn": OOPAttributeString.descriptions(["en":"Date and time that the record was migrated."]),
+      "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who created the record on behalf of another user."]),
+      "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
+      "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
       "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-      "ownerId": OOPAttributeUUID.descriptions(["en":"Owner Id"]),
-      "ownerIdType": OOPAttributeString.descriptions(["en":"The type of owner, either User or Team."]),
+      "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id"]),
+      "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
       "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-      "owningUserId": OOPAttributeString.descriptions(["en":"Unique identifier of the user that owns the activity."]),
-      "owningTeamId": OOPAttributeString.descriptions(["en":"Unique identifier for the team that owns the record."]),
+      "owningUserId": OOPStringAttribute.descriptions(["en":"Unique identifier of the user that owns the activity."]),
+      "owningTeamId": OOPStringAttribute.descriptions(["en":"Unique identifier for the team that owns the record."]),
       "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
+      "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
       "versionNumber": OOPAttributeNumber.descriptions(["en":"Version Number"]),
-      "eventVendorId": OOPAttributeUUID.descriptions(["en":"Unique identifier for entity instances"]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the Event Vendor"]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Reason for the status of the Event Vendor"]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]),
-      "name": OOPAttributeString.descriptions(["en":"The name of the custom entity."]),
-      "account": OOPAttributeString.descriptions(["en":""]),
-      "type": OOPAttributeString.descriptions(["en":""]),
-      "type_display": OOPAttributeString.descriptions(["en":""]),
+      "eventVendorId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances"]),
+      "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Event Vendor"]),
+      "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Event Vendor"]),
+      "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "name": OOPStringAttribute.descriptions(["en":"The name of the custom entity."]),
+      "account": OOPStringAttribute.descriptions(["en":""]),
+      "type": OOPStringAttribute.descriptions(["en":""]),
+      "type_display": OOPStringAttribute.descriptions(["en":""]),
     ]);
   }
 
@@ -43,14 +43,14 @@ class DAPLEventVendor : DOOPEntity {
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 }
-auto APLEventVendor() { return new DAPLEventVendor; } 
-auto APLEventVendor(Json json) { return new DAPLEventVendor(json); } 
+auto CRMEventVendor() { return new DCRMEventVendor; } 
+auto CRMEventVendor(Json json) { return new DCRMEventVendor(json); } 
 
 unittest {
   version(uim_entities) {
-    assert(APLEventVendor);
+    assert(CRMEventVendor);
   
-  auto entity = APLEventVendor;
+  auto entity = CRMEventVendor;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

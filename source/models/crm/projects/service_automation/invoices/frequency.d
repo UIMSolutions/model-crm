@@ -4,51 +4,42 @@ module models.crm.projects.service_automation.invoices.frequency;
 import uim.entities;
 
 // InvoiceFrequency of a user in the hierarchy
-class DAPLInvoiceFrequency : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "createdOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the record."]),
-      "modifiedOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
-      "organizationId": OOPAttributeLink("aplOrganization").descriptions(["en":"Unique identifier for the organization"]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the Invoice Frequency"]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Reason for the status of the Invoice Frequency"]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]),
-      "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-      "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
-      "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "daysOfRun": OOPAttributeString.descriptions(["en":"Describes how the run days per period interval are setup. As weekdays (Monday, Tuesday...) or day of period (1st, 2nd…)"]),
-      "daysOfRun_display": OOPAttributeString.descriptions(["en":""]),
-      "period": OOPAttributeString.descriptions(["en":"Select the period used for the setup of invoice frequency: supported values are Monthly, Weekly or Bi Weekly."]),
-      "period_display": OOPAttributeString.descriptions(["en":""]),
-      "runsPerMonth": OOPAttributeString.descriptions(["en":"Select the number of times invoicing should run in a period."]),
-      "runsPerMonth_display": OOPAttributeString.descriptions(["en":""]),
-    ]);
+class DCRMInvoiceFrequency : DOOPEntity {
+  mixin(OOPEntityThis!("CRMInvoiceFrequency"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .attributes([
+        "createdOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the record."]),
+        "modifiedOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
+        "organizationId": OOPAttributeLink("aplOrganization").descriptions(["en":"Unique identifier for the organization"]),
+        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Invoice Frequency"]),
+        "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Invoice Frequency"]),
+        "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
+        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+        "daysOfRun": OOPStringAttribute.descriptions(["en":"Describes how the run days per period interval are setup. As weekdays (Monday, Tuesday...) or day of period (1st, 2nd…)"]),
+        "daysOfRun_display": OOPStringAttribute.descriptions(["en":""]),
+        "period": OOPStringAttribute.descriptions(["en":"Select the period used for the setup of invoice frequency: supported values are Monthly, Weekly or Bi Weekly."]),
+        "period_display": OOPStringAttribute.descriptions(["en":""]),
+        "runsPerMonth": OOPStringAttribute.descriptions(["en":"Select the number of times invoicing should run in a period."]),
+        "runsPerMonth_display": OOPStringAttribute.descriptions(["en":""]),
+      ])
+      .registerPath("crm_invoicefrequencies");
   }
-
-  override string entityClass() { return "aplInvoiceFrequency"; }
-  override string entityClasses() { return "aplInvoiceFrequencies"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
-
-  // mixin(GetEntity!("organization", "organizationId", "APLOrganization"));
 }
-auto APLInvoiceFrequency() { return new DAPLInvoiceFrequency; } 
-auto APLInvoiceFrequency(Json json) { return new DAPLInvoiceFrequency(json); } 
+mixin(OOPEntityCalls!("CRMInvoiceFrequency"));
 
 unittest {
   version(uim_entities) {
-    assert(APLInvoiceFrequency);
+    assert(CRMInvoiceFrequency);
 
-  auto entity = APLInvoiceFrequency;
+  auto entity = CRMInvoiceFrequency;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

@@ -5,16 +5,16 @@ module models.crm.services.entitlements.product;
 import uim.entities;
 
 // The root entity for portal Ideas.
-class DAPLEntitlementProduct : DOOPEntity {
+class DCRMEntitlementProduct : DOOPEntity {
   this() { super();
     this.attributes([
-      "entitlementProductId": OOPAttributeUUID.descriptions(["en":"Unique identifier of the contacts for the entitlements."]),
+      "entitlementProductId": OOPUUIDAttribute.descriptions(["en":"Unique identifier of the contacts for the entitlements."]),
       "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-      "overriddenCreatedOn": OOPAttributeString.descriptions(["en":"Date and time that the record was migrated."]),
+      "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
       "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "productId": OOPAttributeUUID.descriptions(["en":""]),
-      "entitlementId": OOPAttributeUUID.descriptions(["en":""]),
+      "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+      "productId": OOPUUIDAttribute.descriptions(["en":""]),
+      "entitlementId": OOPUUIDAttribute.descriptions(["en":""]),
     ]);
   }
 
@@ -30,14 +30,14 @@ class DAPLEntitlementProduct : DOOPEntity {
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 }
-auto APLEntitlementProduct() { return new DAPLEntitlementProduct; } 
-auto APLEntitlementProduct(Json json) { return new DAPLEntitlementProduct(json); } 
+auto CRMEntitlementProduct() { return new DCRMEntitlementProduct; } 
+auto CRMEntitlementProduct(Json json) { return new DCRMEntitlementProduct(json); } 
 
 unittest {
   version(uim_entities) {
-    assert(APLEntitlementProduct);
+    assert(CRMEntitlementProduct);
   
-  auto entity = APLEntitlementProduct;
+  auto entity = CRMEntitlementProduct;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

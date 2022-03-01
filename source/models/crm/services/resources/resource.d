@@ -4,7 +4,7 @@ module models.crm.services.resources.resource;
 import uim.entities;
 
 // 
-class DAPLResource : DOOPEntity {
+class DCRMResource : DOOPEntity {
   this() { super();
     this.attributes([
       "resourceId": OOPAttributeUserId.descriptions(["en":"Unique identifier of the resource."]),
@@ -13,7 +13,7 @@ class DAPLResource : DOOPEntity {
       "overriddenCreatedOn": OOPAttributeUserId.descriptions(["en":"Date and time that the record was migrated."]),
       "timeZoneRuleVersionNumber": OOPAttributeUserId.descriptions(["en":"For internal use only."]),
       "utcConversionTimeZoneCode": OOPAttributeUserId.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "calendarId": OOPAttributeUUID.descriptions(["en":"Unique identifier of the calendar for the resource."]),
+      "calendarId": OOPUUIDAttribute.descriptions(["en":"Unique identifier of the calendar for the resource."]),
       "displayInServiceViews": OOPAttributeUserId.descriptions(["en":"For internal use only."]),
       "isDisabled": OOPAttributeBoolean.descriptions(["en":"Information about whether the resource is enabled."]),
       "objectTypeCode": OOPAttributeUserId.descriptions(["en":"Type of entity with which the resource is associated."]),
@@ -35,16 +35,16 @@ class DAPLResource : DOOPEntity {
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 
-  // mixin(GetEntity!("organization", "organizationId", "APLOrganization"));
+  // mixin(GetEntity!("organization", "organizationId", "CRMOrganization"));
 }
-auto APLResource() { return new DAPLResource; } 
-auto APLResource(Json json) { return new DAPLResource(json); } 
+auto CRMResource() { return new DCRMResource; } 
+auto CRMResource(Json json) { return new DCRMResource(json); } 
 
 unittest {
   version(uim_entities) {
-    assert(APLResource);
+    assert(CRMResource);
   
-  auto entity = APLResource;
+  auto entity = CRMResource;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

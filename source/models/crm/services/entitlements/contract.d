@@ -4,16 +4,16 @@ module models.crm.services.entitlements.contract;
 import uim.entities;
 
 // 
-class DAPLEntitlementContact : DOOPEntity {
+class DCRMEntitlementContact : DOOPEntity {
   this() { super();
     this.attributes([
       "entitlementContactId": OOPAttributeLink("aplContact").descriptions(["en":"Unique identifier of the contacts for the entitlements."]),
       "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-      "overriddenCreatedOn": OOPAttributeString.descriptions(["en":"Date and time that the record was migrated."]),
+      "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
       "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
+      "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
       "contactId": OOPAttributeLink("aplContact").descriptions(["en":""]),
-      "entitlementId": OOPAttributeUUID.descriptions(["en":""]),
+      "entitlementId": OOPUUIDAttribute.descriptions(["en":""]),
     ]);
   }
 
@@ -29,16 +29,16 @@ class DAPLEntitlementContact : DOOPEntity {
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
   
-  // mixin(GetEntity!("contact", "contactId", "APLContact"));
+  // mixin(GetEntity!("contact", "contactId", "CRMContact"));
 }
-auto APLEntitlementContact() { return new DAPLEntitlementContact; } 
-auto APLEntitlementContact(Json json) { return new DAPLEntitlementContact(json); } 
+auto CRMEntitlementContact() { return new DCRMEntitlementContact; } 
+auto CRMEntitlementContact(Json json) { return new DCRMEntitlementContact(json); } 
 
 unittest {
   version(uim_entities) {
-    assert(APLEntitlementContact);
+    assert(CRMEntitlementContact);
   
-  auto entity = APLEntitlementContact;
+  auto entity = CRMEntitlementContact;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

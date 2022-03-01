@@ -4,29 +4,29 @@ module models.crm.solutions.customers.segments.membership;
 import uim.entities;
 
 // Members participating in a given segment.
-class DAPLSegmentMembership : DOOPEntity {
+class DCRMSegmentMembership : DOOPEntity {
   this() { super();
     this.attributes([
-      "createdOnBehalfBy": OOPAttributeString.descriptions(["en":"Shows who created the record on behalf of another user."]),
-      "modifiedOnBehalfBy": OOPAttributeString.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
-      "overriddenCreatedOn": OOPAttributeString.descriptions(["en":"Date and time that the record was migrated."]),
+      "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who created the record on behalf of another user."]),
+      "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
+      "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
       "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-      "ownerId": OOPAttributeString.descriptions(["en":"Owner Id"]),
-      "ownerIdType": OOPAttributeString.descriptions(["en":"The type of owner, either User or Team."]),
+      "ownerId": OOPStringAttribute.descriptions(["en":"Owner Id"]),
+      "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
       "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-      "owningUser": OOPAttributeString.descriptions(["en":"Unique identifier of the user that owns the activity."]),
-      "owningTeam": OOPAttributeString.descriptions(["en":"Unique identifier for the team that owns the record."]),
+      "owningUser": OOPStringAttribute.descriptions(["en":"Unique identifier of the user that owns the activity."]),
+      "owningTeam": OOPStringAttribute.descriptions(["en":"Unique identifier for the team that owns the record."]),
       "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "customerProfileId": OOPAttributeString.descriptions(["en":"Customer Profile Id"]),
+      "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+      "customerProfileId": OOPStringAttribute.descriptions(["en":"Customer Profile Id"]),
       "lastEvaluationDate": OOPAttributeDate.descriptions(["en":"Latest date when a segment memberships is evaluated/refreshed."]),
-      "segmentId": OOPAttributeString.descriptions(["en":"Segment identifiers customers are associated with."]),
-      "segmentMembershipId": OOPAttributeString.descriptions(["en":"Unique identifier for entity instances"]),
-      "version": OOPAttributeString.descriptions(["en":"Denotes latest version of the customer segment membership for manual tracking."]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the Segment Membership"]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Reason for the status of the Segment Membership"]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]),
+      "segmentId": OOPStringAttribute.descriptions(["en":"Segment identifiers customers are associated with."]),
+      "segmentMembershipId": OOPStringAttribute.descriptions(["en":"Unique identifier for entity instances"]),
+      "version": OOPStringAttribute.descriptions(["en":"Denotes latest version of the customer segment membership for manual tracking."]),
+      "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Segment Membership"]),
+      "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Segment Membership"]),
+      "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
     ]);
   }
 
@@ -42,16 +42,16 @@ class DAPLSegmentMembership : DOOPEntity {
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 
-   // mixin(GetEntity!("campaign", "campaignId", "APLSegmentMembership"));
+   // mixin(GetEntity!("campaign", "campaignId", "CRMSegmentMembership"));
 }
-auto APLSegmentMembership() { return new DAPLSegmentMembership; } 
-auto APLSegmentMembership(Json json) { return new DAPLSegmentMembership(json); } 
+auto CRMSegmentMembership() { return new DCRMSegmentMembership; } 
+auto CRMSegmentMembership(Json json) { return new DCRMSegmentMembership(json); } 
 
 unittest {
   version(uim_entities) {
-    assert(APLSegmentMembership);
+    assert(CRMSegmentMembership);
 
-  auto entity = APLSegmentMembership;
+  auto entity = CRMSegmentMembership;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

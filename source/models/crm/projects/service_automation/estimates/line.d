@@ -4,72 +4,72 @@ module models.crm.projects.service_automation.estimates.line;
 import uim.entities;
 
 // Estimates on a per day timescale.
-class DAPLEstimateLine : DOOPEntity {
+class DCRMEstimateLine : DOOPEntity {
   this() { super();
     this.attributes([
       "createdOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
       "modifiedOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
       "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
       "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-      "ownerId": OOPAttributeUUID.descriptions(["en":"Owner Id"]),
-      "ownerIdType": OOPAttributeString.descriptions(["en":"The type of owner, either User or Team."]),
+      "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id"]),
+      "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
       "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
       "owningUserId": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier for the user that owns the record."]),
       "owningTeamId": OOPAttributeLink("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
       "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "estimateLineId": OOPAttributeUUID.descriptions(["en":"Shows the entity instances."]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the Estimate Line"]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Reason for the status of the Estimate Line"]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]),
-      "accountCustomer": OOPAttributeString.descriptions(["en":"Shows the customer for the estimate line."]),
+      "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+      "estimateLineId": OOPUUIDAttribute.descriptions(["en":"Shows the entity instances."]),
+      "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Estimate Line"]),
+      "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Estimate Line"]),
+      "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "accountCustomer": OOPStringAttribute.descriptions(["en":"Shows the customer for the estimate line."]),
       "accountingDate": OOPAttributeDate.descriptions(["en":""]),
-      "accountVendor": OOPAttributeString.descriptions(["en":""]),
-      "amount": OOPAttributeString.descriptions(["en":"Shows the amount on the estimate line."]),
+      "accountVendor": OOPStringAttribute.descriptions(["en":""]),
+      "amount": OOPStringAttribute.descriptions(["en":"Shows the amount on the estimate line."]),
       "transactionCurrencyId": OOPAttributeLink("aplCurrency").descriptions(["en":"Shows the currency associated with the entity."]),
-      "exchangeRate": OOPAttributeString.descriptions(["en":"Exchange rate for the currency associated with the entity with respect to the base currency."]),
-      "amountBase": OOPAttributeString.descriptions(["en":"Value of the Amount in base currency."]),
-      "amountMethod": OOPAttributeString.descriptions(["en":"Shows the calculation method used to determine the amount on the estimate line."]),
-      "amountMethod_display": OOPAttributeString.descriptions(["en":""]),
-      "basisAmount": OOPAttributeString.descriptions(["en":""]),
-      "basisAmountBase": OOPAttributeString.descriptions(["en":"Value of the Basis Amount in base currency."]),
-      "basisPrice": OOPAttributeString.descriptions(["en":""]),
-      "basisPriceBase": OOPAttributeString.descriptions(["en":"Value of the Basis Price in base currency."]),
-      "basisQuantity": OOPAttributeString.descriptions(["en":""]),
-      "billingType": OOPAttributeString.descriptions(["en":"Shows whether this estimate line is charged to the customer. "]),
-      "billingType_display": OOPAttributeString.descriptions(["en":""]),
-      "bookableResource": OOPAttributeString.descriptions(["en":"Shows the bookable resource for which estimates are generated."]),
-      "contactCustomer": OOPAttributeString.descriptions(["en":"Shows the name of the customer contact."]),
-      "contactVendor": OOPAttributeString.descriptions(["en":""]),
-      "customerType": OOPAttributeString.descriptions(["en":"Select the type of customer."]),
-      "customerType_display": OOPAttributeString.descriptions(["en":""]),
+      "exchangeRate": OOPStringAttribute.descriptions(["en":"Exchange rate for the currency associated with the entity with respect to the base currency."]),
+      "amountBase": OOPStringAttribute.descriptions(["en":"Value of the Amount in base currency."]),
+      "amountMethod": OOPStringAttribute.descriptions(["en":"Shows the calculation method used to determine the amount on the estimate line."]),
+      "amountMethod_display": OOPStringAttribute.descriptions(["en":""]),
+      "basisAmount": OOPStringAttribute.descriptions(["en":""]),
+      "basisAmountBase": OOPStringAttribute.descriptions(["en":"Value of the Basis Amount in base currency."]),
+      "basisPrice": OOPStringAttribute.descriptions(["en":""]),
+      "basisPriceBase": OOPStringAttribute.descriptions(["en":"Value of the Basis Price in base currency."]),
+      "basisQuantity": OOPStringAttribute.descriptions(["en":""]),
+      "billingType": OOPStringAttribute.descriptions(["en":"Shows whether this estimate line is charged to the customer. "]),
+      "billingType_display": OOPStringAttribute.descriptions(["en":""]),
+      "bookableResource": OOPStringAttribute.descriptions(["en":"Shows the bookable resource for which estimates are generated."]),
+      "contactCustomer": OOPStringAttribute.descriptions(["en":"Shows the name of the customer contact."]),
+      "contactVendor": OOPStringAttribute.descriptions(["en":""]),
+      "customerType": OOPStringAttribute.descriptions(["en":"Select the type of customer."]),
+      "customerType_display": OOPStringAttribute.descriptions(["en":""]),
       "documentDate": OOPAttributeDate.descriptions(["en":"Shows the transaction date of the estimate line."]),
       "endDateTime": OOPAttributeDatetime.descriptions(["en":"Enter the end date and time."]),
-      "estimate": OOPAttributeString.descriptions(["en":"Shows the name of the estimate line."]),
-      "estimatePerDayLines": OOPAttributeString.descriptions(["en":"Stores the estimate per day detail lines."]),
+      "estimate": OOPStringAttribute.descriptions(["en":"Shows the name of the estimate line."]),
+      "estimatePerDayLines": OOPStringAttribute.descriptions(["en":"Stores the estimate per day detail lines."]),
       "exchangeRateDate": OOPAttributeDate.descriptions(["en":""]),
-      "numberOfResources": OOPAttributeString.descriptions(["en":"Shows the estimate of the number of resources intended to be staffed for this task."]),
-      "percent": OOPAttributeString.descriptions(["en":"Shows the percent for the estimate line."]),
-      "price": OOPAttributeString.descriptions(["en":"Shows the price for this estimate line."]),
-      "priceBase": OOPAttributeString.descriptions(["en":"Value of the Price in base currency."]),
-      "priceList": OOPAttributeString.descriptions(["en":"Shows the price list used in this estimate line."]),
-      "product": OOPAttributeString.descriptions(["en":"Select the product."]),
-      "project": OOPAttributeString.descriptions(["en":"Shows the project for this estimate line."]),
-      "quantity": OOPAttributeString.descriptions(["en":"Enter the estimated quantity of work, cost, and sales."]),
-      "resourceCategory": OOPAttributeString.descriptions(["en":"Shows the role of this resource on the estimate line."]),
-      "resourceOrganizationalUnitId": OOPAttributeUUID.descriptions(["en":"Select the organizational unit at the time the estimate line was registered of the resource who should perform the work."]),
+      "numberOfResources": OOPStringAttribute.descriptions(["en":"Shows the estimate of the number of resources intended to be staffed for this task."]),
+      "percent": OOPStringAttribute.descriptions(["en":"Shows the percent for the estimate line."]),
+      "price": OOPStringAttribute.descriptions(["en":"Shows the price for this estimate line."]),
+      "priceBase": OOPStringAttribute.descriptions(["en":"Value of the Price in base currency."]),
+      "priceList": OOPStringAttribute.descriptions(["en":"Shows the price list used in this estimate line."]),
+      "product": OOPStringAttribute.descriptions(["en":"Select the product."]),
+      "project": OOPStringAttribute.descriptions(["en":"Shows the project for this estimate line."]),
+      "quantity": OOPStringAttribute.descriptions(["en":"Enter the estimated quantity of work, cost, and sales."]),
+      "resourceCategory": OOPStringAttribute.descriptions(["en":"Shows the role of this resource on the estimate line."]),
+      "resourceOrganizationalUnitId": OOPUUIDAttribute.descriptions(["en":"Select the organizational unit at the time the estimate line was registered of the resource who should perform the work."]),
       "startDateTime": OOPAttributeDatetime.descriptions(["en":"Shows the start date and time for the task for this estimate line."]),
-      "task": OOPAttributeString.descriptions(["en":"Shows the task related to this estimate line."]),
-      "transactionCategory": OOPAttributeString.descriptions(["en":"Select the type of transaction."]),
-      "transactionClassification": OOPAttributeString.descriptions(["en":"Shows the transaction classification for this estimate line."]),
-      "transactionClassification_display": OOPAttributeString.descriptions(["en":""]),
-      "transactionTypeCode": OOPAttributeString.descriptions(["en":"Shows the transaction type for this estimate line."]),
-      "transactionTypeCode_display": OOPAttributeString.descriptions(["en":""]),
-      "unit": OOPAttributeString.descriptions(["en":"Shows the unit of measurement for this estimate line."]),
-      "unitSchedule": OOPAttributeString.descriptions(["en":"Select the unit of measure for the estimate quantity."]),
-      "vendorType": OOPAttributeString.descriptions(["en":""]),
-      "vendorType_display": OOPAttributeString.descriptions(["en":""]),
+      "task": OOPStringAttribute.descriptions(["en":"Shows the task related to this estimate line."]),
+      "transactionCategory": OOPStringAttribute.descriptions(["en":"Select the type of transaction."]),
+      "transactionClassification": OOPStringAttribute.descriptions(["en":"Shows the transaction classification for this estimate line."]),
+      "transactionClassification_display": OOPStringAttribute.descriptions(["en":""]),
+      "transactionTypeCode": OOPStringAttribute.descriptions(["en":"Shows the transaction type for this estimate line."]),
+      "transactionTypeCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "unit": OOPStringAttribute.descriptions(["en":"Shows the unit of measurement for this estimate line."]),
+      "unitSchedule": OOPStringAttribute.descriptions(["en":"Select the unit of measure for the estimate quantity."]),
+      "vendorType": OOPStringAttribute.descriptions(["en":""]),
+      "vendorType_display": OOPStringAttribute.descriptions(["en":""]),
     ]);
   }
 
@@ -85,14 +85,14 @@ class DAPLEstimateLine : DOOPEntity {
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 }
-auto APLEstimateLine() { return new DAPLEstimateLine; } 
-auto APLEstimateLine(Json json) { return new DAPLEstimateLine(json); } 
+auto CRMEstimateLine() { return new DCRMEstimateLine; } 
+auto CRMEstimateLine(Json json) { return new DCRMEstimateLine(json); } 
 
 unittest {
   version(uim_entities) {
-    assert(APLEstimateLine);
+    assert(CRMEstimateLine);
 
-  auto entity = APLEstimateLine;
+  auto entity = CRMEstimateLine;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

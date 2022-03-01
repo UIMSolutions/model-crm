@@ -4,28 +4,28 @@ module models.crm.solutions.marketing.event_management.events.custom_registratio
 import uim.entities;
 
 // 
-class DAPLEventCustomRegistrationField : DOOPEntity {
+class DCRMEventCustomRegistrationField : DOOPEntity {
   this() { super();
     this.attributes([
       "createdOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Shows who created the record on behalf of another user. "]),
       "modifiedOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
       "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
       "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-      "ownerId": OOPAttributeUUID.descriptions(["en":"Owner Id"]),
-      "ownerIdType": OOPAttributeString.descriptions(["en":"The type of owner, either User or Team."]),
+      "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id"]),
+      "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
       "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
       "owningUserId": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
       "owningTeamId": OOPAttributeLink("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
       "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "eventCustomRegistrationFieldId": OOPAttributeUUID.descriptions(["en":"Unique identifier for entity instances"]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the Event Custom Registration Field"]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Reason for the status of the Event Custom Registration Field"]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]),
-      "customRegistrationField": OOPAttributeString.descriptions(["en":""]),
-      "event": OOPAttributeString.descriptions(["en":""]),
-      "order": OOPAttributeString.descriptions(["en":""]),
+      "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+      "eventCustomRegistrationFieldId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances"]),
+      "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Event Custom Registration Field"]),
+      "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Event Custom Registration Field"]),
+      "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "customRegistrationField": OOPStringAttribute.descriptions(["en":""]),
+      "event": OOPStringAttribute.descriptions(["en":""]),
+      "order": OOPStringAttribute.descriptions(["en":""]),
     ]);
   }
 
@@ -41,14 +41,14 @@ class DAPLEventCustomRegistrationField : DOOPEntity {
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 }
-auto APLEventCustomRegistrationField() { return new DAPLEventCustomRegistrationField; } 
-auto APLEventCustomRegistrationField(Json json) { return new DAPLEventCustomRegistrationField(json); } 
+auto CRMEventCustomRegistrationField() { return new DCRMEventCustomRegistrationField; } 
+auto CRMEventCustomRegistrationField(Json json) { return new DCRMEventCustomRegistrationField(json); } 
 
 unittest {
   version(uim_entities) {
-    assert(APLEventCustomRegistrationField);
+    assert(CRMEventCustomRegistrationField);
   
-  auto entity = APLEventCustomRegistrationField;
+  auto entity = CRMEventCustomRegistrationField;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

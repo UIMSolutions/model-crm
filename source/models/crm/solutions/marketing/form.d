@@ -4,40 +4,40 @@ module models.crm.solutions.marketing.form;
 import uim.entities;
 
 // 
-class DAPLMarketingForm : DOOPEntity {
+class DCRMMarketingForm : DOOPEntity {
   this() { super();
     this.attributes([
-      "createdOnBehalfBy": OOPAttributeString.descriptions(["en":"Shows who created the record on behalf of another user."]),
-      "modifiedOnBehalfBy": OOPAttributeString.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
-      "overriddenCreatedOn": OOPAttributeString.descriptions(["en":"Date and time that the record was migrated."]),
+      "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who created the record on behalf of another user."]),
+      "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
+      "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
       "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-      "ownerId": OOPAttributeString.descriptions(["en":"Owner Id"]),
-      "ownerIdType": OOPAttributeString.descriptions(["en":"The type of owner, either User or Team."]),
+      "ownerId": OOPStringAttribute.descriptions(["en":"Owner Id"]),
+      "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
       "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-      "owningUser": OOPAttributeString.descriptions(["en":"Unique identifier of the user that owns the activity."]),
-      "owningTeam": OOPAttributeString.descriptions(["en":"Unique identifier for the team that owns the record."]),
+      "owningUser": OOPStringAttribute.descriptions(["en":"Unique identifier of the user that owns the activity."]),
+      "owningTeam": OOPStringAttribute.descriptions(["en":"Unique identifier for the team that owns the record."]),
       "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "marketingFormId": OOPAttributeString.descriptions(["en":"Unique ID for entity instances"]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the marketing form"]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Reason for the status of the marketing form"]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]),
-      "allowPrefill": OOPAttributeString.descriptions(["en":""]),
-      "contactMatchingStrategy": OOPAttributeString.descriptions(["en":""]),
-      "updateContactsLeads": OOPAttributeString.descriptions(["en":""]),
-      "updateContactsLeads_display": OOPAttributeString.descriptions(["en":""]),
-      "marketingFormTemplate": OOPAttributeString.descriptions(["en":""]),
-      "formControlMapping": OOPAttributeString.descriptions(["en":""]),
-      "formDefinition": OOPAttributeString.descriptions(["en":"JSON definition of the fields related to the Marketing form entity."]),
-      "insightsPlaceholder": OOPAttributeString.descriptions(["en":""]),
-      "leadMatchingStrategy": OOPAttributeString.descriptions(["en":""]),
-      "validForPageType": OOPAttributeString.descriptions(["en":""]),
-      "validForPageType_display": OOPAttributeString.descriptions(["en":""]),
-      "purpose": OOPAttributeString.descriptions(["en":""]),
-      "purpose_display": OOPAttributeString.descriptions(["en":""]),
-      "visualStyle": OOPAttributeString.descriptions(["en":""]),
-      "visualStyle_display": OOPAttributeString.descriptions(["en":""]),
+      "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+      "marketingFormId": OOPStringAttribute.descriptions(["en":"Unique ID for entity instances"]),
+      "stateCode": OOPStringAttribute.descriptions(["en":"Status of the marketing form"]),
+      "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the marketing form"]),
+      "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "allowPrefill": OOPStringAttribute.descriptions(["en":""]),
+      "contactMatchingStrategy": OOPStringAttribute.descriptions(["en":""]),
+      "updateContactsLeads": OOPStringAttribute.descriptions(["en":""]),
+      "updateContactsLeads_display": OOPStringAttribute.descriptions(["en":""]),
+      "marketingFormTemplate": OOPStringAttribute.descriptions(["en":""]),
+      "formControlMapping": OOPStringAttribute.descriptions(["en":""]),
+      "formDefinition": OOPStringAttribute.descriptions(["en":"JSON definition of the fields related to the Marketing form entity."]),
+      "insightsPlaceholder": OOPStringAttribute.descriptions(["en":""]),
+      "leadMatchingStrategy": OOPStringAttribute.descriptions(["en":""]),
+      "validForPageType": OOPStringAttribute.descriptions(["en":""]),
+      "validForPageType_display": OOPStringAttribute.descriptions(["en":""]),
+      "purpose": OOPStringAttribute.descriptions(["en":""]),
+      "purpose_display": OOPStringAttribute.descriptions(["en":""]),
+      "visualStyle": OOPStringAttribute.descriptions(["en":""]),
+      "visualStyle_display": OOPStringAttribute.descriptions(["en":""]),
     ]);
   }
 
@@ -53,14 +53,14 @@ class DAPLMarketingForm : DOOPEntity {
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 }
-auto APLMarketingForm() { return new DAPLMarketingForm; } 
-auto APLMarketingForm(Json json) { return new DAPLMarketingForm(json); } 
+auto CRMMarketingForm() { return new DCRMMarketingForm; } 
+auto CRMMarketingForm(Json json) { return new DCRMMarketingForm(json); } 
 
 unittest {
   version(uim_entities) {
-    assert(APLMarketingForm);
+    assert(CRMMarketingForm);
   
-  auto entity = APLMarketingForm;
+  auto entity = CRMMarketingForm;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

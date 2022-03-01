@@ -4,7 +4,7 @@ module models.crm.services.contracts.contract;
 import uim.entities;
 
 // Agreement to provide customer service during a specified amount of time or number of cases.
-class DAPLContract : DOOPEntity {
+class DCRMContract : DOOPEntity {
   this() { super();
     this.attributes([
       "createdOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
@@ -78,17 +78,17 @@ class DAPLContract : DOOPEntity {
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 
-  // mixin(GetEntity!("account", "accountId", "APLAccount"));
-  // mixin(GetEntity!("contact", "contactId", "APLContact"));
+  // mixin(GetEntity!("account", "accountId", "CRMAccount"));
+  // mixin(GetEntity!("contact", "contactId", "CRMContact"));
 }
-auto APLContract() { return new DAPLContract; } 
-auto APLContract(Json json) { return new DAPLContract(json); } 
+auto CRMContract() { return new DCRMContract; } 
+auto CRMContract(Json json) { return new DCRMContract(json); } 
 
 unittest {
   version(uim_entities) {
-    assert(APLContract);
+    assert(CRMContract);
   
-  auto entity = APLContract;
+  auto entity = CRMContract;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

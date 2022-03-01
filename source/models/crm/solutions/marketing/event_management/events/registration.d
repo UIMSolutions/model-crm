@@ -4,49 +4,49 @@ module models.crm.solutions.marketing.event_management.events.registration;
 import uim.entities;
 
 // 
-class DAPLEventRegistration : DOOPEntity {
+class DCRMEventRegistration : DOOPEntity {
   this() { super();
     this.attributes([
       "createdOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Shows who created the record on behalf of another user. "]),
       "modifiedOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
       "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
       "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-      "ownerId": OOPAttributeUUID.descriptions(["en":"Owner Id"]),
-      "ownerIdType": OOPAttributeString.descriptions(["en":"The type of owner, either User or Team."]),
+      "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id"]),
+      "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
       "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
       "owningUserId": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
       "owningTeamId": OOPAttributeLink("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
       "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "eventRegistrationId": OOPAttributeUUID.descriptions(["en":"Unique identifier for entity instances"]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the Event Registration"]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Reason for the status of the Event Registration"]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]),
-      "name": OOPAttributeString.descriptions(["en":"The name of the custom entity."]),
-      "area": OOPAttributeString.descriptions(["en":""]),
-      "area_display": OOPAttributeString.descriptions(["en":""]),
-      "companySize": OOPAttributeString.descriptions(["en":""]),
-      "companySize_display": OOPAttributeString.descriptions(["en":""]),
+      "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+      "eventRegistrationId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances"]),
+      "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Event Registration"]),
+      "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Event Registration"]),
+      "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "name": OOPStringAttribute.descriptions(["en":"The name of the custom entity."]),
+      "area": OOPStringAttribute.descriptions(["en":""]),
+      "area_display": OOPStringAttribute.descriptions(["en":""]),
+      "companySize": OOPStringAttribute.descriptions(["en":""]),
+      "companySize_display": OOPStringAttribute.descriptions(["en":""]),
       "contactId": OOPAttributeLink("aplContact").descriptions(["en":""]),
-      "eventId": OOPAttributeUUID.descriptions(["en":"Unique identifier for Event associated with Event Registration."]),
-      "industry": OOPAttributeString.descriptions(["en":""]),
-      "industry_display": OOPAttributeString.descriptions(["en":""]),
+      "eventId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for Event associated with Event Registration."]),
+      "industry": OOPStringAttribute.descriptions(["en":""]),
+      "industry_display": OOPStringAttribute.descriptions(["en":""]),
       "isCanceled": OOPAttributeBoolean.descriptions(["en":""]),
-      "memo": OOPAttributeString.descriptions(["en":""]),
-      "primaryRole": OOPAttributeString.descriptions(["en":"Primary Role of the event attendee."]),
-      "primaryRole_display": OOPAttributeString.descriptions(["en":""]),
-      "publishingState": OOPAttributeString.descriptions(["en":"The publishing state of the event registration."]),
-      "publishingState_display": OOPAttributeString.descriptions(["en":""]),
-      "registeredBy": OOPAttributeString.descriptions(["en":"A lookup to the contact who created this event registration"]),
-      "registrationNotificationSeen": OOPAttributeString.descriptions(["en":"Whether the registration creation notification has been seen or not"]),
-      "registrationStatus": OOPAttributeString.descriptions(["en":""]),
-      "syncedWithProvider": OOPAttributeString.descriptions(["en":"A flag that indicates that the registration was synced with provider"]),
-      "syncedWithProvider_display": OOPAttributeString.descriptions(["en":""]),
-      "timesCheckedIn": OOPAttributeString.descriptions(["en":"Hidden field. Number of Event Check-ins related to this ER.Used as partial aggregation for Check-in count of Event.Increasing and decreasing done by corresponding workflows."]),
-      "webinarRegistrationID": OOPAttributeString.descriptions(["en":"Webinar ID of the Event Registration."]),
-      "yearsInIndustry": OOPAttributeString.descriptions(["en":""]),
-      "yearsInIndustry_display": OOPAttributeString.descriptions(["en":""]),
+      "memo": OOPStringAttribute.descriptions(["en":""]),
+      "primaryRole": OOPStringAttribute.descriptions(["en":"Primary Role of the event attendee."]),
+      "primaryRole_display": OOPStringAttribute.descriptions(["en":""]),
+      "publishingState": OOPStringAttribute.descriptions(["en":"The publishing state of the event registration."]),
+      "publishingState_display": OOPStringAttribute.descriptions(["en":""]),
+      "registeredBy": OOPStringAttribute.descriptions(["en":"A lookup to the contact who created this event registration"]),
+      "registrationNotificationSeen": OOPStringAttribute.descriptions(["en":"Whether the registration creation notification has been seen or not"]),
+      "registrationStatus": OOPStringAttribute.descriptions(["en":""]),
+      "syncedWithProvider": OOPStringAttribute.descriptions(["en":"A flag that indicates that the registration was synced with provider"]),
+      "syncedWithProvider_display": OOPStringAttribute.descriptions(["en":""]),
+      "timesCheckedIn": OOPStringAttribute.descriptions(["en":"Hidden field. Number of Event Check-ins related to this ER.Used as partial aggregation for Check-in count of Event.Increasing and decreasing done by corresponding workflows."]),
+      "webinarRegistrationID": OOPStringAttribute.descriptions(["en":"Webinar ID of the Event Registration."]),
+      "yearsInIndustry": OOPStringAttribute.descriptions(["en":""]),
+      "yearsInIndustry_display": OOPStringAttribute.descriptions(["en":""]),
     ]);
   }
 
@@ -62,17 +62,17 @@ class DAPLEventRegistration : DOOPEntity {
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 
-  // mixin(GetEntity!("contact", "contactId", "APLContact"));
+  // mixin(GetEntity!("contact", "contactId", "CRMContact"));
 
 }
-auto APLEventRegistration() { return new DAPLEventRegistration; } 
-auto APLEventRegistration(Json json) { return new DAPLEventRegistration(json); } 
+auto CRMEventRegistration() { return new DCRMEventRegistration; } 
+auto CRMEventRegistration(Json json) { return new DCRMEventRegistration(json); } 
 
 unittest {
   version(uim_entities) {
-    assert(APLEventRegistration);
+    assert(CRMEventRegistration);
   
-  auto entity = APLEventRegistration;
+  auto entity = CRMEventRegistration;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

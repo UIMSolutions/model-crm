@@ -4,11 +4,11 @@ module models.crm.team_membership;
 import uim.entities;
 
 // TeamMembership that is attached to one or more objects, including other notes.
- /*  class DAPLTeamMembership : DOOPEntity {
+ /*  class DCRMTeamMembership : DOOPEntity {
   this() { super();
     this.attributes([
-      "systemUserId":OOPAttributeUUID"datatype":"UUID", "descriptions":{}}`,
-      "teamId":OOPAttributeUUID"datatype":"UUID", "descriptions":{}}`,
+      "systemUserId":OOPUUIDAttribute"datatype":"UUID", "descriptions":{}}`,
+      "teamId":OOPUUIDAttribute"datatype":"UUID", "descriptions":{}}`,
     ]);
   }
 
@@ -24,12 +24,12 @@ import uim.entities;
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 }
-auto APLTeamMembership() { return new DAPLTeamMembership; } 
-auto APLTeamMembership(Json json) { return new DAPLTeamMembership(json); }  */
+auto CRMTeamMembership() { return new DCRMTeamMembership; } 
+auto CRMTeamMembership(Json json) { return new DCRMTeamMembership(json); }  */
 
 unittest {
   version(uim_entities) {
-  /* // auto entity = APLTeamMembership;
+  /* // auto entity = CRMTeamMembership;
   // auto repository = OOPFileRepository("./tests");
   repository.create("entities", entity.entityClasses, entity.toJson);
   auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);

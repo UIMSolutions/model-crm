@@ -4,38 +4,31 @@ module models.crm.sales.competitors.product;
 import uim.entities;
 
 // Association between a competitor and a product offered by the competitor.
-class DAPLCompetitorProduct : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-      "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
-      "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "competitorId": OOPAttributeUUID.descriptions(["en":""]),
-      "productId": OOPAttributeUUID.descriptions(["en":""]),
-    ]);
+class DCRMCompetitorProduct : DOOPEntity {
+  mixin(OOPEntityThis!("CRMCompetitorProduct"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .attributes([
+        "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
+        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+        "competitorId": OOPUUIDAttribute.descriptions(["en":""]),
+        "productId": OOPUUIDAttribute.descriptions(["en":""]),
+      ])
+      .registerPath("crm_competitorproducts");
   }
-
-  override string entityClass() { return "aplCompetitorProduct"; }
-  override string entityClasses() { return "aplCompetitorProducts"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto APLCompetitorProduct() { return new DAPLCompetitorProduct; } 
-auto APLCompetitorProduct(Json json) { return new DAPLCompetitorProduct(json); } 
+mixin(OOPEntityCalls!("CRMCompetitorProduct"));
 
 unittest {
   version(uim_entities) {
-    assert(APLCompetitorProduct);
+    assert(CRMCompetitorProduct);
 
-  auto entity = APLCompetitorProduct;
+  auto entity = CRMCompetitorProduct;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

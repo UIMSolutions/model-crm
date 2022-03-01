@@ -4,33 +4,33 @@ module models.crm.solutions.marketing.website;
 import uim.entities;
 
 // 
-class DAPLMarketingWebsite : DOOPEntity {
+class DCRMMarketingWebsite : DOOPEntity {
   this() { super();
     this.attributes([
-      "createdOnBehalfBy": OOPAttributeString.descriptions(["en":"Shows who created the record on behalf of another user."]),
-      "modifiedOnBehalfBy": OOPAttributeString.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
-      "overriddenCreatedOn": OOPAttributeString.descriptions(["en":"Date and time that the record was migrated."]),
+      "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who created the record on behalf of another user."]),
+      "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
+      "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
       "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-      "ownerId": OOPAttributeString.descriptions(["en":"Owner Id"]),
-      "ownerIdType": OOPAttributeString.descriptions(["en":"The type of owner, either User or Team."]),
+      "ownerId": OOPStringAttribute.descriptions(["en":"Owner Id"]),
+      "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
       "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-      "owningUser": OOPAttributeString.descriptions(["en":"Unique identifier of the user that owns the activity."]),
-      "owningTeam": OOPAttributeString.descriptions(["en":"Unique identifier for the team that owns the record."]),
+      "owningUser": OOPStringAttribute.descriptions(["en":"Unique identifier of the user that owns the activity."]),
+      "owningTeam": OOPStringAttribute.descriptions(["en":"Unique identifier for the team that owns the record."]),
       "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeString.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "websiteId": OOPAttributeString.descriptions(["en":"Unique ID for entity instances."]),
-      "stateCode": OOPAttributeString.descriptions(["en":"Status of the Website"]),
-      "stateCode_display": OOPAttributeString.descriptions(["en":""]),
-      "statusCode": OOPAttributeString.descriptions(["en":"Website status reason"]),
-      "statusCode_display": OOPAttributeString.descriptions(["en":""]),
-      "insightsPlaceholder": OOPAttributeString.descriptions(["en":""]),
-      "javascriptcode": OOPAttributeString.descriptions(["en":""]),
-      "remoteWebsiteID": OOPAttributeString.descriptions(["en":"Unique ID for remote entity instances."]),
-      "shouldBeRemoved": OOPAttributeString.descriptions(["en":""]),
-      "timeout": OOPAttributeString.descriptions(["en":""]),
+      "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+      "websiteId": OOPStringAttribute.descriptions(["en":"Unique ID for entity instances."]),
+      "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Website"]),
+      "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "statusCode": OOPStringAttribute.descriptions(["en":"Website status reason"]),
+      "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+      "insightsPlaceholder": OOPStringAttribute.descriptions(["en":""]),
+      "javascriptcode": OOPStringAttribute.descriptions(["en":""]),
+      "remoteWebsiteID": OOPStringAttribute.descriptions(["en":"Unique ID for remote entity instances."]),
+      "shouldBeRemoved": OOPStringAttribute.descriptions(["en":""]),
+      "timeout": OOPStringAttribute.descriptions(["en":""]),
       "Url": OOPAttributeUrl.descriptions(["en":""]),
-      "purpose": OOPAttributeString.descriptions(["en":""]),
-      "purpose_display": OOPAttributeString.descriptions(["en":""]),
+      "purpose": OOPStringAttribute.descriptions(["en":""]),
+      "purpose_display": OOPStringAttribute.descriptions(["en":""]),
     ]);
   }
 
@@ -46,14 +46,14 @@ class DAPLMarketingWebsite : DOOPEntity {
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 }
-auto APLMarketingWebsite() { return new DAPLMarketingWebsite; } 
-auto APLMarketingWebsite(Json json) { return new DAPLMarketingWebsite(json); } 
+auto CRMMarketingWebsite() { return new DCRMMarketingWebsite; } 
+auto CRMMarketingWebsite(Json json) { return new DCRMMarketingWebsite(json); } 
 
 unittest {
   version(uim_entities) {
-    assert(APLMarketingWebsite);
+    assert(CRMMarketingWebsite);
   
-  auto entity = APLMarketingWebsite;
+  auto entity = CRMMarketingWebsite;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 
