@@ -5,42 +5,32 @@ import uim.entities;
 
 // Type of discount specified as either a percentage or an amount.
 class DCRMDiscountList : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "discountTypeId": OOPStringAttribute.descriptions(["en":"Unique identifier of the discount list."]), 
-      "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Unique identifier of the delegate user who created the discounttype."]), 
-      "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Unique identifier of the delegate user who last modified the discounttype."]), 
-      "organizationId": OOPStringAttribute.descriptions(["en":"Unique identifier for the organization"]), 
-      "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]), 
-      "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]), 
-      "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]), 
-      "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]), 
-      "isAmountType": OOPAttributeBoolean.descriptions(["en":"Information about whether the discount list amounts are specified as monetary amounts or percentages."]), 
-      "stateCode": OOPStringAttribute.descriptions(["en":"Status of the discount list."]), 
-      "stateCode_display": OOPStringAttribute.descriptions(["en":""]), 
-      "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the discount list."]), 
-      "statusCode_display": OOPStringAttribute.descriptions(["en":""]), 
-      "transactionCurrencyId": OOPStringAttribute.descriptions(["en":"Unique identifier of the currency associated with the discount type."]), 
-    ]);
+  mixin(OOPEntityThis!("CRMDiscountList"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .attributes([
+        "discountTypeId": OOPStringAttribute.descriptions(["en":"Unique identifier of the discount list."]), 
+        "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Unique identifier of the delegate user who created the discounttype."]), 
+        "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Unique identifier of the delegate user who last modified the discounttype."]), 
+        "organizationId": OOPStringAttribute.descriptions(["en":"Unique identifier for the organization"]), 
+        "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]), 
+        "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]), 
+        "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]), 
+        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]), 
+        "isAmountType": OOPAttributeBoolean.descriptions(["en":"Information about whether the discount list amounts are specified as monetary amounts or percentages."]), 
+        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the discount list."]), 
+        "stateCode_display": OOPStringAttribute.descriptions(["en":""]), 
+        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the discount list."]), 
+        "statusCode_display": OOPStringAttribute.descriptions(["en":""]), 
+        "transactionCurrencyId": OOPStringAttribute.descriptions(["en":"Unique identifier of the currency associated with the discount type."]), 
+      ])
+      .registerPath("crm_discountlists");
   }
-
-  override string entityClass() { return "aplDiscountList"; }
-  override string entityClasses() { return "aplDiscountLists"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
-
-  // mixin(GetEntity!("organization", "organizationId", "CRMOrganization"));
-
 }
-auto CRMDiscountList() { return new DCRMDiscountList; } 
-auto CRMDiscountList(Json json) { return new DCRMDiscountList(json); } 
+mixin(OOPEntityCalls!("CRMDiscountList"));
 
 unittest {
   version(test_model_crm) {
