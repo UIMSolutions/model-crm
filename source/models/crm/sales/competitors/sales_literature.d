@@ -31,7 +31,7 @@ auto CRMCompetitorSalesLiterature() { return new DCRMCompetitorSalesLiterature; 
 auto CRMCompetitorSalesLiterature(Json json) { return new DCRMCompetitorSalesLiterature(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMCompetitorSalesLiterature);
 
   auto entity = CRMCompetitorSalesLiterature;

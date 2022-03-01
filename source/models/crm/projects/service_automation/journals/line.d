@@ -88,7 +88,7 @@ class DCRMJournalLine : DOOPEntity {
 mixin(OOPEntityCalls!("CRMJournalLine"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMJournalLine);
 
   auto entity = CRMJournalLine;

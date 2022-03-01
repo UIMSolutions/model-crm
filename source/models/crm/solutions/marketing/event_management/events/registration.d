@@ -69,7 +69,7 @@ auto CRMEventRegistration() { return new DCRMEventRegistration; }
 auto CRMEventRegistration(Json json) { return new DCRMEventRegistration(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMEventRegistration);
   
   auto entity = CRMEventRegistration;

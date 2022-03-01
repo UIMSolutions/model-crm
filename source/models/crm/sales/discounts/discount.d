@@ -38,7 +38,7 @@ class DCRMDiscount : DOOPEntity {
 mixin(OOPEntityCalls!("CRMDiscount"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMDiscount);
   
   auto entity = CRMDiscount;

@@ -43,7 +43,7 @@ auto CRMExpenseReceipt() { return new DCRMExpenseReceipt; }
 auto CRMExpenseReceipt(Json json) { return new DCRMExpenseReceipt(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMExpenseReceipt);
 
   auto entity = CRMExpenseReceipt;

@@ -41,7 +41,7 @@ class DCRMSalesAttachment : DOOPEntity {
 mixin(OOPEntityCalls!("CRMSalesAttachment"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMSalesAttachment);
   
   auto entity = CRMSalesAttachment;

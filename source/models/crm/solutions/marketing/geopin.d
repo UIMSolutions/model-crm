@@ -70,7 +70,7 @@ auto CRMGeoPin() { return new DCRMGeoPin; }
 auto CRMGeoPin(Json json) { return new DCRMGeoPin(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMGeoPin);
   
   auto entity = CRMGeoPin;

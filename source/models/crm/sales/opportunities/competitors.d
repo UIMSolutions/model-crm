@@ -33,7 +33,7 @@ auto CRMOpportunityCompetitors() { return new DCRMOpportunityCompetitors; }
 auto CRMOpportunityCompetitors(Json json) { return new DCRMOpportunityCompetitors(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMOpportunityCompetitors);
 
   auto entity = CRMOpportunityCompetitors;

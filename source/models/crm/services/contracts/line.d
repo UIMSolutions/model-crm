@@ -81,7 +81,7 @@ auto CRMContractLine() { return new DCRMContractLine; }
 auto CRMContractLine(Json json) { return new DCRMContractLine(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMContractLine);
   
   auto entity = CRMContractLine;

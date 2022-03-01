@@ -36,7 +36,7 @@ auto CRMResourceExpansion() { return new DCRMResourceExpansion; }
 auto CRMResourceExpansion(Json json) { return new DCRMResourceExpansion(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMResourceExpansion);
   
   auto entity = CRMResourceExpansion;

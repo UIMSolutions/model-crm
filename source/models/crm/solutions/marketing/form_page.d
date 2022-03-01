@@ -50,7 +50,7 @@ auto CRMFormPage() { return new DCRMFormPage; }
 auto CRMFormPage(Json json) { return new DCRMFormPage(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMFormPage);
   
   auto entity = CRMFormPage;

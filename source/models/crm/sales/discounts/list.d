@@ -43,7 +43,7 @@ auto CRMDiscountList() { return new DCRMDiscountList; }
 auto CRMDiscountList(Json json) { return new DCRMDiscountList(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMDiscountList);
   
   auto entity = CRMDiscountList;

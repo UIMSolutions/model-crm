@@ -89,7 +89,7 @@ auto CRMEstimateLine() { return new DCRMEstimateLine; }
 auto CRMEstimateLine(Json json) { return new DCRMEstimateLine(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMEstimateLine);
 
   auto entity = CRMEstimateLine;

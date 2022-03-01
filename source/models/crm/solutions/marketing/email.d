@@ -59,7 +59,7 @@ auto CRMMarketingEmail() { return new DCRMMarketingEmail; }
 auto CRMMarketingEmail(Json json) { return new DCRMMarketingEmail(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMMarketingEmail);
   
   auto entity = CRMMarketingEmail;

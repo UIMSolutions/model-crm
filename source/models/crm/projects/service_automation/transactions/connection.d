@@ -41,7 +41,7 @@ class DCRMTransactionConnection : DOOPEntity {
 mixin(OOPEntityCalls!("CRMTransactionConnection"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMTransactionConnection);
 
   auto entity = CRMTransactionConnection;

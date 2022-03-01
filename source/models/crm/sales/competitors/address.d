@@ -50,7 +50,7 @@ class DCRMCompetitorAddress : DOOPEntity {
 mixin(OOPEntityCalls!("CRMCompetitorAddress"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMCompetitorAddress);
   
   auto entity = CRMCompetitorAddress;

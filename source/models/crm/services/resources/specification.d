@@ -44,7 +44,7 @@ auto CRMResourceSpecification() { return new DCRMResourceSpecification; }
 auto CRMResourceSpecification(Json json) { return new DCRMResourceSpecification(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMResourceSpecification);
   
   auto entity = CRMResourceSpecification;

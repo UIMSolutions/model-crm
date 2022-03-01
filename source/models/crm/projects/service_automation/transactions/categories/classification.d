@@ -33,7 +33,7 @@ class DCRMTransactionCategoryClassification : DOOPEntity {
 mixin(OOPEntityCalls!("CRMTransactionCategoryClassification"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMTransactionCategoryClassification);
 
   auto entity = CRMTransactionCategoryClassification;

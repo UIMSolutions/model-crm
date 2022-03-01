@@ -47,7 +47,7 @@ auto CRMJournal() { return new DCRMJournal; }
 auto CRMJournal(Json json) { return new DCRMJournal(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMJournal);
 
   auto entity = CRMJournal;

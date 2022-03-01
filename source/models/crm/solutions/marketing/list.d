@@ -64,7 +64,7 @@ auto CRMMarketingList() { return new DCRMMarketingList; }
 auto CRMMarketingList(Json json) { return new DCRMMarketingList(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMMarketingList);
   
   auto entity = CRMMarketingList;

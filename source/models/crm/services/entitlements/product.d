@@ -34,7 +34,7 @@ auto CRMEntitlementProduct() { return new DCRMEntitlementProduct; }
 auto CRMEntitlementProduct(Json json) { return new DCRMEntitlementProduct(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMEntitlementProduct);
   
   auto entity = CRMEntitlementProduct;

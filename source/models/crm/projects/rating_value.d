@@ -40,7 +40,7 @@ class DCRMRatingValue : DOOPEntity {
 mixin(OOPEntityCalls!("CRMRatingValue"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMRatingValue);
   
   auto entity = CRMRatingValue;

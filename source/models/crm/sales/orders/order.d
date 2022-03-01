@@ -129,7 +129,7 @@ auto CRMOrder() { return new DCRMOrder; }
 auto CRMOrder(Json json) { return new DCRMOrder(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMOrder);
 
   auto entity = CRMOrder;

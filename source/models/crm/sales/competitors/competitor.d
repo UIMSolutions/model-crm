@@ -96,7 +96,7 @@ class DCRMCompetitor : DOOPEntity {
 mixin(OOPEntityCalls!("CRMCompetitor"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMCompetitor);
 
   auto entity = CRMCompetitor;

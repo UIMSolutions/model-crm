@@ -96,7 +96,7 @@ class DCRMOpportunityClose : DOOPEntity {
 mixin(OOPEntityCalls!("CRMOpportunityClose"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMOpportunityClose);
   
   auto entity = CRMOpportunityClose;

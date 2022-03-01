@@ -92,7 +92,7 @@ class DCRMInvoiceLineTransaction : DOOPEntity {
 mixin(OOPEntityCalls!("CRMInvoiceLineTransaction"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMInvoiceLineTransaction);
 
   auto entity = CRMInvoiceLineTransaction;

@@ -40,7 +40,7 @@ class DCRMSalesLiterature : DOOPEntity {
 mixin(OOPEntityCalls!("CRMSalesLiterature"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMSalesLiterature);
   
   auto entity = CRMSalesLiterature;

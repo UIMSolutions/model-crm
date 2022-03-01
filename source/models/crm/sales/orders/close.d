@@ -104,7 +104,7 @@ auto CRMOrderClose() { return new DCRMOrderClose; }
 auto CRMOrderClose(Json json) { return new DCRMOrderClose(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMOrderClose);
   
   auto entity = CRMOrderClose;

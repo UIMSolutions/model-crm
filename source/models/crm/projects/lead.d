@@ -158,7 +158,7 @@ class DCRMLead : DOOPEntity {
 mixin(OOPEntityCalls!("CRMLead"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMLead);
   
   auto entity = CRMLead;

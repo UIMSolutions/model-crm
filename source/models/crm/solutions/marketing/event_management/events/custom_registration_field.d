@@ -45,7 +45,7 @@ auto CRMEventCustomRegistrationField() { return new DCRMEventCustomRegistrationF
 auto CRMEventCustomRegistrationField(Json json) { return new DCRMEventCustomRegistrationField(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMEventCustomRegistrationField);
   
   auto entity = CRMEventCustomRegistrationField;

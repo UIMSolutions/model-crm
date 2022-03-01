@@ -44,7 +44,7 @@ auto CRMOpportunityRelationship() { return new DCRMOpportunityRelationship; }
 auto CRMOpportunityRelationship(Json json) { return new DCRMOpportunityRelationship(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMOpportunityRelationship);
   
   auto entity = CRMOpportunityRelationship;

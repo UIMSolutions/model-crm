@@ -50,7 +50,7 @@ auto CRMSegment() { return new DCRMSegment; }
 auto CRMSegment(Json json) { return new DCRMSegment(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMSegment);
 
   auto entity = CRMSegment;

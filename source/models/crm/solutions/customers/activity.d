@@ -59,7 +59,7 @@ auto CRMCustomerActivity() { return new DCRMCustomerActivity; }
 auto CRMCustomerActivity(Json json) { return new DCRMCustomerActivity(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMCustomerActivity);
 
   auto entity = CRMCustomerActivity;

@@ -41,7 +41,7 @@ class DCRMTransactionCategoryPriceLevel : DOOPEntity {
 mixin(OOPEntityCalls!("CRMTransactionCategoryPriceLevel"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMTransactionCategoryPriceLevel);
 
   auto entity = CRMTransactionCategoryPriceLevel;

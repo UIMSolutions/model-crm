@@ -35,7 +35,7 @@ class DCRMExpenseCategory : DOOPEntity {
 mixin(OOPEntityCalls!("CRMExpenseCategory"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMExpenseCategory);
 
   auto entity = CRMExpenseCategory;

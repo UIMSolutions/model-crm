@@ -148,7 +148,7 @@ auto CRMCustomerProfile() { return new DCRMCustomerProfile; }
 auto CRMCustomerProfile(Json json) { return new DCRMCustomerProfile(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMCustomerProfile);
 
   auto entity = CRMCustomerProfile;

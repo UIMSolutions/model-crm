@@ -104,7 +104,7 @@ auto CRMQuoteClose() { return new DCRMQuoteClose; }
 auto CRMQuoteClose(Json json) { return new DCRMQuoteClose(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMQuoteClose);
   
   auto entity = CRMQuoteClose;

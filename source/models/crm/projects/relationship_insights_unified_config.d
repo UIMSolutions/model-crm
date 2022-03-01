@@ -37,7 +37,7 @@ class DCRMRelationshipInsightsUnifiedConfig : DOOPEntity {
 mixin(OOPEntityCalls!("CRMRelationshipInsightsUnifiedConfig"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMRelationshipInsightsUnifiedConfig);
   
   auto entity = CRMRelationshipInsightsUnifiedConfig;

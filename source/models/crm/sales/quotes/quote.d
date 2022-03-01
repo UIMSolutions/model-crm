@@ -124,7 +124,7 @@ auto CRMQuote() { return new DCRMQuote; }
 auto CRMQuote(Json json) { return new DCRMQuote(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMQuote);
 
   auto entity = CRMQuote; 

@@ -41,7 +41,7 @@ auto CRMResource() { return new DCRMResource; }
 auto CRMResource(Json json) { return new DCRMResource(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMResource);
   
   auto entity = CRMResource;

@@ -28,7 +28,7 @@ auto CRMTeamMembership() { return new DCRMTeamMembership; }
 auto CRMTeamMembership(Json json) { return new DCRMTeamMembership(json); }  */
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
   /* // auto entity = CRMTeamMembership;
   // auto repository = OOPFileRepository("./tests");
   repository.create("entities", entity.entityClasses, entity.toJson);

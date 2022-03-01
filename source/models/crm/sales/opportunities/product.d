@@ -68,7 +68,7 @@ class DCRMOpportunityProduct : DOOPEntity {
 mixin(OOPEntityCalls!("CRMOpportunityProduct"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMOpportunityProduct);
   
   auto entity = CRMOpportunityProduct;

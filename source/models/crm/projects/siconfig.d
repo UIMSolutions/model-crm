@@ -36,7 +36,7 @@ class DCRMSiconfig : DOOPEntity {
 mixin(OOPEntityCalls!("CRMSiconfig"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMSiconfig);
   
   auto entity = CRMSiconfig;

@@ -54,7 +54,7 @@ auto CRMEventTeamMember() { return new DCRMEventTeamMember; }
 auto CRMEventTeamMember(Json json) { return new DCRMEventTeamMember(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMEventTeamMember);
   
   auto entity = CRMEventTeamMember;

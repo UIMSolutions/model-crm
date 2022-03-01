@@ -48,7 +48,7 @@ auto CRMSegmentMembership() { return new DCRMSegmentMembership; }
 auto CRMSegmentMembership(Json json) { return new DCRMSegmentMembership(json); } 
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMSegmentMembership);
 
   auto entity = CRMSegmentMembership;

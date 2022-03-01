@@ -5,49 +5,42 @@ import uim.entities;
 
 // 
 class DCRMEventVendor : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who created the record on behalf of another user."]),
-      "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
-      "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
-      "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-      "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id"]),
-      "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
-      "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-      "owningUserId": OOPStringAttribute.descriptions(["en":"Unique identifier of the user that owns the activity."]),
-      "owningTeamId": OOPStringAttribute.descriptions(["en":"Unique identifier for the team that owns the record."]),
-      "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "versionNumber": OOPAttributeNumber.descriptions(["en":"Version Number"]),
-      "eventVendorId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances"]),
-      "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Event Vendor"]),
-      "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
-      "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Event Vendor"]),
-      "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
-      "name": OOPStringAttribute.descriptions(["en":"The name of the custom entity."]),
-      "account": OOPStringAttribute.descriptions(["en":""]),
-      "type": OOPStringAttribute.descriptions(["en":""]),
-      "type_display": OOPStringAttribute.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("CRMEventVendor"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .attributes([
+        "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who created the record on behalf of another user."]),
+        "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
+        "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
+        "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
+        "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id"]),
+        "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
+        "owningBusinessUnitId": OOPAttributeLink("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
+        "owningUserId": OOPStringAttribute.descriptions(["en":"Unique identifier of the user that owns the activity."]),
+        "owningTeamId": OOPStringAttribute.descriptions(["en":"Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
+        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+        "versionNumber": OOPAttributeNumber.descriptions(["en":"Version Number"]),
+        "eventVendorId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for entity instances"]),
+        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Event Vendor"]),
+        "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Event Vendor"]),
+        "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "name": OOPStringAttribute.descriptions(["en":"The name of the custom entity."]),
+        "account": OOPStringAttribute.descriptions(["en":""]),
+        "type": OOPStringAttribute.descriptions(["en":""]),
+        "type_display": OOPStringAttribute.descriptions(["en":""]),
+      ])
+      .registerPath("crm_eventvendors");
   }
-
-  override string entityClass() { return "aplEventVendor"; }
-  override string entityClasses() { return "aplEventVendors"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto CRMEventVendor() { return new DCRMEventVendor; } 
-auto CRMEventVendor(Json json) { return new DCRMEventVendor(json); } 
+mixin(OOPEntityCalls!("CRMEventVendor"));
 
 unittest {
-  version(uim_entities) {
+  version(test_model_crm) {
     assert(CRMEventVendor);
   
   auto entity = CRMEventVendor;
