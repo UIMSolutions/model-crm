@@ -11,7 +11,7 @@ class DCRMResource : DOOPEntity {
     super.initialize;
 
     this
-      .attributes([
+      .addAttributes([
         "resourceId": OOPAttributeUserId.descriptions(["en":"Unique identifier of the resource."]),
         "businessUnitId": OOPAttributeUserId.descriptions(["en":"Business Unit Id"]),
         "importSequenceNumber": OOPAttributeUserId.descriptions(["en":"Sequence number of the import that created this record."]),

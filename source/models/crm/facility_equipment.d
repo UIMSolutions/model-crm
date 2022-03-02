@@ -11,7 +11,7 @@ class DCRMFacilityEquipment : DOOPEntity {
     super.initialize;
 
     this
-      .attributes([
+      .addAttributes([
         "equipmentId": OOPStringAttribute.descriptions(["en":"Unique identifier of the facility/equipment."]),
         "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Unique identifier of the delegate user who created the equipment."]),
         "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Unique identifier of the delegate user who last modified the equipment."]),

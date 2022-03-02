@@ -11,7 +11,7 @@ import uim.entities;
     super.initialize;
 
     this
-      .attributes([
+      .addAttributes([
         "systemUserId":OOPUUIDAttribute"datatype":"UUID", "descriptions":{}}`,
         "teamId":OOPUUIDAttribute"datatype":"UUID", "descriptions":{}}`,
       ])

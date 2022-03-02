@@ -12,7 +12,7 @@ class DCRMResourceSpecification : DOOPEntity {
     super.initialize;
 
     this
-      .attributes([
+      .addAttributes([
         "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Unique identifier of the delegate user who created the resourcespec."]),
         "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Unique identifier of the delegate user who last modified the resourcespec."]),
         "businessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier of the business unit with which the resource specification is associated."]),

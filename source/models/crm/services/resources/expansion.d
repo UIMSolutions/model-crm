@@ -11,7 +11,7 @@ class DCRMResourceExpansion : DOOPEntity {
     super.initialize;
 
     this
-      .attributes([
+      .addAttributes([
         "resourceGroupExpansionId": OOPUUIDAttribute.descriptions(["en":"Unique identifier of the resource expansion record."]),
         "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
         "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),

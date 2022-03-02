@@ -11,7 +11,7 @@ class DCRMDiscount : DOOPEntity {
     super.initialize;
 
     this
-      .attributes([
+      .addAttributes([
         "discountId": OOPStringAttribute.descriptions(["en":"nique identifier of the discount."]),
         "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"nique identifier of the delegate user who created the discount."]),
         "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"nique identifier of the delegate user who last modified the discount."]),

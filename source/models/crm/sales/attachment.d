@@ -11,7 +11,7 @@ class DCRMSalesAttachment : DOOPEntity {
     super.initialize;
 
     this
-      .attributes([
+      .addAttributes([
         "salesLiteratureItemId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for the document."]),
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the salesliteratureitem."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the salesliteratureitem."]),

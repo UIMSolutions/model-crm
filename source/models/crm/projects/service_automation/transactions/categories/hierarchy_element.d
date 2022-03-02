@@ -10,7 +10,7 @@ class DCRMTransactionCategoryHierarchyElement : DOOPEntity {
     super.initialize;
 
     this
-      .attributes([
+      .addAttributes([
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the record."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
         "organizationId": OOPLinkAttribute("aplOrganization").descriptions(["en":"Unique identifier for the organization"]),
