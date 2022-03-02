@@ -5,27 +5,20 @@ import uim.entities;
 
 // TeamMembership that is attached to one or more objects, including other notes.
  /*  class DCRMTeamMembership : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "systemUserId":OOPUUIDAttribute"datatype":"UUID", "descriptions":{}}`,
-      "teamId":OOPUUIDAttribute"datatype":"UUID", "descriptions":{}}`,
-    ]);
+  mixin(OOPEntityThis!("CRMTeamMembership"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .attributes([
+        "systemUserId":OOPUUIDAttribute"datatype":"UUID", "descriptions":{}}`,
+        "teamId":OOPUUIDAttribute"datatype":"UUID", "descriptions":{}}`,
+      ])
+      .registerPath("crm_campaigns");
   }
-
-  override string entityClass() { return "aplTeamMembership"; }
-  override string entityClasses() { return "aplTeamMemberships"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto CRMTeamMembership() { return new DCRMTeamMembership; } 
-auto CRMTeamMembership(Json json) { return new DCRMTeamMembership(json); }  */
+mixin(OOPEntityCalls!("CRMCampaign")); */
 
 unittest {
   version(test_model_crm) {

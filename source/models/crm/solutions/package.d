@@ -4,5 +4,3 @@ module models.crm.solutions;
 import uim.entities;
 
 public import models.crm.solutions.customers;
-public import models.crm.solutions.marketing;
-public import models.crm.solutions.portals;

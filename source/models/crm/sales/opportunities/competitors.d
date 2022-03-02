@@ -13,9 +13,9 @@ class DCRMOpportunityCompetitors : DOOPEntity {
     this
       .attributes([
         "opportunityCompetitorId": OOPUUIDAttribute.descriptions(["en":"Unique identifier of the opportunity competitor."]),
-        "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
+        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
         "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
         "competitorId": OOPUUIDAttribute.descriptions(["en":""]),
         "opportunityId": OOPUUIDAttribute.descriptions(["en":""]),

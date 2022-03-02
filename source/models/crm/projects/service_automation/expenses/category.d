@@ -12,16 +12,16 @@ class DCRMExpenseCategory : DOOPEntity {
 
     this
       .attributes([
-        "createdOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the record."]),
-        "modifiedOnBehalfBy": OOPAttributeLink("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
-        "organizationId": OOPAttributeLink("aplOrganization").descriptions(["en":"Unique identifier for the organization"]),
+        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the record."]),
+        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
+        "organizationId": OOPLinkAttribute("aplOrganization").descriptions(["en":"Unique identifier for the organization"]),
         "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Expense Category"]),
         "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
         "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Expense Category"]),
         "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
-        "importSequenceNumber": OOPAttributeNumber.descriptions(["en":"Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": OOPAttributeTimestamp.descriptions(["en":"Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": OOPAttributeNumber.descriptions(["en":"For internal use only."]),
+        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
         "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
         "expenseCategoryuId": OOPUUIDAttribute.descriptions(["en":"Select the Transaction Category associated with Expense Category."]),
         "expenseType": OOPStringAttribute.descriptions(["en":"Enter the type of expense"]),

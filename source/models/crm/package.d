@@ -20,8 +20,8 @@ public import models.crm.solutions;
 public import models.crm.campaign;
 public import models.crm.team_membership;
 
-static this() {
-  uimRegistryEntities
+/* static this() {
+  uimEntityRegistry
   .register("crm/blogs", CMSBlog)
   .register("cmsBlogs", CMSBlog)
   .register("cms/demos", CMSDemo)
@@ -42,3 +42,4 @@ static this() {
   .register("cms/tutorials", CMSTutorial)
   .register("cmsTutorials", CMSTutorial);
 }
+ */

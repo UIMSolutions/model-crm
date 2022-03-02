@@ -5,40 +5,31 @@ import uim.entities;
 
 // 
 class DCRMResource : DOOPEntity {
-  this() { super();
-    this.attributes([
-      "resourceId": OOPAttributeUserId.descriptions(["en":"Unique identifier of the resource."]),
-      "businessUnitId": OOPAttributeUserId.descriptions(["en":"Business Unit Id"]),
-      "importSequenceNumber": OOPAttributeUserId.descriptions(["en":"Sequence number of the import that created this record."]),
-      "overriddenCreatedOn": OOPAttributeUserId.descriptions(["en":"Date and time that the record was migrated."]),
-      "timeZoneRuleVersionNumber": OOPAttributeUserId.descriptions(["en":"For internal use only."]),
-      "utcConversionTimeZoneCode": OOPAttributeUserId.descriptions(["en":"Time zone code that was in use when the record was created."]),
-      "calendarId": OOPUUIDAttribute.descriptions(["en":"Unique identifier of the calendar for the resource."]),
-      "displayInServiceViews": OOPAttributeUserId.descriptions(["en":"For internal use only."]),
-      "isDisabled": OOPAttributeBoolean.descriptions(["en":"Information about whether the resource is enabled."]),
-      "objectTypeCode": OOPAttributeUserId.descriptions(["en":"Type of entity with which the resource is associated."]),
-      "organizationId": OOPAttributeUserId.descriptions(["en":"Unique identifier of the organization with which the resource is associated."]),
-      "siteId": OOPAttributeUserId.descriptions(["en":"Unique identifier of the site at which the resource is located."]),
-      "entityImageId": OOPAttributeUserId.descriptions(["en":""]),
-    ]);
+  mixin(OOPEntityThis!("CRMResource"));
+
+  override void initialize() {
+    super.initialize;
+
+    this
+      .attributes([
+        "resourceId": OOPAttributeUserId.descriptions(["en":"Unique identifier of the resource."]),
+        "businessUnitId": OOPAttributeUserId.descriptions(["en":"Business Unit Id"]),
+        "importSequenceNumber": OOPAttributeUserId.descriptions(["en":"Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": OOPAttributeUserId.descriptions(["en":"Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": OOPAttributeUserId.descriptions(["en":"For internal use only."]),
+        "utcConversionTimeZoneCode": OOPAttributeUserId.descriptions(["en":"Time zone code that was in use when the record was created."]),
+        "calendarId": OOPUUIDAttribute.descriptions(["en":"Unique identifier of the calendar for the resource."]),
+        "displayInServiceViews": OOPAttributeUserId.descriptions(["en":"For internal use only."]),
+        "isDisabled": OOPBooleanAttribute.descriptions(["en":"Information about whether the resource is enabled."]),
+        "objectTypeCode": OOPAttributeUserId.descriptions(["en":"Type of entity with which the resource is associated."]),
+        "organizationId": OOPAttributeUserId.descriptions(["en":"Unique identifier of the organization with which the resource is associated."]),
+        "siteId": OOPAttributeUserId.descriptions(["en":"Unique identifier of the site at which the resource is located."]),
+        "entityImageId": OOPAttributeUserId.descriptions(["en":""])
+      ])
+      .registerPath("crm_resources");
   }
-
-  override string entityClass() { return "aplResource"; }
-  override string entityClasses() { return "aplResources"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
-
-  // mixin(GetEntity!("organization", "organizationId", "CRMOrganization"));
 }
-auto CRMResource() { return new DCRMResource; } 
-auto CRMResource(Json json) { return new DCRMResource(json); } 
+mixin(OOPEntityCalls!("CRMResource"));
 
 unittest {
   version(test_model_crm) {
