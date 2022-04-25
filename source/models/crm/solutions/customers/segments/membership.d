@@ -5,7 +5,7 @@ import uim.entities;
 
 // Members participating in a given segment.
 class DCRMSegmentMembership : DOOPEntity {
-  mixin(OOPEntityThis!("CRMSegmentMembership"));
+  mixin(EntityThis!("CRMSegmentMembership"));
 
   override void initialize() {
     super.initialize;
@@ -36,7 +36,7 @@ class DCRMSegmentMembership : DOOPEntity {
       .registerPath("crm_segmentmemberships");
   }
 }
-mixin(OOPEntityCalls!("CRMSegmentMembership"));
+mixin(EntityCalls!("CRMSegmentMembership"));
 
 unittest {
   version(test_model_crm) {

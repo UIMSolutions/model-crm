@@ -5,7 +5,7 @@ import uim.entities;
 
 // Association between a competitor and a product offered by the competitor.
 class DCRMCompetitorSalesLiterature : DOOPEntity {
-  mixin(OOPEntityThis!("CRMCompetitorSalesLiterature"));
+  mixin(EntityThis!("CRMCompetitorSalesLiterature"));
 
   override void initialize() {
     super.initialize;
@@ -21,7 +21,7 @@ class DCRMCompetitorSalesLiterature : DOOPEntity {
       .registerPath("crm_competitorsalesliteratures");
   }
 }
-mixin(OOPEntityCalls!("CRMCompetitorSalesLiterature"));
+mixin(EntityCalls!("CRMCompetitorSalesLiterature"));
 
 unittest {
   version(test_model_crm) {

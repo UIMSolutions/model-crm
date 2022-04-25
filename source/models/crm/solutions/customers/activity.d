@@ -5,7 +5,7 @@ import uim.entities;
 
 // An activity performed by a user that has observational value to the business.
 class DCRMCustomerActivity : DOOPEntity {
-  mixin(OOPEntityThis!("CRMCustomerActivity"));
+  mixin(EntityThis!("CRMCustomerActivity"));
 
   override void initialize() {
     super.initialize;
@@ -47,7 +47,7 @@ class DCRMCustomerActivity : DOOPEntity {
       .registerPath("crm_customeractivities");
   }
 }
-mixin(OOPEntityCalls!("CRMCustomerActivity"));
+mixin(EntityCalls!("CRMCustomerActivity"));
 
 unittest {
   version(test_model_crm) {

@@ -5,7 +5,7 @@ import uim.entities;
 
 // Line item in a contract that specifies the type of service a customer is entitled to.
 class DCRMContractLine : DOOPEntity {
-  mixin(OOPEntityThis!("CRMContractLine"));
+  mixin(EntityThis!("CRMContractLine"));
 
   override void initialize() {
     super.initialize;
@@ -68,7 +68,7 @@ class DCRMContractLine : DOOPEntity {
       .registerPath("crm_contractlines");
   }
 }
-mixin(OOPEntityCalls!("CRMContractLine"));
+mixin(EntityCalls!("CRMContractLine"));
 
 unittest {
   version(test_model_crm) {

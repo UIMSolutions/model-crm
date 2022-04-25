@@ -5,7 +5,7 @@ import uim.entities;
 
 // Expense of a user in the hierarchy
 class DCRMExpense : DOOPEntity {
-  mixin(OOPEntityThis!("CRMExpense"));
+  mixin(EntityThis!("CRMExpense"));
 
   override void initialize() {
     super.initialize;
@@ -60,7 +60,7 @@ class DCRMExpense : DOOPEntity {
       .registerPath("crm_expenses");
   }
 }
-mixin(OOPEntityCalls!("CRMExpense"));
+mixin(EntityCalls!("CRMExpense"));
 
 unittest {
   version(test_model_crm) {

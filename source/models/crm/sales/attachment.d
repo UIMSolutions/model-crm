@@ -5,7 +5,7 @@ import uim.entities;
 
 // Item in the sales literature collection.
 class DCRMSalesAttachment : DOOPEntity {
-  mixin(OOPEntityThis!("CRMSalesAttachment"));
+  mixin(EntityThis!("CRMSalesAttachment"));
 
   override void initialize() {
     super.initialize;
@@ -38,7 +38,7 @@ class DCRMSalesAttachment : DOOPEntity {
       .registerPath("crm_salesattachments");
   }
 }
-mixin(OOPEntityCalls!("CRMSalesAttachment"));
+mixin(EntityCalls!("CRMSalesAttachment"));
 
 unittest {
   version(test_model_crm) {

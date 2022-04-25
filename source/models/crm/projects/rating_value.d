@@ -5,7 +5,7 @@ import uim.entities;
 
 // A unique value associated with a rating model that allows providing a user friendly rating value..
 class DCRMRatingValue : DOOPEntity {
-  mixin(OOPEntityThis!("CRMRatingValue"));
+  mixin(EntityThis!("CRMRatingValue"));
 
   override void initialize() {
     super.initialize;
@@ -37,7 +37,7 @@ class DCRMRatingValue : DOOPEntity {
       .registerPath("crm_ratingvalues");
   }
 }
-mixin(OOPEntityCalls!("CRMRatingValue"));
+mixin(EntityCalls!("CRMRatingValue"));
 
 unittest {
   version(test_model_crm) {

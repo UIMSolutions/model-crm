@@ -6,7 +6,7 @@ import uim.entities;
 
 // The root entity for portal Ideas.
 class DCRMEntitlementProduct : DOOPEntity {
-  mixin(OOPEntityThis!("CRMEntitlementProduct"));
+  mixin(EntityThis!("CRMEntitlementProduct"));
 
   override void initialize() {
     super.initialize;
@@ -24,7 +24,7 @@ class DCRMEntitlementProduct : DOOPEntity {
       .registerPath("crm_entitlementproducts");
   }
 }
-mixin(OOPEntityCalls!("CRMEntitlementProduct"));
+mixin(EntityCalls!("CRMEntitlementProduct"));
 
 unittest {
   version(test_model_crm) {

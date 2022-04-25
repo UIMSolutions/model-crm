@@ -5,7 +5,7 @@ import uim.entities;
 
 // Association between an opportunity and a product.
 class DCRMOpportunityProduct : DOOPEntity {
-  mixin(OOPEntityThis!("CRMOpportunityProduct"));
+  mixin(EntityThis!("CRMOpportunityProduct"));
 
   override void initialize() {
     super.initialize;
@@ -65,7 +65,7 @@ class DCRMOpportunityProduct : DOOPEntity {
       .registerPath("crm_opportunityproducts");
   }
 }
-mixin(OOPEntityCalls!("CRMOpportunityProduct"));
+mixin(EntityCalls!("CRMOpportunityProduct"));
 
 unittest {
   version(test_model_crm) {

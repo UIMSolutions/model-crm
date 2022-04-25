@@ -5,7 +5,7 @@ import uim.entities;
 
 // Main container that holds expense category information.
 class DCRMExpenseCategory : DOOPEntity {
-  mixin(OOPEntityThis!("CRMExpenseCategory"));
+  mixin(EntityThis!("CRMExpenseCategory"));
 
   override void initialize() {
     super.initialize;
@@ -32,7 +32,7 @@ class DCRMExpenseCategory : DOOPEntity {
       .registerPath("crm_expensecategories");
   }
 }
-mixin(OOPEntityCalls!("CRMExpenseCategory"));
+mixin(EntityCalls!("CRMExpenseCategory"));
 
 unittest {
   version(test_model_crm) {

@@ -5,7 +5,7 @@ import uim.entities;
 
 // Defines a group of members that exhibit common traits.
 class DCRMSegment : DOOPEntity {
-  mixin(OOPEntityThis!("CRMSegment"));
+  mixin(EntityThis!("CRMSegment"));
 
   override void initialize() {
     super.initialize;
@@ -38,7 +38,7 @@ class DCRMSegment : DOOPEntity {
       .registerPath("crm_segments");
   }
 }
-mixin(OOPEntityCalls!("CRMSegment"));
+mixin(EntityCalls!("CRMSegment"));
 
 unittest {
   version(test_model_crm) {

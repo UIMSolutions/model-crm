@@ -5,7 +5,7 @@ import uim.entities;
 
 // A person or organization that either performed or has the potential to engage in a business activity.
 class DCRMCustomerProfile : DOOPEntity {
-  mixin(OOPEntityThis!("CRMCustomerProfile"));
+  mixin(EntityThis!("CRMCustomerProfile"));
 
   override void initialize() {
     super.initialize;
@@ -136,7 +136,7 @@ class DCRMCustomerProfile : DOOPEntity {
       .registerPath("crm_customerprofiles");
   }
 }
-mixin(OOPEntityCalls!("CRMCustomerProfile"));
+mixin(EntityCalls!("CRMCustomerProfile"));
 
 unittest {
   version(test_model_crm) {

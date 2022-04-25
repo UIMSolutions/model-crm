@@ -5,7 +5,7 @@ import uim.entities;
 
 // Unposted business transactions, for example, time and expense.
 class DCRMJournalEntity : DOOPEntity {
-  mixin(OOPEntityThis!("CRMJournalEntity"));
+  mixin(EntityThis!("CRMJournalEntity"));
 
   override void initialize() {
     super.initialize;
@@ -37,7 +37,7 @@ class DCRMJournalEntity : DOOPEntity {
       .registerPath("crm_journals");
   }
 }
-mixin(OOPEntityCalls!("CRMJournalEntity"));
+mixin(EntityCalls!("CRMJournalEntity"));
 
 unittest {
   version(test_model_crm) {

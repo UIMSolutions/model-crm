@@ -5,7 +5,7 @@ import uim.entities;
 
 // Price reduction made from the list price of a product or service based on the quantity purchased.
 class DCRMDiscount : DOOPEntity {
-  mixin(OOPEntityThis!("CRMDiscount"));
+  mixin(EntityThis!("CRMDiscount"));
 
   override void initialize() {
     super.initialize;
@@ -35,7 +35,7 @@ class DCRMDiscount : DOOPEntity {
       .registerPath("crm_discounts");
   }
 }
-mixin(OOPEntityCalls!("CRMDiscount"));
+mixin(EntityCalls!("CRMDiscount"));
 
 unittest {
   version(test_model_crm) {

@@ -5,7 +5,7 @@ import uim.entities;
 
 // 
 class DCRMSiconfig : DOOPEntity {
-  mixin(OOPEntityThis!("CRMSiconfig"));
+  mixin(EntityThis!("CRMSiconfig"));
 
   override void initialize() {
     super.initialize;
@@ -33,7 +33,7 @@ class DCRMSiconfig : DOOPEntity {
       .registerPath("crm_siconfigs");
   }
 }
-mixin(OOPEntityCalls!("CRMSiconfig"));
+mixin(EntityCalls!("CRMSiconfig"));
 
 unittest {
   version(test_model_crm) {

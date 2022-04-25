@@ -5,7 +5,7 @@ import uim.entities;
 
 // Line item in an invoice containing detailed billing information for a product.
 class DCRMInvoiceProductEntity : DOOPEntity {
-  mixin(OOPEntityThis!("CRMInvoiceProductEntity"));
+  mixin(EntityThis!("CRMInvoiceProductEntity"));
 
   override void initialize() {
     super.initialize;
@@ -100,7 +100,7 @@ class DCRMInvoiceProductEntity : DOOPEntity {
       .registerPath("crm_invoiceproducts");
   }
 }
-mixin(OOPEntityCalls!("CRMInvoiceProductEntity"));
+mixin(EntityCalls!("CRMInvoiceProductEntity"));
 
 unittest {
   version(test_model_crm) {

@@ -5,7 +5,7 @@ import uim.entities;
 
 // Activity generated when a quote is closed.
 class DCRMQuoteClose : DOOPEntity {
-  mixin(OOPEntityThis!("CRMQuoteClose"));
+  mixin(EntityThis!("CRMQuoteClose"));
 
   override void initialize() {
     super.initialize;
@@ -92,7 +92,7 @@ class DCRMQuoteClose : DOOPEntity {
       .registerPath("crm_quotecloses");
   }
 }
-mixin(OOPEntityCalls!("CRMQuoteClose"));
+mixin(EntityCalls!("CRMQuoteClose"));
 
 unittest {
   version(test_model_crm) {

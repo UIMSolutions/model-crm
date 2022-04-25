@@ -4,8 +4,8 @@ module models.crm.projects.lead;
 import uim.entities;
 
 // Prospect or potential sales opportunity. Leads are converted into accounts, contacts, or opportunities when they are qualified.
-class DCRMLead : DOOPEntity {
-  mixin(OOPEntityThis!("CRMLead"));
+class DCRMLeadEntity : DOOPEntity {
+  mixin(EntityThis!("CRMLeadEntity"));
 
   override void initialize() {
     super.initialize;
@@ -155,13 +155,13 @@ class DCRMLead : DOOPEntity {
       .registerPath("crm_leads");
   }
 }
-mixin(OOPEntityCalls!("CRMLead"));
+mixin(EntityCalls!("CRMLeadEntity"));
 
 unittest {
   version(test_model_crm) {
-    assert(CRMLead);
+    assert(CRMLeadEntity);
   
-  auto entity = CRMLead;
+  auto entity = CRMLeadEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

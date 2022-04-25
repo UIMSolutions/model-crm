@@ -5,7 +5,7 @@ import uim.entities;
 
 // Container for campaign activities and responses, sales literature, products, and lists to create, plan, execute, and track the results of a specific marketing campaign through its life.
 class DCRMCampaign : DOOPEntity {
-  mixin(OOPEntityThis!("CRMCampaign"));
+  mixin(EntityThis!("CRMCampaign"));
 
   override void initialize() {
     super.initialize;
@@ -62,7 +62,7 @@ class DCRMCampaign : DOOPEntity {
       .registerPath("crm_campaigns");
   }
 }
-mixin(OOPEntityCalls!("CRMCampaign"));
+mixin(EntityCalls!("CRMCampaign"));
 
 unittest {
   version(test_model_crm) {

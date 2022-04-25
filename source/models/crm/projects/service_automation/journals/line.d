@@ -5,7 +5,7 @@ import uim.entities;
 
 // nposted business transaction line details.
 class DCRMJournalLineEntity : DOOPEntity {
-  mixin(OOPEntityThis!("CRMJournalLineEntity"));
+  mixin(EntityThis!("CRMJournalLineEntity"));
 
   override void initialize() {
     super.initialize;
@@ -85,7 +85,7 @@ class DCRMJournalLineEntity : DOOPEntity {
       .registerPath("crm_journallines");
   }
 }
-mixin(OOPEntityCalls!("CRMJournalLineEntity"));
+mixin(EntityCalls!("CRMJournalLineEntity"));
 
 unittest {
   version(test_model_crm) {

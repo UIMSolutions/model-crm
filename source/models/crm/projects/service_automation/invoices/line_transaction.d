@@ -4,7 +4,7 @@ import uim.entities;
 
 // Transactions that are associated to an invoice line.
 class DCRMInvoiceLineTransactionEntity : DOOPEntity {
-  mixin(OOPEntityThis!("CRMInvoiceLineTransactionEntity"));
+  mixin(EntityThis!("CRMInvoiceLineTransactionEntity"));
 
   override void initialize() {
     super.initialize;
@@ -89,7 +89,7 @@ class DCRMInvoiceLineTransactionEntity : DOOPEntity {
       .registerPath("crm_invoicelinetransactions");
   }
 }
-mixin(OOPEntityCalls!("CRMInvoiceLineTransactionEntity"));
+mixin(EntityCalls!("CRMInvoiceLineTransactionEntity"));
 
 unittest {
   version(test_model_crm) {

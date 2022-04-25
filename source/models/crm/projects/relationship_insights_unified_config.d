@@ -5,7 +5,7 @@ import uim.entities;
 
 // 
 class DCRMRelationshipInsightsUnifiedConfig : DOOPEntity {
-  mixin(OOPEntityThis!("CRMRelationshipInsightsUnifiedConfig"));
+  mixin(EntityThis!("CRMRelationshipInsightsUnifiedConfig"));
 
   override void initialize() {
     super.initialize;
@@ -34,7 +34,7 @@ class DCRMRelationshipInsightsUnifiedConfig : DOOPEntity {
       .registerPath("crm_relationshipinsightsunifiedconfigs");
   }
 }
-mixin(OOPEntityCalls!("CRMRelationshipInsightsUnifiedConfig"));
+mixin(EntityCalls!("CRMRelationshipInsightsUnifiedConfig"));
 
 unittest {
   version(test_model_crm) {

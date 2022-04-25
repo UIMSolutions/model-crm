@@ -6,7 +6,7 @@ import uim.entities;
 
 // Additional addresses for a competitor. The first two addresses are stored in the competitor object.
 class DCRMCompetitorAddress : DOOPEntity {
-  mixin(OOPEntityThis!("CRMCompetitorAddress"));
+  mixin(EntityThis!("CRMCompetitorAddress"));
 
   override void initialize() {
     super.initialize;
@@ -47,7 +47,7 @@ class DCRMCompetitorAddress : DOOPEntity {
       .registerPath("crm_competitoraddresses");
   }
 }
-mixin(OOPEntityCalls!("CRMCompetitorAddress"));
+mixin(EntityCalls!("CRMCompetitorAddress"));
 
 unittest {
   version(test_model_crm) {

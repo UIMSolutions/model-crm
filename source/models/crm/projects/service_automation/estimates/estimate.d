@@ -4,8 +4,8 @@ module models.crm.projects.service_automation.estimates.estimate;
 import uim.entities;
 
 // Labor, cost, and revenue estimates for a project.
-class DCRMEstimate : DOOPEntity {
-  mixin(OOPEntityThis!("CRMEstimate"));
+class DCRMEstimateEntity : DOOPEntity {
+  mixin(EntityThis!("CRMEstimateEntity"));
 
   override void initialize() {
     super.initialize;
@@ -35,13 +35,13 @@ class DCRMEstimate : DOOPEntity {
       .registerPath("crm_estimates");
   }
 }
-mixin(OOPEntityCalls!("CRMEstimate"));
+mixin(EntityCalls!("CRMEstimateEntity"));
 
 unittest {
   version(test_model_crm) {
-    assert(CRMEstimate);
+    assert(CRMEstimateEntity);
 
-  auto entity = CRMEstimate;
+  auto entity = CRMEstimateEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

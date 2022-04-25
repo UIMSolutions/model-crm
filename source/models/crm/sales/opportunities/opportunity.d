@@ -5,7 +5,7 @@ import uim.entities;
 
 // Potential revenue-generating event, or sale to an account, which needs to be tracked through a sales process to completion.
 class DCRMOpportunity : DOOPEntity {
- mixin(OOPEntityThis!("CRMOpportunity"));
+ mixin(EntityThis!("CRMOpportunity"));
 
   override void initialize() {
     super.initialize;
@@ -130,7 +130,7 @@ class DCRMOpportunity : DOOPEntity {
       .registerPath("crm_opportunities");
   }
 }
-mixin(OOPEntityCalls!("CRMOpportunity"));
+mixin(EntityCalls!("CRMOpportunity"));
 
 unittest {
   version(test_model_crm) {

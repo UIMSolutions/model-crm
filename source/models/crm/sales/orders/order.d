@@ -5,7 +5,7 @@ import uim.entities;
 
 // Quote that has been accepted.
 class DCRMOrder : DOOPEntity {
-  mixin(OOPEntityThis!("CRMOrder"));
+  mixin(EntityThis!("CRMOrder"));
 
   override void initialize() {
     super.initialize;
@@ -115,7 +115,7 @@ class DCRMOrder : DOOPEntity {
       .registerPath("crm_orders");
   }
 }
-mixin(OOPEntityCalls!("CRMOrder"));
+mixin(EntityCalls!("CRMOrder"));
 
 unittest {
   version(test_model_crm) {

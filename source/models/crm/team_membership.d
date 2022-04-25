@@ -5,7 +5,7 @@ import uim.entities;
 
 // TeamMembership that is attached to one or more objects, including other notes.
  /*  class DCRMTeamMembership : DOOPEntity {
-  mixin(OOPEntityThis!("CRMTeamMembership"));
+  mixin(EntityThis!("CRMTeamMembership"));
 
   override void initialize() {
     super.initialize;
@@ -18,7 +18,7 @@ import uim.entities;
       .registerPath("crm_campaigns");
   }
 }
-mixin(OOPEntityCalls!("CRMCampaign")); */
+mixin(EntityCalls!("CRMCampaign")); */
 
 unittest {
   version(test_model_crm) {

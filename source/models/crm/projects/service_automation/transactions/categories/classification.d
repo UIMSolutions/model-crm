@@ -4,8 +4,8 @@ module models.crm.projects.service_automation.transactions.categories.classifica
 import uim.entities;
 
 // Entity used to associate a category broadly as time, expense or material.
-class DCRMTransactionCategoryClassification : DOOPEntity {
-  mixin(OOPEntityThis!("CRMTransactionCategoryClassification"));
+class DCRMTransactionCategoryClassificationEntity : DOOPEntity {
+  mixin(EntityThis!("CRMTransactionCategoryClassificationEntity"));
 
   override void initialize() {
     super.initialize;
@@ -30,13 +30,13 @@ class DCRMTransactionCategoryClassification : DOOPEntity {
       .registerPath("crm_transactioncategoryclassifications");
   }
 }
-mixin(OOPEntityCalls!("CRMTransactionCategoryClassification"));
+mixin(EntityCalls!("CRMTransactionCategoryClassificationEntity"));
 
 unittest {
   version(test_model_crm) {
-    assert(CRMTransactionCategoryClassification);
+    assert(CRMTransactionCategoryClassificationEntity);
 
-  auto entity = CRMTransactionCategoryClassification;
+  auto entity = CRMTransactionCategoryClassificationEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

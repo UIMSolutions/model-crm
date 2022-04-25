@@ -5,7 +5,7 @@ import uim.entities;
 
 // Activity generated automatically when an order is closed.
 class DCRMOrderClose : DOOPEntity {
-  mixin(OOPEntityThis!("CRMOrderClose"));
+  mixin(EntityThis!("CRMOrderClose"));
 
   override void initialize() {
     super.initialize;
@@ -92,7 +92,7 @@ class DCRMOrderClose : DOOPEntity {
       .registerPath("crm_ordercloses");
   }
 }
-mixin(OOPEntityCalls!("CRMOrderClose"));
+mixin(EntityCalls!("CRMOrderClose"));
 
 unittest {
   version(test_model_crm) {

@@ -5,7 +5,7 @@ import uim.entities;
 
 // Type of discount specified as either a percentage or an amount.
 class DCRMDiscountList : DOOPEntity {
-  mixin(OOPEntityThis!("CRMDiscountList"));
+  mixin(EntityThis!("CRMDiscountList"));
 
   override void initialize() {
     super.initialize;
@@ -30,7 +30,7 @@ class DCRMDiscountList : DOOPEntity {
       .registerPath("crm_discountlists");
   }
 }
-mixin(OOPEntityCalls!("CRMDiscountList"));
+mixin(EntityCalls!("CRMDiscountList"));
 
 unittest {
   version(test_model_crm) {

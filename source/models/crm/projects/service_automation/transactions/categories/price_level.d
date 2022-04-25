@@ -4,8 +4,8 @@ module models.crm.projects.service_automation.transactions.categories.price_leve
 import uim.entities;
 
 // List of prices by category on a price list.
-class DCRMTransactionCategoryPriceLevel : DOOPEntity {
-  mixin(OOPEntityThis!("CRMTransactionCategoryPriceLevel"));
+class DCRMTransactionCategoryPriceLevelEntity : DOOPEntity {
+  mixin(EntityThis!("CRMTransactionCategoryPriceLevelEntity"));
 
   override void initialize() {
     super.initialize;
@@ -38,13 +38,13 @@ class DCRMTransactionCategoryPriceLevel : DOOPEntity {
       .registerPath("crm_transactioncategorypricelevels");
   }
 }
-mixin(OOPEntityCalls!("CRMTransactionCategoryPriceLevel"));
+mixin(EntityCalls!("CRMTransactionCategoryPriceLevelEntity"));
 
 unittest {
   version(test_model_crm) {
-    assert(CRMTransactionCategoryPriceLevel);
+    assert(CRMTransactionCategoryPriceLevelEntity);
 
-  auto entity = CRMTransactionCategoryPriceLevel;
+  auto entity = CRMTransactionCategoryPriceLevelEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

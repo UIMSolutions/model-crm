@@ -5,7 +5,7 @@ import uim.entities;
 
 // Order that has been billed.
 class DCRMInvoiceEntity : DOOPEntity {
-  mixin(OOPEntityThis!("CRMInvoiceEntity"));
+  mixin(EntityThis!("CRMInvoiceEntity"));
 
   override void initialize() {
     super.initialize;
@@ -111,7 +111,7 @@ class DCRMInvoiceEntity : DOOPEntity {
       .registerPath("crm_invoices");
   }
 }
-mixin(OOPEntityCalls!("CRMInvoiceEntity"));
+mixin(EntityCalls!("CRMInvoiceEntity"));
 
 unittest {
   version(test_model_crm) {

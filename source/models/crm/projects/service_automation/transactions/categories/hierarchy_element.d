@@ -3,8 +3,8 @@ module models.crm.projects.service_automation.transactions.categories.hierarchy_
 import uim.entities;
 
 // Hierarchical relationship of the transaction category with a root node.
-class DCRMTransactionCategoryHierarchyElement : DOOPEntity {
-  mixin(OOPEntityThis!("CRMTransactionCategoryHierarchyElement"));
+class DCRMTransactionCategoryHierarchyElementEntity : DOOPEntity {
+  mixin(EntityThis!("CRMTransactionCategoryHierarchyElementEntity"));
 
   override void initialize() {
     super.initialize;
@@ -28,13 +28,13 @@ class DCRMTransactionCategoryHierarchyElement : DOOPEntity {
       .registerPath("crm_transactioncategoryhierarchyelements");
   }
 }
-mixin(OOPEntityCalls!("CRMTransactionCategoryHierarchyElement"));
+mixin(EntityCalls!("CRMTransactionCategoryHierarchyElementEntity"));
 
 unittest {
   version(test_model_crm) {
-    assert(CRMTransactionCategoryHierarchyElement);
+    assert(CRMTransactionCategoryHierarchyElementEntity);
 
-  auto entity = CRMTransactionCategoryHierarchyElement;
+  auto entity = CRMTransactionCategoryHierarchyElementEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

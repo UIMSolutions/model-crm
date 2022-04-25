@@ -5,7 +5,7 @@ import uim.entities;
 
 // Table that contains expense receipt information.
 class DCRMExpenseReceipt : DOOPEntity {
-  mixin(OOPEntityThis!("CRMExpenseReceipt"));
+  mixin(EntityThis!("CRMExpenseReceipt"));
 
   override void initialize() {
     super.initialize;
@@ -33,7 +33,7 @@ class DCRMExpenseReceipt : DOOPEntity {
       .registerPath("crm_expensereceipts");
   }
 }
-mixin(OOPEntityCalls!("CRMExpenseReceipt"));
+mixin(EntityCalls!("CRMExpenseReceipt"));
 
 unittest {
   version(test_model_crm) {

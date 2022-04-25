@@ -5,7 +5,7 @@ import uim.entities;
 
 // Resource that can be scheduled.
 class DCRMFacilityEquipment : DOOPEntity {
-  mixin(OOPEntityThis!("CRMFacilityEquipment"));
+  mixin(EntityThis!("CRMFacilityEquipment"));
 
   override void initialize() {
     super.initialize;
@@ -34,7 +34,7 @@ class DCRMFacilityEquipment : DOOPEntity {
       .registerPath("crm_facilityequipments");
   }
 }
-mixin(OOPEntityCalls!("CRMFacilityEquipment"));
+mixin(EntityCalls!("CRMFacilityEquipment"));
 
 unittest {
   version(test_model_crm) {

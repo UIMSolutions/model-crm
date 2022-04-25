@@ -5,7 +5,7 @@ import uim.entities;
 
 // Line item in a sales order.
 class DCRMOrderProduct : DOOPEntity {
-  mixin(OOPEntityThis!("CRMOrderProduct"));
+  mixin(EntityThis!("CRMOrderProduct"));
 
   override void initialize() {
     super.initialize;
@@ -87,7 +87,7 @@ class DCRMOrderProduct : DOOPEntity {
       .registerPath("crm_orderproducts");
   }
 }
-mixin(OOPEntityCalls!("CRMOrderProduct"));
+mixin(EntityCalls!("CRMOrderProduct"));
 
 unittest {
   version(test_model_crm) {

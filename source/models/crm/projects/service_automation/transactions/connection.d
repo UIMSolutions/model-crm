@@ -4,8 +4,8 @@ module models.crm.projects.service_automation.transactions.connection;
 import uim.entities;
 
 // TransactionConnection of a user in the hierarchy
-class DCRMTransactionConnection : DOOPEntity {
-  mixin(OOPEntityThis!("CRMTransactionConnection"));
+class DCRMTransactionConnectionEntity : DOOPEntity {
+  mixin(EntityThis!("CRMTransactionConnectionEntity"));
 
   override void initialize() {
     super.initialize;
@@ -38,13 +38,13 @@ class DCRMTransactionConnection : DOOPEntity {
       .registerPath("crm_transactionconnections");
   }
 }
-mixin(OOPEntityCalls!("CRMTransactionConnection"));
+mixin(EntityCalls!("CRMTransactionConnectionEntity"));
 
 unittest {
   version(test_model_crm) {
-    assert(CRMTransactionConnection);
+    assert(CRMTransactionConnectionEntity);
 
-  auto entity = CRMTransactionConnection;
+  auto entity = CRMTransactionConnectionEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

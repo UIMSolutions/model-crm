@@ -5,7 +5,7 @@ import uim.entities;
 
 // Activity that is created automatically when an opportunity is closed, containing information such as the description of the closing and actual revenue.
 class DCRMOpportunityClose : DOOPEntity {
-  mixin(OOPEntityThis!("CRMOpportunityClose"));
+  mixin(EntityThis!("CRMOpportunityClose"));
 
   override void initialize() {
     super.initialize;
@@ -93,7 +93,7 @@ class DCRMOpportunityClose : DOOPEntity {
       .registerPath("crm_opportunitycloses");
   }
 }
-mixin(OOPEntityCalls!("CRMOpportunityClose"));
+mixin(EntityCalls!("CRMOpportunityClose"));
 
 unittest {
   version(test_model_crm) {

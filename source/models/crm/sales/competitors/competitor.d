@@ -5,7 +5,7 @@ import uim.entities;
 
 // Business competing for the sale represented by a lead or opportunity.
 class DCRMCompetitor : DOOPEntity {
-  mixin(OOPEntityThis!("CRMCompetitor"));
+  mixin(EntityThis!("CRMCompetitor"));
 
   override void initialize() {
     super.initialize;
@@ -93,7 +93,7 @@ class DCRMCompetitor : DOOPEntity {
       .registerPath("crm_competitors");
   }
 }
-mixin(OOPEntityCalls!("CRMCompetitor"));
+mixin(EntityCalls!("CRMCompetitor"));
 
 unittest {
   version(test_model_crm) {

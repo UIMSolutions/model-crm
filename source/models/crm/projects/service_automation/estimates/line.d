@@ -4,8 +4,8 @@ module models.crm.projects.service_automation.estimates.line;
 import uim.entities;
 
 // Estimates on a per day timescale.
-class DCRMEstimateLine : DOOPEntity {
-  mixin(OOPEntityThis!("CRMEstimateLine"));
+class DCRMEstimateLineEntity : DOOPEntity {
+  mixin(EntityThis!("CRMEstimateLineEntity"));
 
   override void initialize() {
     super.initialize;
@@ -79,13 +79,13 @@ class DCRMEstimateLine : DOOPEntity {
       .registerPath("crm_estimatelines");
   }
 }
-mixin(OOPEntityCalls!("CRMEstimateLine"));
+mixin(EntityCalls!("CRMEstimateLineEntity"));
 
 unittest {
   version(test_model_crm) {
-    assert(CRMEstimateLine);
+    assert(CRMEstimateLineEntity);
 
-  auto entity = CRMEstimateLine;
+  auto entity = CRMEstimateLineEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

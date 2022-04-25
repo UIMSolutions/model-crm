@@ -5,7 +5,7 @@ import uim.entities;
 
 // Business transaction categories to classify costs and revenue.
 class DCRMTransactionCategoryEntity : DOOPEntity {
-  mixin(OOPEntityThis!("CRMTransactionCategoryEntity"));
+  mixin(EntityThis!("CRMTransactionCategoryEntity"));
 
   override void initialize() {
     super.initialize;
@@ -31,7 +31,7 @@ class DCRMTransactionCategoryEntity : DOOPEntity {
       .registerPath("crm_transactioncategories");
   }
 }
-mixin(OOPEntityCalls!("CRMTransactionCategoryEntity"));
+mixin(EntityCalls!("CRMTransactionCategoryEntity"));
 
 unittest {
   version(test_model_crm) {

@@ -5,7 +5,7 @@ import uim.entities;
 
 // Storage of sales literature, which may contain one or more documents.
 class DCRMSalesLiterature : DOOPEntity {
-  mixin(OOPEntityThis!("CRMSalesLiterature"));
+  mixin(EntityThis!("CRMSalesLiterature"));
 
   override void initialize() {
     super.initialize;
@@ -37,7 +37,7 @@ class DCRMSalesLiterature : DOOPEntity {
       .registerPath("crm_salesliteratures");
   }
 }
-mixin(OOPEntityCalls!("CRMSalesLiterature"));
+mixin(EntityCalls!("CRMSalesLiterature"));
 
 unittest {
   version(test_model_crm) {

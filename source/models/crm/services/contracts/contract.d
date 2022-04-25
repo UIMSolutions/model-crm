@@ -5,7 +5,7 @@ import uim.entities;
 
 // Agreement to provide customer service during a specified amount of time or number of cases.
 class DCRMContract : DOOPEntity {
-  mixin(OOPEntityThis!("CRMContract"));
+  mixin(EntityThis!("CRMContract"));
 
   override void initialize() {
     super.initialize;
@@ -72,7 +72,7 @@ class DCRMContract : DOOPEntity {
       .registerPath("crm_contracts");
   }
 }
-mixin(OOPEntityCalls!("CRMContract"));
+mixin(EntityCalls!("CRMContract"));
 unittest {
   version(test_model_crm) {
     assert(CRMContract);

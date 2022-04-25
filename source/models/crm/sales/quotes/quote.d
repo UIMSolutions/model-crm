@@ -5,7 +5,7 @@ import uim.entities;
 
 // Formal offer for products and/or services, proposed at specific prices and related payment terms, which is sent to a prospective customer.
 class DCRMQuote : DOOPEntity {
-  mixin(OOPEntityThis!("CRMQuote"));
+  mixin(EntityThis!("CRMQuote"));
 
   override void initialize() {
     super.initialize;
@@ -110,7 +110,7 @@ class DCRMQuote : DOOPEntity {
       .registerPath("crm_quotes");
   }
 }
-mixin(OOPEntityCalls!("CRMQuote"));
+mixin(EntityCalls!("CRMQuote"));
 
 unittest {
   version(test_model_crm) {

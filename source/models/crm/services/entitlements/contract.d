@@ -5,7 +5,7 @@ import uim.entities;
 
 // 
 class DCRMEntitlementContact : DOOPEntity {
-  mixin(OOPEntityThis!("CRMEntitlementContact"));
+  mixin(EntityThis!("CRMEntitlementContact"));
 
   override void initialize() {
     super.initialize;
@@ -23,7 +23,7 @@ class DCRMEntitlementContact : DOOPEntity {
       .registerPath("crm_entitlementcontacts");
   }
 }
-mixin(OOPEntityCalls!("CRMEntitlementContact"));
+mixin(EntityCalls!("CRMEntitlementContact"));
 
 unittest {
   version(test_model_crm) {

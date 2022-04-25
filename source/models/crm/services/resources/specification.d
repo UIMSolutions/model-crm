@@ -6,7 +6,7 @@ import uim.entities;
 
 // Selection rule that allows the scheduling engine to select a number of resources from a pool of resources. The rules can be associated with a service.
 class DCRMResourceSpecification : DOOPEntity {
-  mixin(OOPEntityThis!("CRMResourceSpecification"));
+  mixin(EntityThis!("CRMResourceSpecification"));
 
   override void initialize() {
     super.initialize;
@@ -32,7 +32,7 @@ class DCRMResourceSpecification : DOOPEntity {
       .registerPath("crm_resourcespecifications");
   }
 }
-mixin(OOPEntityCalls!("CRMResourceSpecification"));
+mixin(EntityCalls!("CRMResourceSpecification"));
 
 unittest {
   version(test_model_crm) {

@@ -5,7 +5,7 @@ import uim.entities;
 
 // InvoiceFrequency of a user in the hierarchy
 class DCRMInvoiceFrequencyEntity : DOOPEntity {
-  mixin(OOPEntityThis!("CRMInvoiceFrequencyEntity"));
+  mixin(EntityThis!("CRMInvoiceFrequencyEntity"));
 
   override void initialize() {
     super.initialize;
@@ -33,7 +33,7 @@ class DCRMInvoiceFrequencyEntity : DOOPEntity {
       .registerPath("crm_invoicefrequencies");
   }
 }
-mixin(OOPEntityCalls!("CRMInvoiceFrequencyEntity"));
+mixin(EntityCalls!("CRMInvoiceFrequencyEntity"));
 
 unittest {
   version(test_model_crm) {

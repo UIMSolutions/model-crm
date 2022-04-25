@@ -5,7 +5,7 @@ import uim.entities;
 
 // Product line item in a quote. The details include such information as product ID, description, quantity, and cost.
 class DCRMQuoteProduct : DOOPEntity {
-  mixin(OOPEntityThis!("CRMQuoteProduct"));
+  mixin(EntityThis!("CRMQuoteProduct"));
 
   override void initialize() {
     super.initialize;
@@ -81,7 +81,7 @@ class DCRMQuoteProduct : DOOPEntity {
       .registerPath("crm_quoteproducts");
   }
 }
-mixin(OOPEntityCalls!("CRMQuoteProduct"));
+mixin(EntityCalls!("CRMQuoteProduct"));
 
 unittest {
   version(test_model_crm) {
