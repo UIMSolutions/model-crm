@@ -4,8 +4,8 @@ module models.crm.projects.service_automation.invoices.invoice;
 import uim.entities;
 
 // Order that has been billed.
-class DCRMInvoice : DOOPEntity {
-  mixin(OOPEntityThis!("CRMInvoice"));
+class DCRMInvoiceEntity : DOOPEntity {
+  mixin(OOPEntityThis!("CRMInvoiceEntity"));
 
   override void initialize() {
     super.initialize;
@@ -111,13 +111,13 @@ class DCRMInvoice : DOOPEntity {
       .registerPath("crm_invoices");
   }
 }
-mixin(OOPEntityCalls!("CRMInvoice"));
+mixin(OOPEntityCalls!("CRMInvoiceEntity"));
 
 unittest {
   version(test_model_crm) {
-    assert(CRMInvoice);
+    assert(CRMInvoiceEntity);
 
-  auto entity = CRMInvoice;
+  auto entity = CRMInvoiceEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

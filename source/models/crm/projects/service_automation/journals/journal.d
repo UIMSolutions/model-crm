@@ -4,8 +4,8 @@ module models.crm.projects.service_automation.journals.journal;
 import uim.entities;
 
 // Unposted business transactions, for example, time and expense.
-class DCRMJournal : DOOPEntity {
-  mixin(OOPEntityThis!("CRMJournal"));
+class DCRMJournalEntity : DOOPEntity {
+  mixin(OOPEntityThis!("CRMJournalEntity"));
 
   override void initialize() {
     super.initialize;
@@ -37,13 +37,13 @@ class DCRMJournal : DOOPEntity {
       .registerPath("crm_journals");
   }
 }
-mixin(OOPEntityCalls!("CRMJournal"));
+mixin(OOPEntityCalls!("CRMJournalEntity"));
 
 unittest {
   version(test_model_crm) {
-    assert(CRMJournal);
+    assert(CRMJournalEntity);
 
-  auto entity = CRMJournal;
+  auto entity = CRMJournalEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

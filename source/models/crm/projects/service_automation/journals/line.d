@@ -4,8 +4,8 @@ module models.crm.projects.service_automation.journals.line;
 import uim.entities;
 
 // nposted business transaction line details.
-class DCRMJournalLine : DOOPEntity {
-  mixin(OOPEntityThis!("CRMJournalLine"));
+class DCRMJournalLineEntity : DOOPEntity {
+  mixin(OOPEntityThis!("CRMJournalLineEntity"));
 
   override void initialize() {
     super.initialize;
@@ -85,13 +85,13 @@ class DCRMJournalLine : DOOPEntity {
       .registerPath("crm_journallines");
   }
 }
-mixin(OOPEntityCalls!("CRMJournalLine"));
+mixin(OOPEntityCalls!("CRMJournalLineEntity"));
 
 unittest {
   version(test_model_crm) {
-    assert(CRMJournalLine);
+    assert(CRMJournalLineEntity);
 
-  auto entity = CRMJournalLine;
+  auto entity = CRMJournalLineEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

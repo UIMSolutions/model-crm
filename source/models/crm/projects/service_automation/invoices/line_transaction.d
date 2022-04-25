@@ -3,8 +3,8 @@ module models.crm.projects.service_automation.invoices.line_transaction;
 import uim.entities;
 
 // Transactions that are associated to an invoice line.
-class DCRMInvoiceLineTransaction : DOOPEntity {
-  mixin(OOPEntityThis!("CRMInvoiceLineTransaction"));
+class DCRMInvoiceLineTransactionEntity : DOOPEntity {
+  mixin(OOPEntityThis!("CRMInvoiceLineTransactionEntity"));
 
   override void initialize() {
     super.initialize;
@@ -89,13 +89,13 @@ class DCRMInvoiceLineTransaction : DOOPEntity {
       .registerPath("crm_invoicelinetransactions");
   }
 }
-mixin(OOPEntityCalls!("CRMInvoiceLineTransaction"));
+mixin(OOPEntityCalls!("CRMInvoiceLineTransactionEntity"));
 
 unittest {
   version(test_model_crm) {
-    assert(CRMInvoiceLineTransaction);
+    assert(CRMInvoiceLineTransactionEntity);
 
-  auto entity = CRMInvoiceLineTransaction;
+  auto entity = CRMInvoiceLineTransactionEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

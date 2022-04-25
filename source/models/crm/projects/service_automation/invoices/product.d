@@ -4,8 +4,8 @@ module models.crm.projects.service_automation.invoices.product;
 import uim.entities;
 
 // Line item in an invoice containing detailed billing information for a product.
-class DCRMInvoiceProduct : DOOPEntity {
-  mixin(OOPEntityThis!("CRMInvoiceProduct"));
+class DCRMInvoiceProductEntity : DOOPEntity {
+  mixin(OOPEntityThis!("CRMInvoiceProductEntity"));
 
   override void initialize() {
     super.initialize;
@@ -100,13 +100,13 @@ class DCRMInvoiceProduct : DOOPEntity {
       .registerPath("crm_invoiceproducts");
   }
 }
-mixin(OOPEntityCalls!("CRMInvoiceProduct"));
+mixin(OOPEntityCalls!("CRMInvoiceProductEntity"));
 
 unittest {
   version(test_model_crm) {
-    assert(CRMInvoiceProduct);
+    assert(CRMInvoiceProductEntity);
 
-  auto entity = CRMInvoiceProduct;
+  auto entity = CRMInvoiceProductEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

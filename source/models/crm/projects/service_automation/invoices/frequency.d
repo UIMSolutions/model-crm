@@ -4,8 +4,8 @@ module models.crm.projects.service_automation.invoices.frequency;
 import uim.entities;
 
 // InvoiceFrequency of a user in the hierarchy
-class DCRMInvoiceFrequency : DOOPEntity {
-  mixin(OOPEntityThis!("CRMInvoiceFrequency"));
+class DCRMInvoiceFrequencyEntity : DOOPEntity {
+  mixin(OOPEntityThis!("CRMInvoiceFrequencyEntity"));
 
   override void initialize() {
     super.initialize;
@@ -33,13 +33,13 @@ class DCRMInvoiceFrequency : DOOPEntity {
       .registerPath("crm_invoicefrequencies");
   }
 }
-mixin(OOPEntityCalls!("CRMInvoiceFrequency"));
+mixin(OOPEntityCalls!("CRMInvoiceFrequencyEntity"));
 
 unittest {
   version(test_model_crm) {
-    assert(CRMInvoiceFrequency);
+    assert(CRMInvoiceFrequencyEntity);
 
-  auto entity = CRMInvoiceFrequency;
+  auto entity = CRMInvoiceFrequencyEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

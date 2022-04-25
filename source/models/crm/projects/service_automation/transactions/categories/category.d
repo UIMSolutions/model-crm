@@ -4,8 +4,8 @@ module models.crm.projects.service_automation.transactions.categories.category;
 import uim.entities;
 
 // Business transaction categories to classify costs and revenue.
-class DCRMTransactionCategory : DOOPEntity {
-  mixin(OOPEntityThis!("CRMTransactionCategory"));
+class DCRMTransactionCategoryEntity : DOOPEntity {
+  mixin(OOPEntityThis!("CRMTransactionCategoryEntity"));
 
   override void initialize() {
     super.initialize;
@@ -31,13 +31,13 @@ class DCRMTransactionCategory : DOOPEntity {
       .registerPath("crm_transactioncategories");
   }
 }
-mixin(OOPEntityCalls!("CRMTransactionCategory"));
+mixin(OOPEntityCalls!("CRMTransactionCategoryEntity"));
 
 unittest {
   version(test_model_crm) {
-    assert(CRMTransactionCategory);
+    assert(CRMTransactionCategoryEntity);
 
-  auto entity = CRMTransactionCategory;
+  auto entity = CRMTransactionCategoryEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 
