@@ -15,18 +15,18 @@ class DCRMTransactionCategoryEntity : DOOPEntity {
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the record."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
         "organizationId": OOPLinkAttribute("aplOrganization").descriptions(["en":"Unique identifier for the organization"]),
-        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Transaction Category"]),
-        "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
-        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Transaction Category"]),
-        "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "stateCode": StringAttributeClass, // Status of the Transaction Category"]),
+        "stateCode_display": StringAttributeClass, //
+        "statusCode": StringAttributeClass, // Reason for the status of the Transaction Category"]),
+        "statusCode_display": StringAttributeClass, //
         "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
         "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
-        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
-        "billingType": OOPStringAttribute.descriptions(["en":"Select the default billing type of project transactions in this category. Valid values are Chargeable, Non chargeable or Complimentary. Only chargeable transactions will add to an invoice total"]),
-        "billingType_display": OOPStringAttribute.descriptions(["en":""]),
-        "defaultUnit": OOPStringAttribute.descriptions(["en":""]),
-        "unitGroup": OOPStringAttribute.descriptions(["en":"Select the unit schedule that is associated with the transaction category."]),
+        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
+        "billingType": StringAttributeClass, // Select the default billing type of project transactions in this category. Valid values are Chargeable, Non chargeable or Complimentary. Only chargeable transactions will add to an invoice total"]),
+        "billingType_display": StringAttributeClass, //
+        "defaultUnit": StringAttributeClass, //
+        "unitGroup": StringAttributeClass, // Select the unit schedule that is associated with the transaction category."]),
       ])
       .registerPath("crm_transactioncategories");
   }

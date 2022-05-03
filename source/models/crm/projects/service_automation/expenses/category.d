@@ -15,19 +15,19 @@ class DCRMExpenseCategory : DOOPEntity {
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the record."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
         "organizationId": OOPLinkAttribute("aplOrganization").descriptions(["en":"Unique identifier for the organization"]),
-        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Expense Category"]),
-        "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
-        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Expense Category"]),
-        "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "stateCode": StringAttributeClass, // Status of the Expense Category"]),
+        "stateCode_display": StringAttributeClass, //
+        "statusCode": StringAttributeClass, // Reason for the status of the Expense Category"]),
+        "statusCode_display": StringAttributeClass, //
         "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
         "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
-        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
-        "expenseCategoryuId": OOPUUIDAttribute.descriptions(["en":"Select the Transaction Category associated with Expense Category."]),
-        "expenseType": OOPStringAttribute.descriptions(["en":"Enter the type of expense"]),
-        "expenseType_display": OOPStringAttribute.descriptions(["en":""]),
-        "receiptRequired": OOPStringAttribute.descriptions(["en":"Shows whether the expense entry requires a receipt."]),
-        "receiptRequired_display": OOPStringAttribute.descriptions(["en":"projectServiceAutomation"]),
+        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
+        "expenseCategoryuId": UUIDAttributeClass, // Select the Transaction Category associated with Expense Category."]),
+        "expenseType": StringAttributeClass, // Enter the type of expense"]),
+        "expenseType_display": StringAttributeClass, //
+        "receiptRequired": StringAttributeClass, // Shows whether the expense entry requires a receipt."]),
+        "receiptRequired_display": StringAttributeClass, // projectServiceAutomation"]),
       ])
       .registerPath("crm_expensecategories");
   }

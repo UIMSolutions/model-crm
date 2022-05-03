@@ -12,28 +12,28 @@ class DCRMSegment : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who created the record on behalf of another user."]),
-        "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
-        "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
+        "createdOnBehalfBy": StringAttributeClass, // Shows who created the record on behalf of another user."]),
+        "modifiedOnBehalfBy": StringAttributeClass, // Shows who last updated the record on behalf of another user."]),
+        "overriddenCreatedOn": StringAttributeClass, // Date and time that the record was migrated."]),
         "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
-        "ownerId": OOPStringAttribute.descriptions(["en":"Owner Id"]),
-        "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
+        "ownerId": StringAttributeClass, // Owner Id"]),
+        "ownerIdType": StringAttributeClass, // The type of owner, either User or Team."]),
         "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-        "owningUser": OOPStringAttribute.descriptions(["en":"Unique identifier of the user that owns the activity."]),
-        "owningTeam": OOPStringAttribute.descriptions(["en":"Unique identifier for the team that owns the record."]),
+        "owningUser": StringAttributeClass, // Unique identifier of the user that owns the activity."]),
+        "owningTeam": StringAttributeClass, // Unique identifier for the team that owns the record."]),
         "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
-        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
+        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
         "lastEvaluationDate": DateAttributeClass, // Latest date when segments are evaluated/refreshed."]),
-        "memberCount": OOPStringAttribute.descriptions(["en":"Count of customers/members associated with a segment."]),
-        "queryDefinition": OOPStringAttribute.descriptions(["en":"Segment definition including groups, filters, conditions etc."]),
-        "segmentId": OOPStringAttribute.descriptions(["en":"Unique identifier for entity instances"]),
-        "segmentType": OOPStringAttribute.descriptions(["en":"Segment type."]),
-        "segmentType_display": OOPStringAttribute.descriptions(["en":""]),
-        "version": OOPStringAttribute.descriptions(["en":"Denotes latest version of a segment for manual tracking."]),
-        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Segment"]),
-        "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
-        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Segment"]),
-        "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "memberCount": StringAttributeClass, // Count of customers/members associated with a segment."]),
+        "queryDefinition": StringAttributeClass, // Segment definition including groups, filters, conditions etc."]),
+        "segmentId": StringAttributeClass, // Unique identifier for entity instances"]),
+        "segmentType": StringAttributeClass, // Segment type."]),
+        "segmentType_display": StringAttributeClass, //
+        "version": StringAttributeClass, // Denotes latest version of a segment for manual tracking."]),
+        "stateCode": StringAttributeClass, // Status of the Segment"]),
+        "stateCode_display": StringAttributeClass, //
+        "statusCode": StringAttributeClass, // Reason for the status of the Segment"]),
+        "statusCode_display": StringAttributeClass, //
       ])
       .registerPath("crm_segments");
   }

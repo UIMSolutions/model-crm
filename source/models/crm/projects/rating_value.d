@@ -16,23 +16,23 @@ class DCRMRatingValue : DOOPEntity {
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
         "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
-        "ownerId": OOPUUIDAttribute.descriptions(["en":"Owner Id"]),
-        "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
+        "ownerId": UUIDAttributeClass, // Owner Id"]),
+        "ownerIdType": StringAttributeClass, // The type of owner, either User or Team."]),
         "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
         "owningUserId": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
         "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
         "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
-        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
-        "ratingValueId": OOPUUIDAttribute.descriptions(["en":"Unique identifier of the rating value."]),
-        "ratingModel": OOPStringAttribute.descriptions(["en":"Select the model that this rating value is associated with."]),
-        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Rating Value"]),
-        "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
-        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Rating Value"]),
-        "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
-        "value": OOPStringAttribute.descriptions(["en":"Type a rating value which is unique to the rating model it is associated with and lies within the range specified on the model."]),
-        "exchangeRate": OOPStringAttribute.descriptions(["en":"Exchange rate for the currency associated with the ratingvalue with respect to the base currency."]),
+        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
+        "ratingValueId": UUIDAttributeClass, // Unique identifier of the rating value."]),
+        "ratingModel": StringAttributeClass, // Select the model that this rating value is associated with."]),
+        "stateCode": StringAttributeClass, // Status of the Rating Value"]),
+        "stateCode_display": StringAttributeClass, //
+        "statusCode": StringAttributeClass, // Reason for the status of the Rating Value"]),
+        "statusCode_display": StringAttributeClass, //
+        "value": StringAttributeClass, // Type a rating value which is unique to the rating model it is associated with and lies within the range specified on the model."]),
+        "exchangeRate": StringAttributeClass, // Exchange rate for the currency associated with the ratingvalue with respect to the base currency."]),
         "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Exchange rate for the currency associated with the RatingValue with respect to the base currency."]),
-        "isDefault": OOPBooleanAttribute.descriptions(["en":""]),
+        "isDefault": BooleanAttributeClass, //
       ])
       .registerPath("crm_ratingvalues");
   }

@@ -12,26 +12,26 @@ class DCRMSegmentMembership : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who created the record on behalf of another user."]),
-        "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
-        "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
+        "createdOnBehalfBy": StringAttributeClass, // Shows who created the record on behalf of another user."]),
+        "modifiedOnBehalfBy": StringAttributeClass, // Shows who last updated the record on behalf of another user."]),
+        "overriddenCreatedOn": StringAttributeClass, // Date and time that the record was migrated."]),
         "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
-        "ownerId": OOPStringAttribute.descriptions(["en":"Owner Id"]),
-        "ownerIdType": OOPStringAttribute.descriptions(["en":"The type of owner, either User or Team."]),
+        "ownerId": StringAttributeClass, // Owner Id"]),
+        "ownerIdType": StringAttributeClass, // The type of owner, either User or Team."]),
         "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-        "owningUser": OOPStringAttribute.descriptions(["en":"Unique identifier of the user that owns the activity."]),
-        "owningTeam": OOPStringAttribute.descriptions(["en":"Unique identifier for the team that owns the record."]),
+        "owningUser": StringAttributeClass, // Unique identifier of the user that owns the activity."]),
+        "owningTeam": StringAttributeClass, // Unique identifier for the team that owns the record."]),
         "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
-        "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
-        "customerProfileId": OOPStringAttribute.descriptions(["en":"Customer Profile Id"]),
+        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
+        "customerProfileId": StringAttributeClass, // Customer Profile Id"]),
         "lastEvaluationDate": DateAttributeClass, // Latest date when a segment memberships is evaluated/refreshed."]),
-        "segmentId": OOPStringAttribute.descriptions(["en":"Segment identifiers customers are associated with."]),
-        "segmentMembershipId": OOPStringAttribute.descriptions(["en":"Unique identifier for entity instances"]),
-        "version": OOPStringAttribute.descriptions(["en":"Denotes latest version of the customer segment membership for manual tracking."]),
-        "stateCode": OOPStringAttribute.descriptions(["en":"Status of the Segment Membership"]),
-        "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
-        "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Segment Membership"]),
-        "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
+        "segmentId": StringAttributeClass, // Segment identifiers customers are associated with."]),
+        "segmentMembershipId": StringAttributeClass, // Unique identifier for entity instances"]),
+        "version": StringAttributeClass, // Denotes latest version of the customer segment membership for manual tracking."]),
+        "stateCode": StringAttributeClass, // Status of the Segment Membership"]),
+        "stateCode_display": StringAttributeClass, //
+        "statusCode": StringAttributeClass, // Reason for the status of the Segment Membership"]),
+        "statusCode_display": StringAttributeClass, //
       ])
       .registerPath("crm_segmentmemberships");
   }
