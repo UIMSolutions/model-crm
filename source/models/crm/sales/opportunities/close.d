@@ -11,7 +11,7 @@ class DCRMOpportunityClose : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -34,7 +34,7 @@ class DCRMOpportunityClose : DOOPEntity {
         "regardingObjectTypeCode": OOPStringAttribute.descriptions(["en":"The name of the entity linked by regardingObjectId"]),
         "scheduledEnd": OOPStringAttribute.descriptions(["en":"Scheduled end time of the activity."]),
         "scheduledStart": OOPStringAttribute.descriptions(["en":"Scheduled start time of the activity."]),
-        "sortDate": OOPAttributeDate.descriptions(["en":"Shows the date and time by which the activities are sorted."]),
+        "sortDate": DateAttributeClass, // Shows the date and time by which the activities are sorted."]),
         "subject": OOPStringAttribute.descriptions(["en":"Subject associated with the activity."]),
         "scheduledDurationMinutes": OOPStringAttribute.descriptions(["en":"Scheduled duration of the activity, specified in minutes."]),
         "actualDurationMinutes": OOPStringAttribute.descriptions(["en":"Actual duration of the activity in minutes."]),
@@ -79,8 +79,8 @@ class DCRMOpportunityClose : DOOPEntity {
         "stageId": OOPUUIDAttribute.descriptions(["en":"Unique identifier of the Stage."]),
         "SLAId": OOPLinkAttribute("aplSLA").descriptions(["en":"Choose the service level agreement (SLA) that you want to apply to the case record."]),
         "SLAInvokedId": OOPUUIDAttribute.descriptions(["en":"Last SLA that was applied to this case. This field is for internal use only."]),
-        "onHoldTime": OOPAttributeTime.descriptions(["en":"Shows how long, in minutes, that the record was on hold."]),
-        "lastOnHoldTime": OOPAttributeTime.descriptions(["en":"Contains the date and time stamp of the last on hold time."]),
+        "onHoldTime": TimeAttributeClass, // Shows how long, in minutes, that the record was on hold."]),
+        "lastOnHoldTime": TimeAttributeClass, // Contains the date and time stamp of the last on hold time."]),
         "serviceId": OOPUUIDAttribute.descriptions(["en":"Unique identifier of the service with which the opportunity close activity is associated."]),
         "actualRevenue": OOPStringAttribute.descriptions(["en":"Actual revenue generated for the opportunity."]),
         "actualRevenueBase": OOPStringAttribute.descriptions(["en":"Value of the Actual Revenue in base currency."]),

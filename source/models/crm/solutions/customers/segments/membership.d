@@ -11,7 +11,7 @@ class DCRMSegmentMembership : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -24,7 +24,7 @@ class DCRMSegmentMembership : DOOPEntity {
         "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
         "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
         "customerProfileId": OOPStringAttribute.descriptions(["en":"Customer Profile Id"]),
-        "lastEvaluationDate": OOPAttributeDate.descriptions(["en":"Latest date when a segment memberships is evaluated/refreshed."]),
+        "lastEvaluationDate": DateAttributeClass, // Latest date when a segment memberships is evaluated/refreshed."]),
         "segmentId": OOPStringAttribute.descriptions(["en":"Segment identifiers customers are associated with."]),
         "segmentMembershipId": OOPStringAttribute.descriptions(["en":"Unique identifier for entity instances"]),
         "version": OOPStringAttribute.descriptions(["en":"Denotes latest version of the customer segment membership for manual tracking."]),

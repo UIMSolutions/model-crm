@@ -11,7 +11,7 @@ class DCRMJournalLineEntity : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
       "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
       "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
       "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -29,7 +29,7 @@ class DCRMJournalLineEntity : DOOPEntity {
       "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Journal Line"]),
       "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
       "accountCustomer": OOPStringAttribute.descriptions(["en":"Shows the customer for the journal line."]),
-      "accountingDate": OOPAttributeDate.descriptions(["en":""]),
+      "accountingDate": DateAttributeClass, // 
       "accountVendor": OOPStringAttribute.descriptions(["en":""]),
       "amount": OOPStringAttribute.descriptions(["en":"Shows the amount of the journal line."]),
       "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Shows the currency associated with the entity."]),
@@ -52,9 +52,9 @@ class DCRMJournalLineEntity : DOOPEntity {
       "contractingUnit": OOPStringAttribute.descriptions(["en":"Unique identifier for Organizational Unit associated with Journal Line."]),
       "customerType": OOPStringAttribute.descriptions(["en":"Shows the type of customer."]),
       "customerType_display": OOPStringAttribute.descriptions(["en":""]),
-      "documentDate": OOPAttributeDate.descriptions(["en":"Enter the transaction date of the journal line."]),
-      "endDateTime": OOPAttributeDatetime.descriptions(["en":"Enter the end date and time."]),
-      "exchangeRateDate": OOPAttributeDate.descriptions(["en":""]),
+      "documentDate": DateAttributeClass, // Enter the transaction date of the journal line."]),
+      "endDateTime": DatetimeAttributeClass, // Enter the end date and time."]),
+      "exchangeRateDate": DateAttributeClass, // 
       "externalDescription": OOPStringAttribute.descriptions(["en":"The external description of the journal line."]),
       "isPosted": OOPBooleanAttribute.descriptions(["en":"Shows whether the journal has been submitted."]),
       "journal": OOPStringAttribute.descriptions(["en":"Shows the name of the journal."]),
@@ -70,7 +70,7 @@ class DCRMJournalLineEntity : DOOPEntity {
       "salesContract": OOPStringAttribute.descriptions(["en":"Shows the project contract."]),
       "salesContractLine": OOPStringAttribute.descriptions(["en":"Deprecated) Shows the project contract line."]),
       "salesContractLineId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for Project Contract Line associated with Journal Line."]),
-      "startDateTime": OOPAttributeDatetime.descriptions(["en":"Enter the start date and time."]),
+      "startDateTime": DatetimeAttributeClass, // Enter the start date and time."]),
       "task": OOPStringAttribute.descriptions(["en":"Select the project task."]),
       "transactionCategory": OOPStringAttribute.descriptions(["en":"Select the transaction category."]),
       "transactionClassification": OOPStringAttribute.descriptions(["en":"Select the transaction class."]),

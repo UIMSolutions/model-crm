@@ -10,7 +10,7 @@ class DCRMInvoiceLineTransactionEntity : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -28,7 +28,7 @@ class DCRMInvoiceLineTransactionEntity : DOOPEntity {
         "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Invoice Line Detail"]),
         "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
         "accountCustomer": OOPStringAttribute.descriptions(["en":"Select the customer who this invoice will be sent to."]),
-        "accountingDate": OOPAttributeDate.descriptions(["en":""]),
+        "accountingDate": DateAttributeClass, // 
         "accountVendor": OOPStringAttribute.descriptions(["en":""]),
         "amount": OOPStringAttribute.descriptions(["en":"Enter the amount on the transaction."]),
         "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Shows the currency associated with the entity."]),
@@ -50,9 +50,9 @@ class DCRMInvoiceLineTransactionEntity : DOOPEntity {
         "correction": OOPStringAttribute.descriptions(["en":"Indicates if this transaction is correcting a previous transaction."]),
         "customerType": OOPStringAttribute.descriptions(["en":"Select whether the customer was a account or a contact"]),
         "customerType_display": OOPStringAttribute.descriptions(["en":""]),
-        "documentDate": OOPAttributeDate.descriptions(["en":"Enter the date on which this invoice line detail was sent to the customer"]),
-        "endDateTime": OOPAttributeDatetime.descriptions(["en":"Date of invoiced transaction"]),
-        "exchangeRateDate": OOPAttributeDate.descriptions(["en":""]),
+        "documentDate": DateAttributeClass, // Enter the date on which this invoice line detail was sent to the customer"]),
+        "endDateTime": DatetimeAttributeClass, // Date of invoiced transaction"]),
+        "exchangeRateDate": DateAttributeClass, // 
         "externalDescription": OOPStringAttribute.descriptions(["en":"The external description of the invoice line detail"]),
         "invoice": OOPStringAttribute.descriptions(["en":"The invoice to which this invoice line detail belongs."]),
         "invoiceLine": OOPStringAttribute.descriptions(["en":"Deprecated) Shows the invoice line that this invoice line transaction is associated to."]),
@@ -72,7 +72,7 @@ class DCRMInvoiceLineTransactionEntity : DOOPEntity {
         "salesContract": OOPStringAttribute.descriptions(["en":"Select the name of the project contract that this invoice belongs to."]),
         "salesContractLine": OOPStringAttribute.descriptions(["en":"Deprecated) Shows the ID of the project contract line for this invoice line"]),
         "salesContractLineId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for Order Line associated with Invoice Line Detail."]),
-        "startDateTime": OOPAttributeDatetime.descriptions(["en":"Enter the start date of the transaction."]),
+        "startDateTime": DatetimeAttributeClass, // Enter the start date of the transaction."]),
         "task": OOPStringAttribute.descriptions(["en":"Select the name of the project task for which this transaction was created."]),
         "transactionCategory": OOPStringAttribute.descriptions(["en":"Select the category of the transaction."]),
         "transactionClassification": OOPStringAttribute.descriptions(["en":"Transaction classification of the invoice line"]),

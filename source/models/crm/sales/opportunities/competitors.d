@@ -11,7 +11,7 @@ class DCRMOpportunityCompetitors : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "opportunityCompetitorId": OOPUUIDAttribute.descriptions(["en":"Unique identifier of the opportunity competitor."]),
         "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),

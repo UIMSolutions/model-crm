@@ -12,7 +12,7 @@ class DCRMCompetitorAddress : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the competitor address."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the competitor address."]),
         "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),

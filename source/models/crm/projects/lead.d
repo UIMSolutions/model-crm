@@ -11,7 +11,7 @@ class DCRMLeadEntity : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -92,7 +92,7 @@ class DCRMLeadEntity : DOOPEntity {
         "EMailAddress3": OOPStringAttribute.descriptions(["en":"Type a third email address for the lead."]),
         "estimatedAmount": OOPStringAttribute.descriptions(["en":"Type the estimated revenue value that this lead will generate to assist in sales forecasting and planning."]),
         "estimatedAmountBase": OOPStringAttribute.descriptions(["en":"Value of the Est. Value in base currency."]),
-        "estimatedCloseDate": OOPAttributeDate.descriptions(["en":"Enter the expected close date for the lead, so that the sales team can schedule timely follow-up meetings to move the prospect to the next sales stage."]),
+        "estimatedCloseDate": DateAttributeClass, // Enter the expected close date for the lead, so that the sales team can schedule timely follow-up meetings to move the prospect to the next sales stage."]),
         "estimatedValue": OOPStringAttribute.descriptions(["en":"Type a numeric value of the lead's estimated value, such as a product quantity, if no revenue amount can be specified in the Est. Value field. This can be used for sales forecasting and planning."]),
         "evaluateFit": OOPStringAttribute.descriptions(["en":"Select whether the fit between the lead's requirements and your offerings was evaluated."]),
         "fax": OOPStringAttribute.descriptions(["en":"Type the fax number for the primary contact for the lead."]),
@@ -134,8 +134,8 @@ class DCRMLeadEntity : DOOPEntity {
         "purchaseTimeFrame_display": OOPStringAttribute.descriptions(["en":""]),"webSiteUrl": OOPUrlAttribute.descriptions(["en":"Type the website URL for the company associated with this lead."]),
         "SLAId": OOPLinkAttribute("aplSLA").descriptions(["en":"Choose the service level agreement (SLA) that you want to apply to the Lead record."]),
         "SLAInvokedId": OOPUUIDAttribute.descriptions(["en":"Last SLA that was applied to this case. This field is for internal use only."]),
-        "onHoldTime": OOPAttributeTime.descriptions(["en":"Shows how long, in minutes, that the record was on hold."]),
-        "lastOnHoldTime": OOPAttributeTime.descriptions(["en":"Contains the date and time stamp of the last on hold time."]),
+        "onHoldTime": TimeAttributeClass, // Shows how long, in minutes, that the record was on hold."]),
+        "lastOnHoldTime": TimeAttributeClass, // Contains the date and time stamp of the last on hold time."]),
         "followEmail": OOPStringAttribute.descriptions(["en":"Information about whether to allow following email activity like opens, attachment views and link clicks for emails sent to the lead."]),
         "timeSpentByMeOnEmailAndMeetings": OOPStringAttribute.descriptions(["en":"Total time spent for emails (read and write) and meetings by me in relation to the lead record."]),
         "entityImageId": OOPUUIDAttribute.descriptions(["en":""]),

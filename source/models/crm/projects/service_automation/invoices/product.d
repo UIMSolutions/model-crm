@@ -11,7 +11,7 @@ class DCRMInvoiceProductEntity : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -91,7 +91,7 @@ class DCRMInvoiceProductEntity : DOOPEntity {
         "contractLine": OOPStringAttribute.descriptions(["en":"Deprecated) Shows the project contract line for this invoice line."]),
         "contractLineAmount": OOPStringAttribute.descriptions(["en":"Amount from the related project contract line if present."]),
         "contractLineAmountBase": OOPStringAttribute.descriptions(["en":"Value of the project contract line amount in base currency."]),
-        "invoicedTillDate": OOPAttributeDate.descriptions(["en":"Amount already invoiced to customer for the same project contract line."]),
+        "invoicedTillDate": DateAttributeClass, // Amount already invoiced to customer for the same project contract line."]),
         "invoicedTillDateBase": OOPStringAttribute.descriptions(["en":"Value of the Amount Previously Invoiced in base currency."]),
         "nonChargeableAmount": OOPStringAttribute.descriptions(["en":"The amount from included line details that is non-chargeable."]),
         "nonChargeableAmountBase": OOPStringAttribute.descriptions(["en":"Value of the Non Chargeable Amount in base currency."]),

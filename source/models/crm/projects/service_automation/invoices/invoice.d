@@ -11,7 +11,7 @@ class DCRMInvoiceEntity : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -47,7 +47,7 @@ class DCRMInvoiceEntity : DOOPEntity {
         "exchangeRate": OOPStringAttribute.descriptions(["en":"Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency."]),
         "discountAmountBase": OOPStringAttribute.descriptions(["en":"Value of the Invoice Discount Amount in base currency."]),
         "discountPercentage": OOPPercentageAttribute.descriptions(["en":"Type the discount rate that should be applied to the Detail Amount field, for use in calculating the Pre-Freight Amount and Total Amount values for the invoice."]),
-        "dueDate": OOPAttributeDate.descriptions(["en":"Enter the date by which the invoice should be paid by the customer."]),
+        "dueDate": DateAttributeClass, // Enter the date by which the invoice should be paid by the customer."]),
         "freightAmount": OOPStringAttribute.descriptions(["en":"Type the cost of freight or shipping for the products included in the invoice for use in calculating the total amount due."]),
         "freightAmountBase": OOPStringAttribute.descriptions(["en":"Value of the Freight Amount in base currency."]),
         "invoiceNumber": OOPIntegerAttribute.descriptions(["en":"Shows the identifying number or code of the invoice."]),
@@ -96,8 +96,8 @@ class DCRMInvoiceEntity : DOOPEntity {
         "willCall": OOPStringAttribute.descriptions(["en":"Select whether the products included in the invoice should be shipped to the specified address or held until the customer calls with further pick up or delivery instructions."]),
         "SLAId": OOPLinkAttribute("aplSLA").descriptions(["en":"Choose the service level agreement (SLA) that you want to apply to the invoice record."]),
         "SLAInvokedId": OOPUUIDAttribute.descriptions(["en":"Last SLA that was applied to this invoice. This field is for internal use only."]),
-        "onHoldTime": OOPAttributeTime.descriptions(["en":"Shows the duration in minutes for which the invoice was on hold."]),
-        "lastOnHoldTime": OOPAttributeTime.descriptions(["en":"Contains the date time stamp of the last on hold time."]),
+        "onHoldTime": TimeAttributeClass, // Shows the duration in minutes for which the invoice was on hold."]),
+        "lastOnHoldTime": TimeAttributeClass, // Contains the date time stamp of the last on hold time."]),
         "entityImageId": OOPUUIDAttribute.descriptions(["en":""]),
         "accountId": OOPLinkAttribute("aplAccount").descriptions(["en":"Unique identifier of the account with which the invoice is associated."]),
         "contactId": OOPLinkAttribute("aplContact").descriptions(["en":"Unique identifier of the contact associated with the invoice."]),

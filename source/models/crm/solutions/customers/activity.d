@@ -11,7 +11,7 @@ class DCRMCustomerActivity : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -25,8 +25,8 @@ class DCRMCustomerActivity : DOOPEntity {
         "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
         "activityName": OOPStringAttribute.descriptions(["en":"Specific fields that includes data on customer's activity."]),
         "activityType": OOPStringAttribute.descriptions(["en":""]),
-        "actualEndDate": OOPAttributeDate.descriptions(["en":"End time of an activity."]),
-        "actualStartDate": OOPAttributeDate.descriptions(["en":"Start time of an activity."]),
+        "actualEndDate": DateAttributeClass, // End time of an activity."]),
+        "actualStartDate": DateAttributeClass, // Start time of an activity."]),
         "attachmentReferences": OOPStringAttribute.descriptions(["en":"References to any attachment(s) for an activity."]),
         "community": OOPStringAttribute.descriptions(["en":"Activity community."]),
         "customerActivityId": OOPStringAttribute.descriptions(["en":"Unique identifier for entity instances"]),

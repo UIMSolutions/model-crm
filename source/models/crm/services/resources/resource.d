@@ -11,20 +11,20 @@ class DCRMResource : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
-        "resourceId": OOPAttributeUserId.descriptions(["en":"Unique identifier of the resource."]),
-        "businessUnitId": OOPAttributeUserId.descriptions(["en":"Business Unit Id"]),
-        "importSequenceNumber": OOPAttributeUserId.descriptions(["en":"Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": OOPAttributeUserId.descriptions(["en":"Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": OOPAttributeUserId.descriptions(["en":"For internal use only."]),
-        "utcConversionTimeZoneCode": OOPAttributeUserId.descriptions(["en":"Time zone code that was in use when the record was created."]),
+      .addValues([
+        "resourceId": UserIdAttributeClass, // Unique identifier of the resource."]),
+        "businessUnitId": UserIdAttributeClass, // Business Unit Id"]),
+        "importSequenceNumber": UserIdAttributeClass, // Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": UserIdAttributeClass, // Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": UserIdAttributeClass, // For internal use only."]),
+        "utcConversionTimeZoneCode": UserIdAttributeClass, // Time zone code that was in use when the record was created."]),
         "calendarId": OOPUUIDAttribute.descriptions(["en":"Unique identifier of the calendar for the resource."]),
-        "displayInServiceViews": OOPAttributeUserId.descriptions(["en":"For internal use only."]),
+        "displayInServiceViews": UserIdAttributeClass, // For internal use only."]),
         "isDisabled": OOPBooleanAttribute.descriptions(["en":"Information about whether the resource is enabled."]),
-        "objectTypeCode": OOPAttributeUserId.descriptions(["en":"Type of entity with which the resource is associated."]),
-        "organizationId": OOPAttributeUserId.descriptions(["en":"Unique identifier of the organization with which the resource is associated."]),
-        "siteId": OOPAttributeUserId.descriptions(["en":"Unique identifier of the site at which the resource is located."]),
-        "entityImageId": OOPAttributeUserId.descriptions(["en":""])
+        "objectTypeCode": UserIdAttributeClass, // Type of entity with which the resource is associated."]),
+        "organizationId": UserIdAttributeClass, // Unique identifier of the organization with which the resource is associated."]),
+        "siteId": UserIdAttributeClass, // Unique identifier of the site at which the resource is located."]),
+        "entityImageId": UserIdAttributeClass, // "])
       ])
       .registerPath("crm_resources");
   }

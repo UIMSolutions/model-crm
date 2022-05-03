@@ -11,7 +11,7 @@ class DCRMQuote : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -99,8 +99,8 @@ class DCRMQuote : DOOPEntity {
         "totalTax": OOPStringAttribute.descriptions(["en":"Shows the total of the Tax amounts specified on all products included in the quote, included in the Total Amount due calculation for the quote."]),
         "totalTaxBase": OOPStringAttribute.descriptions(["en":"Value of the Total Tax in base currency."]),
         "willCall": OOPStringAttribute.descriptions(["en":"Select whether the products included in the quote should be shipped to the specified address or held until the customer calls with further pick up or delivery instructions."]),
-        "onHoldTime": OOPAttributeTime.descriptions(["en":"Shows the duration in minutes for which the quote was on hold."]),
-        "lastOnHoldTime": OOPAttributeTime.descriptions(["en":"Contains the date time stamp of the last on hold time."]),
+        "onHoldTime": TimeAttributeClass, // Shows the duration in minutes for which the quote was on hold."]),
+        "lastOnHoldTime": TimeAttributeClass, // Contains the date time stamp of the last on hold time."]),
         "SLAId": OOPLinkAttribute("aplSLA").descriptions(["en":"Choose the service level agreement (SLA) that you want to apply to the quote record."]),
         "SLAInvokedId": OOPUUIDAttribute.descriptions(["en":"Last SLA that was applied to this quote. This field is for internal use only."]),
         "accountId": OOPLinkAttribute("aplAccount").descriptions(["en":"Unique identifier of the account with which the quote is associated."]),

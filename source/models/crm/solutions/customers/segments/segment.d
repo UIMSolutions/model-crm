@@ -11,7 +11,7 @@ class DCRMSegment : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -23,7 +23,7 @@ class DCRMSegment : DOOPEntity {
         "owningTeam": OOPStringAttribute.descriptions(["en":"Unique identifier for the team that owns the record."]),
         "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
         "utcConversionTimeZoneCode": OOPStringAttribute.descriptions(["en":"Time zone code that was in use when the record was created."]),
-        "lastEvaluationDate": OOPAttributeDate.descriptions(["en":"Latest date when segments are evaluated/refreshed."]),
+        "lastEvaluationDate": DateAttributeClass, // Latest date when segments are evaluated/refreshed."]),
         "memberCount": OOPStringAttribute.descriptions(["en":"Count of customers/members associated with a segment."]),
         "queryDefinition": OOPStringAttribute.descriptions(["en":"Segment definition including groups, filters, conditions etc."]),
         "segmentId": OOPStringAttribute.descriptions(["en":"Unique identifier for entity instances"]),

@@ -11,7 +11,7 @@ class DCRMOpportunity : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -28,7 +28,7 @@ class DCRMOpportunity : DOOPEntity {
         "processId": OOPUUIDAttribute.descriptions(["en":"Contains the id of the process associated with the entity."]),
         "stageId": OOPUUIDAttribute.descriptions(["en":"Contains the id of the stage where the entity is located."]),
         "traversedPath": OOPStringAttribute.descriptions(["en":"A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur."]),
-        "actualCloseDate": OOPAttributeDate.descriptions(["en":"Shows the date and time when the opportunity was closed or canceled."]),
+        "actualCloseDate": DateAttributeClass, // Shows the date and time when the opportunity was closed or canceled."]),
         "actualValue": OOPStringAttribute.descriptions(["en":"Type the actual revenue amount for the opportunity for reporting and analysis of estimated versus actual sales. Field defaults to the Est. Revenue value when an opportunity is won."]),
         "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Choose the local currency for the record to make sure budgets are reported in the correct currency."]),
         "exchangeRate": OOPStringAttribute.descriptions(["en":"Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency."]),
@@ -50,14 +50,14 @@ class DCRMOpportunity : DOOPEntity {
         "discountAmount": OOPStringAttribute.descriptions(["en":"Type the discount amount for the opportunity if the customer is eligible for special savings."]),
         "discountAmountBase": OOPStringAttribute.descriptions(["en":"Value of the Opportunity Discount Amount in base currency."]),
         "discountPercentage": OOPPercentageAttribute.descriptions(["en":"Type the discount rate that should be applied to the Product Totals field to include additional savings for the customer in the opportunity."]),
-        "estimatedCloseDate": OOPAttributeDate.descriptions(["en":"Enter the expected closing date of the opportunity to help make accurate revenue forecasts."]),
+        "estimatedCloseDate": DateAttributeClass, // Enter the expected closing date of the opportunity to help make accurate revenue forecasts."]),
         "estimatedValue": OOPStringAttribute.descriptions(["en":"Type the estimated revenue amount to indicate the potential sale or value of the opportunity for revenue forecasting. This field can be either system-populated or editable based on the selection in the Revenue field."]),
         "estimatedValueBase": OOPStringAttribute.descriptions(["en":"Value of the Est. Revenue in base currency."]),
         "evaluateFit": OOPStringAttribute.descriptions(["en":"Select whether the fit between the lead's requirements and your offerings was evaluated."]),
         "resolveFeedback": OOPStringAttribute.descriptions(["en":"Choose whether the proposal feedback has been captured and resolved for the opportunity."]),
         "fileDebrief": OOPStringAttribute.descriptions(["en":"Choose whether the sales team has recorded detailed notes on the proposals and the account's responses."]),
         "completeFinalProposal": OOPStringAttribute.descriptions(["en":"Select whether a final proposal has been completed for the opportunity."]),
-        "finalDecisionDate": OOPAttributeDate.descriptions(["en":"Enter the date and time when the final decision of the opportunity was made."]),
+        "finalDecisionDate": DateAttributeClass, // Enter the date and time when the final decision of the opportunity was made."]),
         "freightAmount": OOPStringAttribute.descriptions(["en":"Type the cost of freight or shipping for the products included in the opportunity for use in calculating the Total Amount field."]),
         "freightAmountBase": OOPStringAttribute.descriptions(["en":"Value of the Freight Amount in base currency."]),
         "initialCommunication": OOPStringAttribute.descriptions(["en":"Choose whether someone from the sales team contacted this lead earlier."]),
@@ -117,8 +117,8 @@ class DCRMOpportunity : DOOPEntity {
         "identifyCompetitors": OOPStringAttribute.descriptions(["en":"Select whether information about competitors is included."]),
         "identifyPursuitTeam": OOPStringAttribute.descriptions(["en":"Choose whether you have recorded who will pursue the opportunity."]),
         "presentFinalProposal": OOPStringAttribute.descriptions(["en":"Select whether the final proposal has been presented to the account."]),
-        "onHoldTime": OOPAttributeTime.descriptions(["en":"Shows the duration in minutes for which the opportunity was on hold."]),
-        "lastOnHoldTime": OOPAttributeTime.descriptions(["en":"Contains the date time stamp of the last on hold time."]),
+        "onHoldTime": TimeAttributeClass, // Shows the duration in minutes for which the opportunity was on hold."]),
+        "lastOnHoldTime": TimeAttributeClass, // Contains the date time stamp of the last on hold time."]),
         "SLAId": OOPLinkAttribute("aplSLA").descriptions(["en":"Choose the service level agreement (SLA) that you want to apply to the opportunity record."]),
         "SLAInvokedId": OOPUUIDAttribute.descriptions(["en":"Last SLA that was applied to this opportunity. This field is for internal use only."]),
         "timeSpentByMeOnEmailAndMeetings": OOPStringAttribute.descriptions(["en":"Total time spent for emails (read and write) and meetings by me in relation to the opportunity record."]),

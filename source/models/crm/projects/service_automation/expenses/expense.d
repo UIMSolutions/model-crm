@@ -11,7 +11,7 @@ class DCRMExpense : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -49,7 +49,7 @@ class DCRMExpense : DOOPEntity {
         "salesTaxAmountBase": OOPStringAttribute.descriptions(["en":"Value of the Sales tax amount in base currency."]),
         "targetExpenseStatus": OOPStringAttribute.descriptions(["en":"Shows the status that the record will be transitioned to asynchronously. Currently, this is only implemented from submission to approved."]),
         "targetExpenseStatus_display": OOPStringAttribute.descriptions(["en":""]),
-        "transactionDate": OOPAttributeDate.descriptions(["en":"Enter the date of the expense transaction."]),
+        "transactionDate": DateAttributeClass, // Enter the date of the expense transaction."]),
         "unit": OOPStringAttribute.descriptions(["en":"Enter the Unit"]),
         "unitGroup": OOPStringAttribute.descriptions(["en":"Enter the Unit Group"]),
         "price": OOPStringAttribute.descriptions(["en":"Enter the Price"]),

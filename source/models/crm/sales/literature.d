@@ -11,7 +11,7 @@ class DCRMSalesLiterature : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "organizationId": OOPLinkAttribute("aplOrganization").descriptions(["en":"Unique identifier for the organization"]),
@@ -23,7 +23,7 @@ class DCRMSalesLiterature : DOOPEntity {
         "stageId": OOPUUIDAttribute.descriptions(["en":"Contains the id of the stage where the entity is located."]),
         "traversedPath": OOPStringAttribute.descriptions(["en":"A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur."]),
         "employeeContactId": OOPLinkAttribute("aplContact").descriptions(["en":"Choose the user who is responsible for maintaining or updating the sales literature."]),
-        "expirationDate": OOPAttributeDate.descriptions(["en":"Enter the expiration date or last day the sales literature can be distributed."]),
+        "expirationDate": DateAttributeClass, // Enter the expiration date or last day the sales literature can be distributed."]),
         "hasAttachments": OOPStringAttribute.descriptions(["en":"Tells whether the sales literature has one or more attachments."]),
         "isCustomerViewable": OOPBooleanAttribute.descriptions(["en":"Select whether the sales literature can be distributed to prospects and customers or is for internal use only."]),
         "keyWords": OOPStringAttribute.descriptions(["en":"Type one or more topics or keywords that can be used to search for the sales literature."]),

@@ -11,7 +11,7 @@ class DCRMCompetitorSalesLiterature : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
         "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),

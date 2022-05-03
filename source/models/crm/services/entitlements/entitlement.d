@@ -11,7 +11,7 @@ class DCRMEntitlement : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -34,14 +34,14 @@ class DCRMEntitlement : DOOPEntity {
         "customerIdType": OOPStringAttribute.descriptions(["en":"The type of customer, either Account or Contact."]),
         "decreaseRemainingOn": OOPStringAttribute.descriptions(["en":"Select whether to decrease the remaining terms when the case is created or when it is resolved."]),
         "decreaseRemainingOn_display": OOPStringAttribute.descriptions(["en":""]),
-        "endDate": OOPAttributeDate.descriptions(["en":"Enter the date when the entitlement ends."]),
+        "endDate": DateAttributeClass, // Enter the date when the entitlement ends."]),
         "entitlementTemplateId": OOPUUIDAttribute.descriptions(["en":"Unique identifier for Entitlement Template associated with Entitlement."]),
         "kbAccessLevel": OOPStringAttribute.descriptions(["en":"Select the access someone will have to the knowledge base on the portal."]),
         "kbAccessLevel_display": OOPStringAttribute.descriptions(["en":""]),
         "remainingTerms": OOPStringAttribute.descriptions(["en":"Type the total number of entitlement terms that are left."]),
         "restrictCaseCreation": OOPStringAttribute.descriptions(["en":"Tells whether case creation is restricted based on entitlement terms."]),
         "SLAId": OOPLinkAttribute("aplSLA").descriptions(["en":"Choose the service level agreement (SLA) associated with the entitlement."]),
-        "startDate": OOPAttributeDate.descriptions(["en":"Enter the date when the entitlement starts."]),
+        "startDate": DateAttributeClass, // Enter the date when the entitlement starts."]),
         "stateCode": OOPStringAttribute.descriptions(["en":"For internal use only."]),
         "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
         "statusCode": OOPStringAttribute.descriptions(["en":"Select the reason code that explains the status of the entitlement."]),

@@ -11,7 +11,7 @@ class DCRMCustomerProfile : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPStringAttribute.descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": OOPStringAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -32,7 +32,7 @@ class DCRMCustomerProfile : DOOPEntity {
         "assistantName": OOPStringAttribute.descriptions(["en":"Name of the customer's assistant."]),
         "awards": OOPStringAttribute.descriptions(["en":"List of award(s) received by the customer."]),
         "billingAddress": OOPStringAttribute.descriptions(["en":"Billing address of the customer."]),
-        "birthDate": OOPAttributeDate.descriptions(["en":""]),
+        "birthDate": DateAttributeClass, // 
         "childrenNames": OOPStringAttribute.descriptions(["en":"Customer's children name(s)."]),
         "churnScore": OOPStringAttribute.descriptions(["en":"Churn score of the customer."]),
         "companyName": OOPStringAttribute.descriptions(["en":"Company name of the customer."]),
@@ -53,7 +53,7 @@ class DCRMCustomerProfile : DOOPEntity {
         "doNotPostalMail": OOPStringAttribute.descriptions(["en":"Select whether the customer allows direct mail. If Do Not Allow is selected, the customer will be excluded from letter activities distributed in marketing campaigns."]),
         "educationCode": OOPStringAttribute.descriptions(["en":"Highest level of education of the customer."]),
         "employeeIdentifier": OOPStringAttribute.descriptions(["en":"The employee ID or number for the customer for reference in orders, service cases, or other communications with the customer's organization."]),
-        "employmentStartDate": OOPAttributeDate.descriptions(["en":"Employment start date of the customer for reference in with the customer's organization."]),
+        "employmentStartDate": DateAttributeClass, // Employment start date of the customer for reference in with the customer's organization."]),
         "engagementScore": OOPStringAttribute.descriptions(["en":"Engagement score of the customer."]),
         "facebookProfile": OOPStringAttribute.descriptions(["en":"Facebook profile url of the customer."]),
         "familyStatus": OOPStringAttribute.descriptions(["en":""]),
@@ -100,7 +100,7 @@ class DCRMCustomerProfile : DOOPEntity {
         "pinterestId": OOPStringAttribute.descriptions(["en":"Pinterest identifier of the customer."]),
         "POBoxAddress": OOPStringAttribute.descriptions(["en":"PO Box address of the customer."]),
         "postalCode": OOPStringAttribute.descriptions(["en":"Postal code of the customer."]),
-        "preferredCallTime": OOPAttributeTime.descriptions(["en":""]),
+        "preferredCallTime": TimeAttributeClass, // 
         "preferredCallTime_display": OOPStringAttribute.descriptions(["en":""]),
         "preferredContactMethodCode": OOPStringAttribute.descriptions(["en":""]),
         "preferredContactMethodCode_display": OOPStringAttribute.descriptions(["en":""]),

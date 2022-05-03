@@ -11,7 +11,7 @@ class DCRMOrder : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -87,7 +87,7 @@ class DCRMOrder : DOOPEntity {
         "stateCode_display": OOPStringAttribute.descriptions(["en":""]),
         "statusCode": OOPStringAttribute.descriptions(["en":"Select the order's status."]),
         "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
-        "submitDate": OOPAttributeDate.descriptions(["en":"Enter the date when the order was submitted to the fulfillment or shipping center."]),
+        "submitDate": DateAttributeClass, // Enter the date when the order was submitted to the fulfillment or shipping center."]),
         "submitStatus": OOPStringAttribute.descriptions(["en":"Type the code for the submitted status in the fulfillment or shipping center system."]),
         "submitStatusDescription": OOPStringAttribute.descriptions(["en":"Type additional details or notes about the order for the fulfillment or shipping center."]),
         "totalAmount": OOPStringAttribute.descriptions(["en":"Shows the total amount due, calculated as the sum of the products, discounts, freight, and taxes for the order."]),
@@ -103,8 +103,8 @@ class DCRMOrder : DOOPEntity {
         "totalTax": OOPStringAttribute.descriptions(["en":"Shows the Tax amounts specified on all products included in the order, included in the Total Amount due calculation for the order."]),
         "totalTaxBase": OOPStringAttribute.descriptions(["en":"Value of the Total Tax in base currency."]),
         "willCall": OOPStringAttribute.descriptions(["en":"Select whether the products included in the order should be shipped to the specified address or held until the customer calls with further pick-up or delivery instructions."]),
-        "onHoldTime": OOPAttributeTime.descriptions(["en":"Shows the duration in minutes for which the order was on hold."]),
-        "lastOnHoldTime": OOPAttributeTime.descriptions(["en":"Contains the date time stamp of the last on hold time."]),
+        "onHoldTime": TimeAttributeClass, // Shows the duration in minutes for which the order was on hold."]),
+        "lastOnHoldTime": TimeAttributeClass, // Contains the date time stamp of the last on hold time."]),
         "SLAId": OOPLinkAttribute("aplSLA").descriptions(["en":"Choose the service level agreement (SLA) that you want to apply to the sales order record."]),
         "SLAInvokedId": OOPUUIDAttribute.descriptions(["en":"Last SLA that was applied to this sales order. This field is for internal use only."]),
         "entityImageId": OOPUUIDAttribute.descriptions(["en":""]),

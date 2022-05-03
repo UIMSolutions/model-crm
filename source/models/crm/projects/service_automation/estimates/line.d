@@ -11,7 +11,7 @@ class DCRMEstimateLineEntity : DOOPEntity {
     super.initialize;
 
     this
-      .addAttributes([
+      .addValues([
         "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
@@ -29,7 +29,7 @@ class DCRMEstimateLineEntity : DOOPEntity {
         "statusCode": OOPStringAttribute.descriptions(["en":"Reason for the status of the Estimate Line"]),
         "statusCode_display": OOPStringAttribute.descriptions(["en":""]),
         "accountCustomer": OOPStringAttribute.descriptions(["en":"Shows the customer for the estimate line."]),
-        "accountingDate": OOPAttributeDate.descriptions(["en":""]),
+        "accountingDate": DateAttributeClass, // 
         "accountVendor": OOPStringAttribute.descriptions(["en":""]),
         "amount": OOPStringAttribute.descriptions(["en":"Shows the amount on the estimate line."]),
         "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Shows the currency associated with the entity."]),
@@ -49,11 +49,11 @@ class DCRMEstimateLineEntity : DOOPEntity {
         "contactVendor": OOPStringAttribute.descriptions(["en":""]),
         "customerType": OOPStringAttribute.descriptions(["en":"Select the type of customer."]),
         "customerType_display": OOPStringAttribute.descriptions(["en":""]),
-        "documentDate": OOPAttributeDate.descriptions(["en":"Shows the transaction date of the estimate line."]),
-        "endDateTime": OOPAttributeDatetime.descriptions(["en":"Enter the end date and time."]),
+        "documentDate": DateAttributeClass, // Shows the transaction date of the estimate line."]),
+        "endDateTime": DatetimeAttributeClass, // Enter the end date and time."]),
         "estimate": OOPStringAttribute.descriptions(["en":"Shows the name of the estimate line."]),
         "estimatePerDayLines": OOPStringAttribute.descriptions(["en":"Stores the estimate per day detail lines."]),
-        "exchangeRateDate": OOPAttributeDate.descriptions(["en":""]),
+        "exchangeRateDate": DateAttributeClass, // 
         "numberOfResources": OOPStringAttribute.descriptions(["en":"Shows the estimate of the number of resources intended to be staffed for this task."]),
         "percent": OOPStringAttribute.descriptions(["en":"Shows the percent for the estimate line."]),
         "price": OOPStringAttribute.descriptions(["en":"Shows the price for this estimate line."]),
@@ -64,7 +64,7 @@ class DCRMEstimateLineEntity : DOOPEntity {
         "quantity": OOPStringAttribute.descriptions(["en":"Enter the estimated quantity of work, cost, and sales."]),
         "resourceCategory": OOPStringAttribute.descriptions(["en":"Shows the role of this resource on the estimate line."]),
         "resourceOrganizationalUnitId": OOPUUIDAttribute.descriptions(["en":"Select the organizational unit at the time the estimate line was registered of the resource who should perform the work."]),
-        "startDateTime": OOPAttributeDatetime.descriptions(["en":"Shows the start date and time for the task for this estimate line."]),
+        "startDateTime": DatetimeAttributeClass, // Shows the start date and time for the task for this estimate line."]),
         "task": OOPStringAttribute.descriptions(["en":"Shows the task related to this estimate line."]),
         "transactionCategory": OOPStringAttribute.descriptions(["en":"Select the type of transaction."]),
         "transactionClassification": OOPStringAttribute.descriptions(["en":"Shows the transaction classification for this estimate line."]),
