@@ -12,12 +12,12 @@ class DCRMCompetitor : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
-        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
-        "organizationId": OOPLinkAttribute("aplOrganization").descriptions(["en":"Unique identifier for the organization"]),
-        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
+        "createdOnBehalfBy": UUIDAttributeClass, //Shows who created the record on behalf of another user."]),
+        "modifiedOnBehalfBy": UUIDAttributeClass, //Shows who last updated the record on behalf of another user."]),
+        "organizationId": UUIDAttributeClass, // Unique identifier for the organization"]),
+        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
         "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
         "processId": UUIDAttributeClass, // Contains the id of the process associated with the entity."]),
         "stageId": UUIDAttributeClass, // Contains the id of the stage where the entity is located."]),
@@ -70,7 +70,7 @@ class DCRMCompetitor : DOOPEntity {
         "address2Telephone3": StringAttributeClass, // Type a third phone number associated with the secondary address."]),
         "address2UPSZone": StringAttributeClass, // Type the UPS zone of the secondary address to make sure shipping charges are calculated correctly and deliveries are made promptly , if shipped by UPS."]),
         "address2UTCOffset": StringAttributeClass, // Select the time zone, or UTC offset, for this address so that other people can reference it when they contact someone at this address."]),
-        "keyProductCode": OOPIntegerAttribute.descriptions(["en":"Type the competitor's primary product, service, or specialty."]),
+        "keyProductCode": IntegerAttributeClass, //Type the competitor's primary product, service, or specialty."]),
         "opportunities": StringAttributeClass, // Type notes or other information about the competitive opportunities or selling points you can make."]),
         "overview": StringAttributeClass, // Type notes or other information about the competitor's business, such as location, revenue, or distribution channel."]),
         "referenceInfoUrl": OOPUrlAttribute.descriptions(["en":"Type the URL for the website used to obtain reference information about the competitor."]),

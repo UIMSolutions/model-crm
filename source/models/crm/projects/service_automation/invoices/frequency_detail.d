@@ -12,16 +12,16 @@ class DCRMInvoiceFrequencyDetail : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the record."]),
-        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
-        "organizationId": OOPLinkAttribute("aplOrganization").descriptions(["en":"Unique identifier for the organization"]),
+        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the record."]),
+        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who modified the record."]),
+        "organizationId": UUIDAttributeClass, // Unique identifier for the organization"]),
         "stateCode": StringAttributeClass, // Status of the Invoice Frequency Detail"]),
         "stateCode_display": StringAttributeClass, //
         "statusCode": StringAttributeClass, // Reason for the status of the Invoice Frequency Detail"]),
         "statusCode_display": StringAttributeClass, //
-        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
+        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
         "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
         "dayOfMonth": StringAttributeClass, // Specify the day(s) of the month on which invoicing should run"]),
         "dayOfMonth_display": StringAttributeClass, //

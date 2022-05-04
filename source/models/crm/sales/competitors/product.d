@@ -12,9 +12,9 @@ class DCRMCompetitorProduct : DOOPEntity {
 
     this
       .addValues([
-        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
+        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
         "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
         "competitorId": UUIDAttributeClass, //
         "productId": UUIDAttributeClass, //

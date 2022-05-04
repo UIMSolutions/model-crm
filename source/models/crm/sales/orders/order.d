@@ -12,16 +12,16 @@ class DCRMOrder : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
-        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
-        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
-        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
+        "createdOnBehalfBy": UUIDAttributeClass, //Shows who created the record on behalf of another user."]),
+        "modifiedOnBehalfBy": UUIDAttributeClass, //Shows who last updated the record on behalf of another user."]),
+        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
+        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
         "ownerId": UUIDAttributeClass, // Owner Id"]),
         "ownerIdTypeCode": StringAttributeClass, // The type of owner, either User or Team."]),
-        "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-        "owningUserId": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
-        "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
-        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
+        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record"]),
+        "owningUserId": UUIDAttributeClass, //Unique identifier of the user that owns the activity."]),
+        "owningTeamId": UUIDAttributeClass, //Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
         "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
         "salesOrderId": UUIDAttributeClass, // Unique identifier of the order."]),
         "emailAddress": StringAttributeClass, // The primary email address for the entity."]),
@@ -56,7 +56,7 @@ class DCRMOrder : DOOPEntity {
         "isPriceLocked": BooleanAttributeClass, // Select whether prices specified on the invoice are locked from any further updates."]),
         "lastBackofficeSubmit": StringAttributeClass, // Enter the date and time when the order was last submitted to an accounting or ERP system for processing."]),
         "opportunityId": UUIDAttributeClass, // Choose the related opportunity so that the data for the order and opportunity are linked for reporting and analytics."]),
-        "orderNumber": OOPIntegerAttribute.descriptions(["en":"Shows the order number for customer reference and to use in search. The number cannot be modified."]),
+        "orderNumber": IntegerAttributeClass, //Shows the order number for customer reference and to use in search. The number cannot be modified."]),
         "paymentTermsCode": StringAttributeClass, // Select the payment terms to indicate when the customer needs to pay the total amount."]),
         "paymentTermsCode_display": StringAttributeClass, //
         "priceLevelId": UUIDAttributeClass, // Choose the price list associated with this record to make sure the products associated with the campaign are offered at the correct prices."]),
@@ -65,7 +65,7 @@ class DCRMOrder : DOOPEntity {
         "priorityCode": StringAttributeClass, // Select the priority so that preferred customers or critical issues are handled quickly."]),
         "priorityCode_display": StringAttributeClass, //
         "quoteId": UUIDAttributeClass, // Choose the related quote so that order data and quote data are linked for reporting and analytics."]),
-        "requestDeliveryBy": OOPLinkAttribute("aplUser").descriptions(["en":"Enter the delivery date requested by the customer for all products in the order."]),
+        "requestDeliveryBy": UUIDAttributeClass, //Enter the delivery date requested by the customer for all products in the order."]),
         "shippingMethodCode": StringAttributeClass, // Select a shipping method for deliveries sent to this address."]),
         "shippingMethodCode_display": StringAttributeClass, //
         "shipToAddressId": OOPLinkAttribute("address").descriptions(["en":"Unique identifier of the shipping address."]),
@@ -108,8 +108,8 @@ class DCRMOrder : DOOPEntity {
         "SLAId": OOPLinkAttribute("aplSLA").descriptions(["en":"Choose the service level agreement (SLA) that you want to apply to the sales order record."]),
         "SLAInvokedId": UUIDAttributeClass, // Last SLA that was applied to this sales order. This field is for internal use only."]),
         "entityImageId": UUIDAttributeClass, //
-        "accountId": OOPLinkAttribute("aplAccount").descriptions(["en":"Shows the parent account related to the record. This information is used to link the sales order to the account selected in the Customer field for reporting and analytics."]),
-        "contactId": OOPLinkAttribute("aplContact").descriptions(["en":"Shows the parent contact related to the record. This information is used to link the contract to the contact selected in the Customer field for reporting and analytics."]),
+        "accountId": UUIDAttributeClass, // Shows the parent account related to the record. This information is used to link the sales order to the account selected in the Customer field for reporting and analytics."]),
+        "contactId": UUIDAttributeClass, // Shows the parent contact related to the record. This information is used to link the contract to the contact selected in the Customer field for reporting and analytics."]),
         "campaignId": UUIDAttributeClass, // Shows the campaign that the order was created from."]),
       ])
       .registerPath("crm_orders");

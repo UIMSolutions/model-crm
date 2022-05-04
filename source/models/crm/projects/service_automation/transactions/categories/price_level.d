@@ -12,16 +12,16 @@ class DCRMTransactionCategoryPriceLevelEntity : DOOPEntity {
 
     this
       .addValues([
-      "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the record."]),
-      "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who modified the record."]),
-      "organizationId": OOPLinkAttribute("aplOrganization").descriptions(["en":"Unique identifier for the organization"]),
+      "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the record."]),
+      "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who modified the record."]),
+      "organizationId": UUIDAttributeClass, // Unique identifier for the organization"]),
       "stateCode": StringAttributeClass, // Status of the Transaction Category Price"]),
       "stateCode_display": StringAttributeClass, //
       "statusCode": StringAttributeClass, // Reason for the status of the Transaction Category Price"]),
       "statusCode_display": StringAttributeClass, //
-      "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
-      "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
-      "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
+      "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
+      "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
+      "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
       "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
       "percent": StringAttributeClass, // Enter the mark up on cost when creating billable transactions from cost transactions. This field is relevant only when the price calculation is 'Markup over cost.'"]),
       "price": StringAttributeClass, // Enter the price of the transaction category."]),

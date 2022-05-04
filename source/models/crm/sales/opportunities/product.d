@@ -12,16 +12,16 @@ class DCRMOpportunityProduct : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
-        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
-        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
-        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
+        "createdOnBehalfBy": UUIDAttributeClass, //Shows who created the record on behalf of another user."]),
+        "modifiedOnBehalfBy": UUIDAttributeClass, //Shows who last updated the record on behalf of another user."]),
+        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
+        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
         "owner": UUIDAttributeClass, // Owner Id"]),
         "ownerIdType": StringAttributeClass, // The type of owner, either User or Team."]),
-        "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-        "owningUserId": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
-        "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
-        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
+        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record"]),
+        "owningUserId": UUIDAttributeClass, //Unique identifier of the user that owns the activity."]),
+        "owningTeamId": UUIDAttributeClass, //Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
         "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
         "opportunityProduct": UUIDAttributeClass, // Unique identifier of the opportunity product."]),
         "baseAmount": StringAttributeClass, // Shows the total price of the opportunity product, based on the price per unit, volume discount, and quantity."]),
@@ -32,7 +32,7 @@ class DCRMOpportunityProduct : DOOPEntity {
         "extendedAmountBase": StringAttributeClass, // Value of the Extended Amount in base currency."]),
         "isPriceOverridden": BooleanAttributeClass, // Select whether the pricing on the opportunity product reflects an override of the product catalog pricing."]),
         "isProductOverridden": BooleanAttributeClass, // For system use only."]),
-        "lineItemNumber": OOPIntegerAttribute.descriptions(["en":"Type the line item number for the opportunity product to easily identify the product in the opportunity documents and make sure it's listed in the correct order."]),
+        "lineItemNumber": IntegerAttributeClass, //Type the line item number for the opportunity product to easily identify the product in the opportunity documents and make sure it's listed in the correct order."]),
         "manualDiscountAmount": StringAttributeClass, // Type the manual discount amount for the opportunity product to deduct any negotiated or other savings from the product total."]),
         "manualDiscountAmountBase": StringAttributeClass, // Value of the Manual Discount Amount in base currency."]),
         "opportunity": UUIDAttributeClass, // Unique identifier of the opportunity with which the opportunity product is associated."]),
@@ -55,7 +55,7 @@ class DCRMOpportunityProduct : DOOPEntity {
         "uoM": UUIDAttributeClass, // Choose the unit of measurement for the base unit quantity for this purchase, such as each or dozen."]),
         "volumeDiscountAmount": StringAttributeClass, // Shows the discount amount per unit if a specified volume is purchased. Configure volume discounts in the Product Catalog in the Settings area."]),
         "volumeDiscountAmountBase": StringAttributeClass, // Value of the Volume Discount in base currency."]),
-        "sequenceNumber": OOPIntegerAttribute.descriptions(["en":"Shows the ID of the data that maintains the sequence."]),
+        "sequenceNumber": IntegerAttributeClass, //Shows the ID of the data that maintains the sequence."]),
         "propertyConfigurationStatus": StringAttributeClass, // Status of the property configuration."]),
         "propertyConfigurationStatus_display": StringAttributeClass, //
         "entityImage": UUIDAttributeClass, //

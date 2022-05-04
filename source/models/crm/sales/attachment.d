@@ -13,11 +13,11 @@ class DCRMSalesAttachment : DOOPEntity {
     this
       .addValues([
         "salesLiteratureItemId": UUIDAttributeClass, // Unique identifier for the document."]),
-        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the salesliteratureitem."]),
-        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the salesliteratureitem."]),
-        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
+        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the salesliteratureitem."]),
+        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who last modified the salesliteratureitem."]),
+        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
         "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
         "title": StringAttributeClass, // Type the title or name that describes the document."]),
         "abstract": StringAttributeClass, // Abstract of the document."]),
@@ -31,7 +31,7 @@ class DCRMSalesAttachment : DOOPEntity {
         "isCustomerViewable": BooleanAttributeClass, // Tells whether the document can be shared with customers or is for internal use only."]),
         "keyWords": StringAttributeClass, // Keywords to use for searches in documents."]),
         "mimeType": StringAttributeClass, // Shows the file type of the sales literature document attachment, such as text or document."]),
-        "organizationId": OOPLinkAttribute("aplOrganization").descriptions(["en":"Unique identifier of the organization associated with the document."]),
+        "organizationId": UUIDAttributeClass, // Unique identifier of the organization associated with the document."]),
         "salesLiteratureId": UUIDAttributeClass, // Unique identifier of the sales literature that is associated with the individual item."]),
         "mode": StringAttributeClass, // Defines the mode of the sales literature document attachment."]),
       ])

@@ -13,13 +13,13 @@ class DCRMCompetitorAddress : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who created the competitor address."]),
-        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the delegate user who last modified the competitor address."]),
-        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
+        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the competitor address."]),
+        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who last modified the competitor address."]),
+        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
         "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "addressNumber": OOPIntegerAttribute.descriptions(["en":"Information about which competitor address is applicable."]),
+        "addressNumber": IntegerAttributeClass, //Information about which competitor address is applicable."]),
         "addressTypeCode": StringAttributeClass, // Type of address for the competitor, such as primary address."]),
         "addressTypeCode_display": StringAttributeClass, //
         "city": StringAttributeClass, // City name in the competitor address."]),

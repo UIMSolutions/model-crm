@@ -12,16 +12,16 @@ class DCRMOpportunity : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who created the record on behalf of another user."]),
-        "modifiedOnBehalfBy": OOPLinkAttribute("aplUser").descriptions(["en":"Shows who last updated the record on behalf of another user."]),
-        "overriddenCreatedOn": OOPTimestampAttribute.descriptions(["en":"Date and time that the record was migrated."]),
-        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
+        "createdOnBehalfBy": UUIDAttributeClass, //Shows who created the record on behalf of another user."]),
+        "modifiedOnBehalfBy": UUIDAttributeClass, //Shows who last updated the record on behalf of another user."]),
+        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
+        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
         "ownerId": UUIDAttributeClass, // Owner Id"]),
         "ownerIdType": StringAttributeClass, // The type of owner, either User or Team."]),
-        "owningBusinessUnitId": OOPLinkAttribute("aplBusinessUnit").descriptions(["en":"Unique identifier for the business unit that owns the record"]),
-        "owningUserId": OOPLinkAttribute("aplUser").descriptions(["en":"Unique identifier of the user that owns the activity."]),
-        "owningTeamId": OOPLinkAttribute("aplTeam").descriptions(["en":"Unique identifier for the team that owns the record."]),
-        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
+        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record"]),
+        "owningUserId": UUIDAttributeClass, //Unique identifier of the user that owns the activity."]),
+        "owningTeamId": UUIDAttributeClass, //Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
         "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
         "opportunityId": UUIDAttributeClass, // Unique identifier of the opportunity."]),
         "emailAddress": StringAttributeClass, // The primary email address for the entity."]),
@@ -68,7 +68,7 @@ class DCRMOpportunity : DOOPEntity {
         "opportunityRatingCode": StringAttributeClass, // Select the expected value or priority of the opportunity based on revenue, customer status, or closing probability."]),
         "opportunityRatingCode_display": StringAttributeClass, //
         "parentAccountId": UUIDAttributeClass, // Choose an account to connect this opportunity to, so that the relationship is visible in reports and analytics, and to provide a quick link to additional details, such as financial information and activities."]),
-        "parentContactId": OOPLinkAttribute("aplContact").descriptions(["en":"Choose a contact to connect this opportunity to, so that the relationship is visible in reports and analytics."]),
+        "parentContactId": UUIDAttributeClass, // Choose a contact to connect this opportunity to, so that the relationship is visible in reports and analytics."]),
         "participatesInWorkflow": StringAttributeClass, // Information about whether the opportunity participates in workflow rules."]),
         "priceLevelId": UUIDAttributeClass, // Choose the price list associated with this record to make sure the products associated with the campaign are offered at the correct prices."]),
         "pricingErrorCode": StringAttributeClass, // Pricing error for the opportunity."]),
@@ -123,8 +123,8 @@ class DCRMOpportunity : DOOPEntity {
         "SLAInvokedId": UUIDAttributeClass, // Last SLA that was applied to this opportunity. This field is for internal use only."]),
         "timeSpentByMeOnEmailAndMeetings": StringAttributeClass, // Total time spent for emails (read and write) and meetings by me in relation to the opportunity record."]),
         "originatingLeadId": UUIDAttributeClass, // Choose the lead that the opportunity was created from for reporting and analytics. The field is read-only after the opportunity is created and defaults to the correct lead when an opportunity is created from a converted lead."]),
-        "accountId": OOPLinkAttribute("aplAccount").descriptions(["en":"Unique identifier of the account with which the opportunity is associated."]),
-        "contactId": OOPLinkAttribute("aplContact").descriptions(["en":"Unique identifier of the contact associated with the opportunity."]),
+        "accountId": UUIDAttributeClass, // Unique identifier of the account with which the opportunity is associated."]),
+        "contactId": UUIDAttributeClass, // Unique identifier of the contact associated with the opportunity."]),
         "campaignId": UUIDAttributeClass, // Shows the campaign that the opportunity was created from. The ID is used for tracking the success of the campaign."]),
       ])
       .registerPath("crm_opportunities");

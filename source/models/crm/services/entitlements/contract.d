@@ -12,12 +12,12 @@ class DCRMEntitlementContact : DOOPEntity {
 
     this
       .addValues([
-        "entitlementContactId": OOPLinkAttribute("aplContact").descriptions(["en":"Unique identifier of the contacts for the entitlements."]),
-        "importSequenceNumber": OOPIntegerAttribute.descriptions(["en":"Sequence number of the import that created this record."]),
+        "entitlementContactId": UUIDAttributeClass, // Unique identifier of the contacts for the entitlements."]),
+        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
         "overriddenCreatedOn": StringAttributeClass, // Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": OOPIntegerAttribute.descriptions(["en":"For internal use only."]),
+        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
         "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "contactId": OOPLinkAttribute("aplContact").descriptions(["en":""]),
+        "contactId": UUIDAttributeClass, // "]),
         "entitlementId": UUIDAttributeClass, // "])
       ])
       .registerPath("crm_entitlementcontacts");
