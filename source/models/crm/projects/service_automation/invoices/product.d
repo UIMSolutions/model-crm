@@ -26,7 +26,7 @@ class DCRMInvoiceProductEntity : DOOPEntity {
         "invoiceDetailId": UUIDAttributeClass, // Unique identifier of the invoice product line item."]),
         "actualDeliveryOn": TimestampAttributeClass, //Enter the date when the invoiced product was delivered to the customer."]),
         "baseAmount": StringAttributeClass, // Shows the total price of the invoice product, based on the price per unit, volume discount, and quantity."]),
-        "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Choose the local currency for the record to make sure budgets are reported in the correct currency."]),
+        "transactionCurrencyId": CurrencyIdAttributeClass, // Choose the local currency for the record to make sure budgets are reported in the correct currency."]),
         "exchangeRate": StringAttributeClass, // Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency."]),
         "baseAmountBase": StringAttributeClass, // Value of the Amount in base currency."]),
         "extendedAmount": StringAttributeClass, // Shows the total amount due for the invoice product, based on the sum of the unit price, quantity, discounts, and tax."]),

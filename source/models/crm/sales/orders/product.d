@@ -25,7 +25,7 @@ class DCRMOrderProduct : DOOPEntity {
         "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
         "salesOrderDetailId": UUIDAttributeClass, // Unique identifier of the product specified in the order."]),
         "baseAmount": StringAttributeClass, // Shows the total price of the order product, based on the price per unit, volume discount, and quantity."]),
-        "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Choose the local currency for the record to make sure budgets are reported in the correct currency."]),
+        "transactionCurrencyId": CurrencyIdAttributeClass, // Choose the local currency for the record to make sure budgets are reported in the correct currency."]),
         "exchangeRate": StringAttributeClass, // Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency."]),
         "baseAmountBase": StringAttributeClass, // Value of the Amount in base currency."]),
         "extendedAmount": StringAttributeClass, // Shows the total amount due for the order product, based on the sum of the unit price, quantity, discounts, and tax."]),
@@ -57,7 +57,7 @@ class DCRMOrderProduct : DOOPEntity {
         "salesOrderStateCode": StringAttributeClass, // Shows the status of the order that the order detail is associated with."]),
         "salesOrderStateCode_display": StringAttributeClass, //
         "salesRepId": UUIDAttributeClass, // Choose the user responsible for the sale of the order product."]),
-        "shipToAddressId": OOPLinkAttribute("address").descriptions(["en":"Unique identifier of the shipping address."]),
+        "shipToAddressId": UUIDAttributeClass, // address").descriptions(["en":"Unique identifier of the shipping address."]),
         "shipToCity": StringAttributeClass, // Type the city for the customer's shipping address."]),
         "shipToContactName": StringAttributeClass, // Type the primary contact name at the customer's shipping address."]),
         "shipToCountry": StringAttributeClass, // Type the country or region for the customer's shipping address."]),

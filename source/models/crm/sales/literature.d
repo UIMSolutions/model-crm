@@ -32,7 +32,7 @@ class DCRMSalesLiterature : DOOPEntity {
         "subjectId": UUIDAttributeClass, // Choose the subject for the sales literature to relate the item to a product or business group. Administrators can configure subjects under Business Management in the Settings area."]),
         "entityImageId": UUIDAttributeClass, //
         "exchangeRate": StringAttributeClass, // Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency."]),
-        "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Choose the local currency for the record to make sure budgets are reported in the correct currency."]),
+        "transactionCurrencyId": CurrencyIdAttributeClass, // Choose the local currency for the record to make sure budgets are reported in the correct currency."]),
       ])
       .registerPath("crm_salesliteratures");
   }

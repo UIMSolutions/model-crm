@@ -31,7 +31,7 @@ class DCRMCampaign : DOOPEntity {
         "actualEnd": StringAttributeClass, // Enter the date when the campaign was closed or completed."]), 
         "actualStart": StringAttributeClass, // Enter the actual start date and time for the campaign."]), 
         "budgetedCost": StringAttributeClass, // Type the amount budgeted for the campaign to define a limit for how much you can spend."]), 
-        "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Choose the local currency for the record to make sure budgets are reported in the correct currency."]), 
+        "transactionCurrencyId": CurrencyIdAttributeClass, // Choose the local currency for the record to make sure budgets are reported in the correct currency."]), 
         "exchangeRate": StringAttributeClass, // Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency."]), 
         "budgetedCostBase": StringAttributeClass, // Value of the Budget Allocated in base currency."]), 
         "codeName": StringAttributeClass, // Type a number or other tracking code to identify the campaign. If no value is entered, a code will be generated automatically."]), 

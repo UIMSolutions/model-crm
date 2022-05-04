@@ -32,7 +32,7 @@ class DCRMJournalLineEntity : DOOPEntity {
       "accountingDate": DateAttributeClass, // 
       "accountVendor": StringAttributeClass, //
       "amount": StringAttributeClass, // Shows the amount of the journal line."]),
-      "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Shows the currency associated with the entity."]),
+      "transactionCurrencyId": CurrencyIdAttributeClass, // Shows the currency associated with the entity."]),
       "exchangeRate": StringAttributeClass, // Exchange rate for the currency associated with the entity with respect to the base currency."]),
       "amountBase": StringAttributeClass, // Value of the Amount in base currency."]),
       "amountMethod": StringAttributeClass, // Select the calculation method for the amount."]),

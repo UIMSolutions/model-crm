@@ -40,7 +40,7 @@ class DCRMEntitlement : DOOPEntity {
         "kbAccessLevel_display": StringAttributeClass, //
         "remainingTerms": StringAttributeClass, // Type the total number of entitlement terms that are left."]),
         "restrictCaseCreation": StringAttributeClass, // Tells whether case creation is restricted based on entitlement terms."]),
-        "SLAId": OOPLinkAttribute("aplSLA").descriptions(["en":"Choose the service level agreement (SLA) associated with the entitlement."]),
+        "SLAId": UUIDAttributeClass, // aplSLA").descriptions(["en":"Choose the service level agreement (SLA) associated with the entitlement."]),
         "startDate": DateAttributeClass, // Enter the date when the entitlement starts."]),
         "stateCode": StringAttributeClass, // For internal use only."]),
         "stateCode_display": StringAttributeClass, //
@@ -51,7 +51,7 @@ class DCRMEntitlement : DOOPEntity {
         "accountId": UUIDAttributeClass, // Unique identifier for Account associated with Entitlement."]),
         "contactId": UUIDAttributeClass, // Unique identifier for Contact associated with Entitlement."]),
         "exchangeRate": StringAttributeClass, // Exchange rate for the currency associated with the contact with respect to the base currency."]),
-        "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Unique identifier of the currency associated with the contact."]),
+        "transactionCurrencyId": CurrencyIdAttributeClass, // Unique identifier of the currency associated with the contact."]),
       ])
       .registerPath("crm_entitlements");
   }

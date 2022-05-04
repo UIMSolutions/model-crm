@@ -32,7 +32,7 @@ class DCRMEstimateLineEntity : DOOPEntity {
         "accountingDate": DateAttributeClass, // 
         "accountVendor": StringAttributeClass, //
         "amount": StringAttributeClass, // Shows the amount on the estimate line."]),
-        "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Shows the currency associated with the entity."]),
+        "transactionCurrencyId": CurrencyIdAttributeClass, // Shows the currency associated with the entity."]),
         "exchangeRate": StringAttributeClass, // Exchange rate for the currency associated with the entity with respect to the base currency."]),
         "amountBase": StringAttributeClass, // Value of the Amount in base currency."]),
         "amountMethod": StringAttributeClass, // Shows the calculation method used to determine the amount on the estimate line."]),

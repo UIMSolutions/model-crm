@@ -22,7 +22,7 @@ class DCRMCompetitor : DOOPEntity {
         "processId": UUIDAttributeClass, // Contains the id of the process associated with the entity."]),
         "stageId": UUIDAttributeClass, // Contains the id of the stage where the entity is located."]),
         "traversedPath": StringAttributeClass, // A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur."]),
-        "address1AddressId": OOPLinkAttribute("address").descriptions(["en":"Unique identifier for address 1."]),
+        "address1AddressId": UUIDAttributeClass, // address").descriptions(["en":"Unique identifier for address 1."]),
         "address1AddressTypeCode": StringAttributeClass, // Select the primary address type."]),
         "address1AddressTypeCode_display": StringAttributeClass, //
         "address1City": StringAttributeClass, // Type the city for the primary address."]),
@@ -46,7 +46,7 @@ class DCRMCompetitor : DOOPEntity {
         "address1Telephone3": StringAttributeClass, // Type a third phone number associated with the primary address."]),
         "address1UPSZone": StringAttributeClass, // Type the UPS zone of the primary address to make sure shipping charges are calculated correctly and deliveries are made promptly, if shipped by UPS."]),
         "address1UTCOffset": StringAttributeClass, // Select the time zone, or UTC offset, for this address so that other people can reference it when they contact someone at this address."]),
-        "address2AddressId": OOPLinkAttribute("address").descriptions(["en":"Unique identifier for address 2."]),
+        "address2AddressId": UUIDAttributeClass, // address").descriptions(["en":"Unique identifier for address 2."]),
         "address2AddressTypeCode": StringAttributeClass, // Select the secondary address type."]),
         "address2AddressTypeCode_display": StringAttributeClass, //
         "address2City": StringAttributeClass, // Type the city for the secondary address."]),
@@ -73,9 +73,9 @@ class DCRMCompetitor : DOOPEntity {
         "keyProductCode": IntegerAttributeClass, //Type the competitor's primary product, service, or specialty."]),
         "opportunities": StringAttributeClass, // Type notes or other information about the competitive opportunities or selling points you can make."]),
         "overview": StringAttributeClass, // Type notes or other information about the competitor's business, such as location, revenue, or distribution channel."]),
-        "referenceInfoUrl": OOPUrlAttribute.descriptions(["en":"Type the URL for the website used to obtain reference information about the competitor."]),
+        "referenceInfoUrl": UrlAttributeClass, // Type the URL for the website used to obtain reference information about the competitor."]),
         "reportedRevenue": StringAttributeClass, // Type the amount of revenue reported in the competitor's annual report or other source."]),
-        "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Choose the local currency for the record to make sure budgets are reported in the correct currency."]),
+        "transactionCurrencyId": CurrencyIdAttributeClass, // Choose the local currency for the record to make sure budgets are reported in the correct currency."]),
         "exchangeRate": StringAttributeClass, // Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency."]),
         "reportedRevenueBase": StringAttributeClass, // Value of the Reported Revenue in base currency."]),
         "reportingQuarter": StringAttributeClass, // Type the quarter number during which the competitor's reported revenue was recorded or announced for use in reporting and analysis."]),
@@ -85,8 +85,8 @@ class DCRMCompetitor : DOOPEntity {
         "threats": StringAttributeClass, // Type notes or other information about the competitor's threats to your organization when you sell to the same prospect or customer."]),
         "tickerSymbol": StringAttributeClass, // Type the stock exchange symbol for the competitor to track financial performance of the company. You can click the code entered in this field to access the latest trading information from MSN Money."]),
         "weaknesses": StringAttributeClass, // Type notes or other information about the competitor's weaknesses or areas in which your organization outperforms the competitor."]),
-        "webSiteUrl": OOPUrlAttribute.descriptions(["en":"Type the website URL for the competitor."]), 
-        "winPercentage": OOPPercentageAttribute.descriptions(["en":"Type the percentage of your organization's lost opportunities that are won by the competitor to identify your strongest competitors."]),
+        "webSiteUrl": UrlAttributeClass, // Type the website URL for the competitor."]), 
+        "winPercentage": PercentageAttributeClass, // Type the percentage of your organization's lost opportunities that are won by the competitor to identify your strongest competitors."]),
         "entityImageId": UUIDAttributeClass, //
         "yomiName": StringAttributeClass, // Type the phonetic spelling of the competitor's name, if specified in Japanese, to make sure the name is pronounced correctly in phone calls and other communications."]),
       ])

@@ -31,7 +31,7 @@ class DCRMInvoiceLineTransactionEntity : DOOPEntity {
         "accountingDate": DateAttributeClass, // 
         "accountVendor": StringAttributeClass, //
         "amount": StringAttributeClass, // Enter the amount on the transaction."]),
-        "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Shows the currency associated with the entity."]),
+        "transactionCurrencyId": CurrencyIdAttributeClass, // Shows the currency associated with the entity."]),
         "exchangeRate": StringAttributeClass, // Exchange rate for the currency associated with the entity with respect to the base currency."]),
         "amountBase": StringAttributeClass, // Value of the Amount in base currency."]),
         "amountMethod": StringAttributeClass, // Select the name of the amount calculation method."]),

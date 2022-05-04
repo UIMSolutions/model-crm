@@ -33,7 +33,7 @@ class DCRMExpense : DOOPEntity {
         "stageId": UUIDAttributeClass, // Contains the id of the stage where the entity is located."]),
         "traversedPath": StringAttributeClass, // A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur."]),
         "amount": StringAttributeClass, // Enter the total amount for expense."]),
-        "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Shows the currency associated with the entity."]),
+        "transactionCurrencyId": CurrencyIdAttributeClass, // Shows the currency associated with the entity."]),
         "exchangeRate": StringAttributeClass, // Exchange rate for the currency associated with the entity with respect to the base currency."]),
         "amountBase": StringAttributeClass, // Value of the Amount in base currency."]),
         "bookableResource": StringAttributeClass, // Shows the bookable resource.."]),

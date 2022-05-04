@@ -25,7 +25,7 @@ class DCRMTransactionCategoryPriceLevelEntity : DOOPEntity {
       "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
       "percent": StringAttributeClass, // Enter the mark up on cost when creating billable transactions from cost transactions. This field is relevant only when the price calculation is 'Markup over cost.'"]),
       "price": StringAttributeClass, // Enter the price of the transaction category."]),
-      "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Shows the currency associated with the entity."]),
+      "transactionCurrencyId": CurrencyIdAttributeClass, // Shows the currency associated with the entity."]),
       "exchangeRate": StringAttributeClass, // Exchange rate for the currency associated with the entity with respect to the base currency."]),
       "priceBase": StringAttributeClass, // Value of the Price in base currency."]),
       "priceCalculation": StringAttributeClass, // Select the method used to determine the sales or bill rate of expenses in this category. Valid values are Price per unit, At cost or Markup over cost."]),

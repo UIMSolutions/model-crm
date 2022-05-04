@@ -28,7 +28,7 @@ class DCRMDiscount : DOOPEntity {
         "isAmountType": BooleanAttributeClass, // pecifies whether the discount is specified as a monetary amount or a percentage."]),
         "lowQuantity": StringAttributeClass, // ower boundary for the quantity range to which a particular discount is applied."]),
         "organizationId": StringAttributeClass, // nique identifier of the organization associated with the discount."]),
-        "percentage": OOPPercentageAttribute.descriptions(["en":"ercentage discount value."]),
+        "percentage": PercentageAttributeClass, // ercentage discount value."]),
         "statusCode": StringAttributeClass, // elect the discount's status."]),
         "statusCode_display": StringAttributeClass, //
       ])

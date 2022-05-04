@@ -36,7 +36,7 @@ class DCRMCustomerActivity : DOOPEntity {
         "numberOfResponses": StringAttributeClass, // Number of responses for/on an activity, like, number of emails on a thread, number of likes on a LinkedIn, Facebook post etc."]),
         "sentiment": StringAttributeClass, // Activity sentiment."]),
         "subject": StringAttributeClass, // Activity subject."]),
-        "Url": OOPUrlAttribute.descriptions(["en":""]),
+        "Url": UrlAttributeClass, // "]),
         "version": StringAttributeClass, // Denotes latest version of an activity for manual tracking."]),
         "viralityScore": StringAttributeClass, // Virality score for an activity."]),
         "stateCode": StringAttributeClass, // Status of the CustomerActivity"]),

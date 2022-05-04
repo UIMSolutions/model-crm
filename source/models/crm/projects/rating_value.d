@@ -31,7 +31,7 @@ class DCRMRatingValue : DOOPEntity {
         "statusCode_display": StringAttributeClass, //
         "value": StringAttributeClass, // Type a rating value which is unique to the rating model it is associated with and lies within the range specified on the model."]),
         "exchangeRate": StringAttributeClass, // Exchange rate for the currency associated with the ratingvalue with respect to the base currency."]),
-        "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Exchange rate for the currency associated with the RatingValue with respect to the base currency."]),
+        "transactionCurrencyId": CurrencyIdAttributeClass, // Exchange rate for the currency associated with the RatingValue with respect to the base currency."]),
         "isDefault": BooleanAttributeClass, //
       ])
       .registerPath("crm_ratingvalues");

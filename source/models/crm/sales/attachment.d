@@ -21,7 +21,7 @@ class DCRMSalesAttachment : DOOPEntity {
         "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
         "title": StringAttributeClass, // Type the title or name that describes the document."]),
         "abstract": StringAttributeClass, // Abstract of the document."]),
-        "attachedDocumentUrl": OOPUrlAttribute.descriptions(["en":"URL of the Website on which the document is located."]),
+        "attachedDocumentUrl": UrlAttributeClass, // URL of the Website on which the document is located."]),
         "authorName": StringAttributeClass, // Author name for the document."]),
         "documentBody": StringAttributeClass, // Shows the encoded contents of the sales literature document attachment."]),
         "fileName": StringAttributeClass, // File name of the document."]),

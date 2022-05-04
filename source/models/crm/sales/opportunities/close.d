@@ -23,7 +23,7 @@ class DCRMOpportunityClose : DOOPEntity {
         "owningTeamId": UUIDAttributeClass, //Unique identifier for the team that owns the record."]),
         "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
         "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "activityId": OOPLinkAttribute("aplActivity").descriptions(["en":"Unique identifier of the activity."]),
+        "activityId": UUIDAttributeClass, // aplActivity").descriptions(["en":"Unique identifier of the activity."]),
         "activityTypeCode": StringAttributeClass, // Type of activity."]),
         "isBilled": BooleanAttributeClass, // Information regarding whether the fax activity was billed as part of resolving a case."]),
         "isRegularActivity": BooleanAttributeClass, // Information regarding whether the activity is a regular activity type or event type."]),
@@ -72,12 +72,12 @@ class DCRMOpportunityClose : DOOPEntity {
         "stateCode_display": StringAttributeClass, //
         "statusCode": StringAttributeClass, // Reason for the status of the opportunity close activity."]),
         "statusCode_display": StringAttributeClass, //
-        "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Choose the local currency for the record to make sure budgets are reported in the correct currency."]),
+        "transactionCurrencyId": CurrencyIdAttributeClass, // Choose the local currency for the record to make sure budgets are reported in the correct currency."]),
         "exchangeRate": StringAttributeClass, // Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency."]),
         "traversedPath": StringAttributeClass, // For internal use only."]),
         "processId": UUIDAttributeClass, // Unique identifier of the Process."]),
         "stageId": UUIDAttributeClass, // Unique identifier of the Stage."]),
-        "SLAId": OOPLinkAttribute("aplSLA").descriptions(["en":"Choose the service level agreement (SLA) that you want to apply to the case record."]),
+        "SLAId": UUIDAttributeClass, // aplSLA").descriptions(["en":"Choose the service level agreement (SLA) that you want to apply to the case record."]),
         "SLAInvokedId": UUIDAttributeClass, // Last SLA that was applied to this case. This field is for internal use only."]),
         "onHoldTime": TimeAttributeClass, // Shows how long, in minutes, that the record was on hold."]),
         "lastOnHoldTime": TimeAttributeClass, // Contains the date and time stamp of the last on hold time."]),

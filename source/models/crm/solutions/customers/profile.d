@@ -62,7 +62,7 @@ class DCRMCustomerProfile : DOOPEntity {
         "firstName": StringAttributeClass, // The customer's first name to make sure the customer is addressed correctly in sales calls, email, and marketing campaigns."]),
         "firstNamePronunciation": StringAttributeClass, // The customer's first name pronunciation to make sure the customer is pronounced correctly in sales calls, email, and marketing campaigns."]),
         "fraudScore": StringAttributeClass, // Calculated fraud score of the customer."]),
-        "FTPSiteUrl": OOPUrlAttribute.descriptions(["en":"The URL for the contact's FTP site to enable users to access data and share documents."]),
+        "FTPSiteUrl": UrlAttributeClass, // The URL for the contact's FTP site to enable users to access data and share documents."]),
         "gamerTag": StringAttributeClass, // The gamertag from the Xbox world of the customer."]),
         "gender": StringAttributeClass, // The customer's gender to make sure the contact is addressed correctly in sales calls, email, and marketing campaigns."]),
         "gender_display": StringAttributeClass, //
@@ -124,14 +124,14 @@ class DCRMCustomerProfile : DOOPEntity {
         "totalTransactionCount": StringAttributeClass, // Value of the total number of transactions performed by the customer."]),
         "twitterHandle": StringAttributeClass, // Twitter account name / handle of the customer."]),
         "version": StringAttributeClass, // Denotes latest version of the customer profile for manual tracking."]),
-        "websiteUrl": OOPUrlAttribute.descriptions(["en":"Website url to identify the customer."]),
+        "websiteUrl": UrlAttributeClass, // Website url to identify the customer."]),
         "workAddress": StringAttributeClass, // Work address of the customer."]),
         "workPhone": StringAttributeClass, // Work phone number of the customer."]),
         "stateCode": StringAttributeClass, // Status of the CustomerProfile"]),
         "stateCode_display": StringAttributeClass, //
         "statusCode": StringAttributeClass, // Reason for the status of the CustomerProfile"]),
         "statusCode_display": StringAttributeClass, //
-        "transactionCurrencyId": OOPLinkAttribute("aplCurrency").descriptions(["en":"Unique identifier of the currency associated with the entity."]),
+        "transactionCurrencyId": CurrencyIdAttributeClass, // Unique identifier of the currency associated with the entity."]),
       ])
       .registerPath("crm_customerprofiles");
   }
