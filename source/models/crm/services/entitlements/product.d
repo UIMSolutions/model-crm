@@ -13,13 +13,13 @@ class DCRMEntitlementProduct : DOOPEntity {
 
     this
       .addValues([
-        "entitlementProductId": UUIDAttributeClass, // Unique identifier of the contacts for the entitlements."]),
-        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": StringAttributeClass, // Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "productId": UUIDAttributeClass, //
-        "entitlementId": UUIDAttributeClass, //
+        "entitlementProductId": UUIDAttribute, // Unique identifier of the contacts for the entitlements."]),
+        "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "productId": UUIDAttribute, //
+        "entitlementId": UUIDAttribute, //
       ])
       .registerPath("crm_entitlementproducts");
   }

@@ -12,27 +12,27 @@ class DCRMJournalEntity : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": UUIDAttributeClass, //Shows who created the record on behalf of another user."]),
-        "modifiedOnBehalfBy": UUIDAttributeClass, //Shows who last updated the record on behalf of another user."]),
-        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
-        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
-        "ownerId": UUIDAttributeClass, // Owner Id"]),
-        "ownerIdType": StringAttributeClass, // The type of owner, either User or Team."]),
-        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record"]),
-        "owningUserId": UUIDAttributeClass, //Unique identifier for the user that owns the record."]),
-        "owningTeamId": UUIDAttributeClass, //Unique identifier for the team that owns the record."]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "journalId": UUIDAttributeClass, // Unique identifier for entity instances"]),
-        "stateCode": StringAttributeClass, // Status of the Journal"]),
-        "stateCode_display": StringAttributeClass, //
-        "statusCode": StringAttributeClass, // Reason for the status of the Journal"]),
-        "statusCode_display": StringAttributeClass, //
-        "processId": UUIDAttributeClass, // Contains the id of the process associated with the entity."]),
-        "stageId": UUIDAttributeClass, // Contains the id of the stage where the entity is located."]),
-        "traversedPath": StringAttributeClass, // A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur."]),
-        "defaultProject": StringAttributeClass, //
-        "isPosted": BooleanAttributeClass, // Shows if the journal has been submitted."]),
+        "createdOnBehalfBy": UUIDAttribute, //Shows who created the record on behalf of another user."]),
+        "modifiedOnBehalfBy": UUIDAttribute, //Shows who last updated the record on behalf of another user."]),
+        "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated."]),
+        "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
+        "ownerId": UUIDAttribute, // Owner Id"]),
+        "ownerIdType": StringAttribute, // The type of owner, either User or Team."]),
+        "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record"]),
+        "owningUserId": UUIDAttribute, //Unique identifier for the user that owns the record."]),
+        "owningTeamId": UUIDAttribute, //Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "journalId": UUIDAttribute, // Unique identifier for entity instances"]),
+        "stateCode": StringAttribute, // Status of the Journal"]),
+        "stateCode_display": StringAttribute, //
+        "statusCode": StringAttribute, // Reason for the status of the Journal"]),
+        "statusCode_display": StringAttribute, //
+        "processId": UUIDAttribute, // Contains the id of the process associated with the entity."]),
+        "stageId": UUIDAttribute, // Contains the id of the stage where the entity is located."]),
+        "traversedPath": StringAttribute, // A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur."]),
+        "defaultProject": StringAttribute, //
+        "isPosted": BooleanAttribute, // Shows if the journal has been submitted."]),
       ])
       .registerPath("crm_journals");
   }

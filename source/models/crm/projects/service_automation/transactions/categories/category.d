@@ -12,21 +12,21 @@ class DCRMTransactionCategoryEntity : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the record."]),
-        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who modified the record."]),
-        "organizationId": UUIDAttributeClass, // Unique identifier for the organization"]),
-        "stateCode": StringAttributeClass, // Status of the Transaction Category"]),
-        "stateCode_display": StringAttributeClass, //
-        "statusCode": StringAttributeClass, // Reason for the status of the Transaction Category"]),
-        "statusCode_display": StringAttributeClass, //
-        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "billingType": StringAttributeClass, // Select the default billing type of project transactions in this category. Valid values are Chargeable, Non chargeable or Complimentary. Only chargeable transactions will add to an invoice total"]),
-        "billingType_display": StringAttributeClass, //
-        "defaultUnit": StringAttributeClass, //
-        "unitGroup": StringAttributeClass, // Select the unit schedule that is associated with the transaction category."]),
+        "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the record."]),
+        "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who modified the record."]),
+        "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
+        "stateCode": StringAttribute, // Status of the Transaction Category"]),
+        "stateCode_display": StringAttribute, //
+        "statusCode": StringAttribute, // Reason for the status of the Transaction Category"]),
+        "statusCode_display": StringAttribute, //
+        "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "billingType": StringAttribute, // Select the default billing type of project transactions in this category. Valid values are Chargeable, Non chargeable or Complimentary. Only chargeable transactions will add to an invoice total"]),
+        "billingType_display": StringAttribute, //
+        "defaultUnit": StringAttribute, //
+        "unitGroup": StringAttribute, // Select the unit schedule that is associated with the transaction category."]),
       ])
       .registerPath("crm_transactioncategories");
   }

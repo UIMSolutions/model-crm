@@ -12,37 +12,37 @@ class DCRMCustomerActivity : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": StringAttributeClass, // Shows who created the record on behalf of another user."]),
-        "modifiedOnBehalfBy": StringAttributeClass, // Shows who last updated the record on behalf of another user."]),
-        "overriddenCreatedOn": StringAttributeClass, // Date and time that the record was migrated."]),
-        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
-        "ownerId": StringAttributeClass, // Owner Id"]),
-        "ownerIdType": StringAttributeClass, // The type of owner, either User or Team."]),
-        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record"]),
-        "owningUser": StringAttributeClass, // Unique identifier of the user that owns the activity."]),
-        "owningTeam": StringAttributeClass, // Unique identifier for the team that owns the record."]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "activityName": StringAttributeClass, // Specific fields that includes data on customer's activity."]),
-        "activityType": StringAttributeClass, //
-        "actualEndDate": DateAttributeClass, // End time of an activity."]),
-        "actualStartDate": DateAttributeClass, // Start time of an activity."]),
-        "attachmentReferences": StringAttributeClass, // References to any attachment(s) for an activity."]),
-        "community": StringAttributeClass, // Activity community."]),
-        "customerActivityId": StringAttributeClass, // Unique identifier for entity instances"]),
-        "customerProfileId": StringAttributeClass, //
-        "mentions": StringAttributeClass, // Activity mentions."]),
-        "message": StringAttributeClass, // Message."]),
-        "numberOfResponses": StringAttributeClass, // Number of responses for/on an activity, like, number of emails on a thread, number of likes on a LinkedIn, Facebook post etc."]),
-        "sentiment": StringAttributeClass, // Activity sentiment."]),
-        "subject": StringAttributeClass, // Activity subject."]),
-        "Url": UrlAttributeClass, // "]),
-        "version": StringAttributeClass, // Denotes latest version of an activity for manual tracking."]),
-        "viralityScore": StringAttributeClass, // Virality score for an activity."]),
-        "stateCode": StringAttributeClass, // Status of the CustomerActivity"]),
-        "stateCode_display": StringAttributeClass, //
-        "statusCode": StringAttributeClass, // Reason for the status of the CustomerActivity"]),
-        "statusCode_display": StringAttributeClass, //
+        "createdOnBehalfBy": StringAttribute, // Shows who created the record on behalf of another user."]),
+        "modifiedOnBehalfBy": StringAttribute, // Shows who last updated the record on behalf of another user."]),
+        "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
+        "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
+        "ownerId": StringAttribute, // Owner Id"]),
+        "ownerIdType": StringAttribute, // The type of owner, either User or Team."]),
+        "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record"]),
+        "owningUser": StringAttribute, // Unique identifier of the user that owns the activity."]),
+        "owningTeam": StringAttribute, // Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "activityName": StringAttribute, // Specific fields that includes data on customer's activity."]),
+        "activityType": StringAttribute, //
+        "actualEndDate": DateAttribute, // End time of an activity."]),
+        "actualStartDate": DateAttribute, // Start time of an activity."]),
+        "attachmentReferences": StringAttribute, // References to any attachment(s) for an activity."]),
+        "community": StringAttribute, // Activity community."]),
+        "customerActivityId": StringAttribute, // Unique identifier for entity instances"]),
+        "customerProfileId": StringAttribute, //
+        "mentions": StringAttribute, // Activity mentions."]),
+        "message": StringAttribute, // Message."]),
+        "numberOfResponses": StringAttribute, // Number of responses for/on an activity, like, number of emails on a thread, number of likes on a LinkedIn, Facebook post etc."]),
+        "sentiment": StringAttribute, // Activity sentiment."]),
+        "subject": StringAttribute, // Activity subject."]),
+        "Url": UrlAttribute, // "]),
+        "version": StringAttribute, // Denotes latest version of an activity for manual tracking."]),
+        "viralityScore": StringAttribute, // Virality score for an activity."]),
+        "stateCode": StringAttribute, // Status of the CustomerActivity"]),
+        "stateCode_display": StringAttribute, //
+        "statusCode": StringAttribute, // Reason for the status of the CustomerActivity"]),
+        "statusCode_display": StringAttribute, //
       ])
       .registerPath("crm_customeractivities");
   }

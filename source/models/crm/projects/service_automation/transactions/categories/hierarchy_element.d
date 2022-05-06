@@ -11,19 +11,19 @@ class DCRMTransactionCategoryHierarchyElementEntity : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the record."]),
-        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who modified the record."]),
-        "organizationId": UUIDAttributeClass, // Unique identifier for the organization"]),
-        "stateCode": StringAttributeClass, // Status of the Transaction Category Hierarchy Element"]),
-        "stateCode_display": StringAttributeClass, //
-        "statusCode": StringAttributeClass, // Reason for the status of the Transaction Category Hierarchy Element"]),
-        "statusCode_display": StringAttributeClass, //
-        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "childCategory": StringAttributeClass, //
-        "parentCategory": StringAttributeClass, //
+        "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the record."]),
+        "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who modified the record."]),
+        "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
+        "stateCode": StringAttribute, // Status of the Transaction Category Hierarchy Element"]),
+        "stateCode_display": StringAttribute, //
+        "statusCode": StringAttribute, // Reason for the status of the Transaction Category Hierarchy Element"]),
+        "statusCode_display": StringAttribute, //
+        "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "childCategory": StringAttribute, //
+        "parentCategory": StringAttribute, //
       ])
       .registerPath("crm_transactioncategoryhierarchyelements");
   }

@@ -12,16 +12,16 @@ class DCRMResourceExpansion : DOOPEntity {
 
     this
       .addValues([
-        "resourceGroupExpansionId": UUIDAttributeClass, // Unique identifier of the resource expansion record."]),
-        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": StringAttributeClass, // Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "itemId": UUIDAttributeClass, // Item that is part of expansion of resource identified by object ID. One object ID can have many item IDs."]),
-        "methodCode": StringAttributeClass, // Code for retrieval method."]),
-        "methodCode_display": StringAttributeClass, //
-        "modifiedOn": StringAttributeClass, // Date and time when the record was last modified."]),
-        "objectId": UUIDAttributeClass, // Object being expanded."]),
+        "resourceGroupExpansionId": UUIDAttribute, // Unique identifier of the resource expansion record."]),
+        "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "itemId": UUIDAttribute, // Item that is part of expansion of resource identified by object ID. One object ID can have many item IDs."]),
+        "methodCode": StringAttribute, // Code for retrieval method."]),
+        "methodCode_display": StringAttribute, //
+        "modifiedOn": StringAttribute, // Date and time when the record was last modified."]),
+        "objectId": UUIDAttribute, // Object being expanded."]),
       ])
       .registerPath("crm_resourceexpansions");
   }

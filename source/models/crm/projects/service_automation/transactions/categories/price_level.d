@@ -12,28 +12,28 @@ class DCRMTransactionCategoryPriceLevelEntity : DOOPEntity {
 
     this
       .addValues([
-      "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the record."]),
-      "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who modified the record."]),
-      "organizationId": UUIDAttributeClass, // Unique identifier for the organization"]),
-      "stateCode": StringAttributeClass, // Status of the Transaction Category Price"]),
-      "stateCode_display": StringAttributeClass, //
-      "statusCode": StringAttributeClass, // Reason for the status of the Transaction Category Price"]),
-      "statusCode_display": StringAttributeClass, //
-      "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
-      "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
-      "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
-      "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-      "percent": StringAttributeClass, // Enter the mark up on cost when creating billable transactions from cost transactions. This field is relevant only when the price calculation is 'Markup over cost.'"]),
-      "price": StringAttributeClass, // Enter the price of the transaction category."]),
-      "transactionCurrencyId": CurrencyIdAttributeClass, // Shows the currency associated with the entity."]),
-      "exchangeRate": StringAttributeClass, // Exchange rate for the currency associated with the entity with respect to the base currency."]),
-      "priceBase": StringAttributeClass, // Value of the Price in base currency."]),
-      "priceCalculation": StringAttributeClass, // Select the method used to determine the sales or bill rate of expenses in this category. Valid values are Price per unit, At cost or Markup over cost."]),
-      "priceCalculation_display": StringAttributeClass, //
-      "priceList": StringAttributeClass, // Select the price list that this price list line belongs to."]),
-      "transactionCategory": StringAttributeClass, // Select the transaction category whose price is being setup"]),
-      "unit": StringAttributeClass, // Select the units that transactions of this category can be expressed in."]),
-      "unitSchedule": StringAttributeClass, // Select the unit schedule that determines in which units the category can be priced."]),
+      "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the record."]),
+      "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who modified the record."]),
+      "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
+      "stateCode": StringAttribute, // Status of the Transaction Category Price"]),
+      "stateCode_display": StringAttribute, //
+      "statusCode": StringAttribute, // Reason for the status of the Transaction Category Price"]),
+      "statusCode_display": StringAttribute, //
+      "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
+      "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated."]),
+      "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
+      "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+      "percent": StringAttribute, // Enter the mark up on cost when creating billable transactions from cost transactions. This field is relevant only when the price calculation is 'Markup over cost.'"]),
+      "price": StringAttribute, // Enter the price of the transaction category."]),
+      "transactionCurrencyId": CurrencyIdAttribute, // Shows the currency associated with the entity."]),
+      "exchangeRate": StringAttribute, // Exchange rate for the currency associated with the entity with respect to the base currency."]),
+      "priceBase": StringAttribute, // Value of the Price in base currency."]),
+      "priceCalculation": StringAttribute, // Select the method used to determine the sales or bill rate of expenses in this category. Valid values are Price per unit, At cost or Markup over cost."]),
+      "priceCalculation_display": StringAttribute, //
+      "priceList": StringAttribute, // Select the price list that this price list line belongs to."]),
+      "transactionCategory": StringAttribute, // Select the transaction category whose price is being setup"]),
+      "unit": StringAttribute, // Select the units that transactions of this category can be expressed in."]),
+      "unitSchedule": StringAttribute, // Select the unit schedule that determines in which units the category can be priced."]),
       ])
       .registerPath("crm_transactioncategorypricelevels");
   }

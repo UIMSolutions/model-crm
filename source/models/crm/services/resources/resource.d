@@ -12,19 +12,19 @@ class DCRMResource : DOOPEntity {
 
     this
       .addValues([
-        "resourceId": UserIdAttributeClass, // Unique identifier of the resource."]),
-        "businessUnitId": UserIdAttributeClass, // Business Unit Id"]),
-        "importSequenceNumber": UserIdAttributeClass, // Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": UserIdAttributeClass, // Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": UserIdAttributeClass, // For internal use only."]),
-        "utcConversionTimeZoneCode": UserIdAttributeClass, // Time zone code that was in use when the record was created."]),
-        "calendarId": UUIDAttributeClass, // Unique identifier of the calendar for the resource."]),
-        "displayInServiceViews": UserIdAttributeClass, // For internal use only."]),
-        "isDisabled": BooleanAttributeClass, // Information about whether the resource is enabled."]),
-        "objectTypeCode": UserIdAttributeClass, // Type of entity with which the resource is associated."]),
-        "organizationId": UserIdAttributeClass, // Unique identifier of the organization with which the resource is associated."]),
-        "siteId": UserIdAttributeClass, // Unique identifier of the site at which the resource is located."]),
-        "entityImageId": UserIdAttributeClass, // "])
+        "resourceId": UserIdAttribute, // Unique identifier of the resource."]),
+        "businessUnitId": UserIdAttribute, // Business Unit Id"]),
+        "importSequenceNumber": UserIdAttribute, // Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": UserIdAttribute, // Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": UserIdAttribute, // For internal use only."]),
+        "utcConversionTimeZoneCode": UserIdAttribute, // Time zone code that was in use when the record was created."]),
+        "calendarId": UUIDAttribute, // Unique identifier of the calendar for the resource."]),
+        "displayInServiceViews": UserIdAttribute, // For internal use only."]),
+        "isDisabled": BooleanAttribute, // Information about whether the resource is enabled."]),
+        "objectTypeCode": UserIdAttribute, // Type of entity with which the resource is associated."]),
+        "organizationId": UserIdAttribute, // Unique identifier of the organization with which the resource is associated."]),
+        "siteId": UserIdAttribute, // Unique identifier of the site at which the resource is located."]),
+        "entityImageId": UserIdAttribute, // "])
       ])
       .registerPath("crm_resources");
   }

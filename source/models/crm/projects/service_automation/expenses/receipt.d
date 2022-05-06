@@ -12,23 +12,23 @@ class DCRMExpenseReceipt : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": UUIDAttributeClass, //Shows who created the record on behalf of another user."]),
-        "modifiedOnBehalfBy": UUIDAttributeClass, //Shows who last updated the record on behalf of another user."]),
-        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
-        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
-        "ownerId": UUIDAttributeClass, // Owner Id"]),
-        "ownerIdType": StringAttributeClass, // The type of owner, either User or Team."]),
-        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record"]),
-        "owningUserId": UUIDAttributeClass, //Unique identifier for the user that owns the record."]),
-        "owningTeamId": UUIDAttributeClass, //Unique identifier for the team that owns the record."]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "expenseReceiptId": UUIDAttributeClass, // Unique identifier for entity instances"]),
-        "stateCode": StringAttributeClass, // Status of the Expense Receipt"]),
-        "stateCode_display": StringAttributeClass, //
-        "statusCode": StringAttributeClass, // Reason for the status of the Expense Receipt"]),
-        "statusCode_display": StringAttributeClass, //
-        "expenseId": UUIDAttributeClass, // Shows the ID of the expense entry."]),
+        "createdOnBehalfBy": UUIDAttribute, //Shows who created the record on behalf of another user."]),
+        "modifiedOnBehalfBy": UUIDAttribute, //Shows who last updated the record on behalf of another user."]),
+        "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated."]),
+        "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
+        "ownerId": UUIDAttribute, // Owner Id"]),
+        "ownerIdType": StringAttribute, // The type of owner, either User or Team."]),
+        "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record"]),
+        "owningUserId": UUIDAttribute, //Unique identifier for the user that owns the record."]),
+        "owningTeamId": UUIDAttribute, //Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "expenseReceiptId": UUIDAttribute, // Unique identifier for entity instances"]),
+        "stateCode": StringAttribute, // Status of the Expense Receipt"]),
+        "stateCode_display": StringAttribute, //
+        "statusCode": StringAttribute, // Reason for the status of the Expense Receipt"]),
+        "statusCode_display": StringAttribute, //
+        "expenseId": UUIDAttribute, // Shows the ID of the expense entry."]),
       ])
       .registerPath("crm_expensereceipts");
   }

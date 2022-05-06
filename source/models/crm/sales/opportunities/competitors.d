@@ -12,13 +12,13 @@ class DCRMOpportunityCompetitors : DOOPEntity {
 
     this
       .addValues([
-        "opportunityCompetitorId": UUIDAttributeClass, // Unique identifier of the opportunity competitor."]),
-        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "competitorId": UUIDAttributeClass, //
-        "opportunityId": UUIDAttributeClass, //
+        "opportunityCompetitorId": UUIDAttribute, // Unique identifier of the opportunity competitor."]),
+        "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "competitorId": UUIDAttribute, //
+        "opportunityId": UUIDAttribute, //
       ])
       .registerPath("crm_opportunitycompetitors");
   }

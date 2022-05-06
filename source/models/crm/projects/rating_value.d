@@ -12,27 +12,27 @@ class DCRMRatingValue : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the record."]),
-        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who modified the record."]),
-        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
-        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
-        "ownerId": UUIDAttributeClass, // Owner Id"]),
-        "ownerIdType": StringAttributeClass, // The type of owner, either User or Team."]),
-        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record"]),
-        "owningUserId": UUIDAttributeClass, //Unique identifier of the user that owns the activity."]),
-        "owningTeamId": UUIDAttributeClass, //Unique identifier for the team that owns the record."]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "ratingValueId": UUIDAttributeClass, // Unique identifier of the rating value."]),
-        "ratingModel": StringAttributeClass, // Select the model that this rating value is associated with."]),
-        "stateCode": StringAttributeClass, // Status of the Rating Value"]),
-        "stateCode_display": StringAttributeClass, //
-        "statusCode": StringAttributeClass, // Reason for the status of the Rating Value"]),
-        "statusCode_display": StringAttributeClass, //
-        "value": StringAttributeClass, // Type a rating value which is unique to the rating model it is associated with and lies within the range specified on the model."]),
-        "exchangeRate": StringAttributeClass, // Exchange rate for the currency associated with the ratingvalue with respect to the base currency."]),
-        "transactionCurrencyId": CurrencyIdAttributeClass, // Exchange rate for the currency associated with the RatingValue with respect to the base currency."]),
-        "isDefault": BooleanAttributeClass, //
+        "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the record."]),
+        "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who modified the record."]),
+        "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated."]),
+        "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
+        "ownerId": UUIDAttribute, // Owner Id"]),
+        "ownerIdType": StringAttribute, // The type of owner, either User or Team."]),
+        "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record"]),
+        "owningUserId": UUIDAttribute, //Unique identifier of the user that owns the activity."]),
+        "owningTeamId": UUIDAttribute, //Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "ratingValueId": UUIDAttribute, // Unique identifier of the rating value."]),
+        "ratingModel": StringAttribute, // Select the model that this rating value is associated with."]),
+        "stateCode": StringAttribute, // Status of the Rating Value"]),
+        "stateCode_display": StringAttribute, //
+        "statusCode": StringAttribute, // Reason for the status of the Rating Value"]),
+        "statusCode_display": StringAttribute, //
+        "value": StringAttribute, // Type a rating value which is unique to the rating model it is associated with and lies within the range specified on the model."]),
+        "exchangeRate": StringAttribute, // Exchange rate for the currency associated with the ratingvalue with respect to the base currency."]),
+        "transactionCurrencyId": CurrencyIdAttribute, // Exchange rate for the currency associated with the RatingValue with respect to the base currency."]),
+        "isDefault": BooleanAttribute, //
       ])
       .registerPath("crm_ratingvalues");
   }

@@ -12,22 +12,22 @@ class DCRMExpenseCategory : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the record."]),
-        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who modified the record."]),
-        "organizationId": UUIDAttributeClass, // Unique identifier for the organization"]),
-        "stateCode": StringAttributeClass, // Status of the Expense Category"]),
-        "stateCode_display": StringAttributeClass, //
-        "statusCode": StringAttributeClass, // Reason for the status of the Expense Category"]),
-        "statusCode_display": StringAttributeClass, //
-        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "expenseCategoryuId": UUIDAttributeClass, // Select the Transaction Category associated with Expense Category."]),
-        "expenseType": StringAttributeClass, // Enter the type of expense"]),
-        "expenseType_display": StringAttributeClass, //
-        "receiptRequired": StringAttributeClass, // Shows whether the expense entry requires a receipt."]),
-        "receiptRequired_display": StringAttributeClass, // projectServiceAutomation"]),
+        "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the record."]),
+        "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who modified the record."]),
+        "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
+        "stateCode": StringAttribute, // Status of the Expense Category"]),
+        "stateCode_display": StringAttribute, //
+        "statusCode": StringAttribute, // Reason for the status of the Expense Category"]),
+        "statusCode_display": StringAttribute, //
+        "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "expenseCategoryuId": UUIDAttribute, // Select the Transaction Category associated with Expense Category."]),
+        "expenseType": StringAttribute, // Enter the type of expense"]),
+        "expenseType_display": StringAttribute, //
+        "receiptRequired": StringAttribute, // Shows whether the expense entry requires a receipt."]),
+        "receiptRequired_display": StringAttribute, // projectServiceAutomation"]),
       ])
       .registerPath("crm_expensecategories");
   }

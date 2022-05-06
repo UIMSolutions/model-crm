@@ -12,26 +12,26 @@ class DCRMSegmentMembership : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": StringAttributeClass, // Shows who created the record on behalf of another user."]),
-        "modifiedOnBehalfBy": StringAttributeClass, // Shows who last updated the record on behalf of another user."]),
-        "overriddenCreatedOn": StringAttributeClass, // Date and time that the record was migrated."]),
-        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
-        "ownerId": StringAttributeClass, // Owner Id"]),
-        "ownerIdType": StringAttributeClass, // The type of owner, either User or Team."]),
-        "owningBusinessUnitId": UUIDAttributeClass, //Unique identifier for the business unit that owns the record"]),
-        "owningUser": StringAttributeClass, // Unique identifier of the user that owns the activity."]),
-        "owningTeam": StringAttributeClass, // Unique identifier for the team that owns the record."]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "customerProfileId": StringAttributeClass, // Customer Profile Id"]),
-        "lastEvaluationDate": DateAttributeClass, // Latest date when a segment memberships is evaluated/refreshed."]),
-        "segmentId": StringAttributeClass, // Segment identifiers customers are associated with."]),
-        "segmentMembershipId": StringAttributeClass, // Unique identifier for entity instances"]),
-        "version": StringAttributeClass, // Denotes latest version of the customer segment membership for manual tracking."]),
-        "stateCode": StringAttributeClass, // Status of the Segment Membership"]),
-        "stateCode_display": StringAttributeClass, //
-        "statusCode": StringAttributeClass, // Reason for the status of the Segment Membership"]),
-        "statusCode_display": StringAttributeClass, //
+        "createdOnBehalfBy": StringAttribute, // Shows who created the record on behalf of another user."]),
+        "modifiedOnBehalfBy": StringAttribute, // Shows who last updated the record on behalf of another user."]),
+        "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
+        "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
+        "ownerId": StringAttribute, // Owner Id"]),
+        "ownerIdType": StringAttribute, // The type of owner, either User or Team."]),
+        "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record"]),
+        "owningUser": StringAttribute, // Unique identifier of the user that owns the activity."]),
+        "owningTeam": StringAttribute, // Unique identifier for the team that owns the record."]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "customerProfileId": StringAttribute, // Customer Profile Id"]),
+        "lastEvaluationDate": DateAttribute, // Latest date when a segment memberships is evaluated/refreshed."]),
+        "segmentId": StringAttribute, // Segment identifiers customers are associated with."]),
+        "segmentMembershipId": StringAttribute, // Unique identifier for entity instances"]),
+        "version": StringAttribute, // Denotes latest version of the customer segment membership for manual tracking."]),
+        "stateCode": StringAttribute, // Status of the Segment Membership"]),
+        "stateCode_display": StringAttribute, //
+        "statusCode": StringAttribute, // Reason for the status of the Segment Membership"]),
+        "statusCode_display": StringAttribute, //
       ])
       .registerPath("crm_segmentmemberships");
   }

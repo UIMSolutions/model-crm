@@ -12,24 +12,24 @@ class DCRMInvoiceFrequencyDetail : DOOPEntity {
 
     this
       .addValues([
-        "createdOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who created the record."]),
-        "modifiedOnBehalfBy": UUIDAttributeClass, //Unique identifier of the delegate user who modified the record."]),
-        "organizationId": UUIDAttributeClass, // Unique identifier for the organization"]),
-        "stateCode": StringAttributeClass, // Status of the Invoice Frequency Detail"]),
-        "stateCode_display": StringAttributeClass, //
-        "statusCode": StringAttributeClass, // Reason for the status of the Invoice Frequency Detail"]),
-        "statusCode_display": StringAttributeClass, //
-        "importSequenceNumber": IntegerAttributeClass, //Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": TimestampAttributeClass, //Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": IntegerAttributeClass, //For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttributeClass, // Time zone code that was in use when the record was created."]),
-        "dayOfMonth": StringAttributeClass, // Specify the day(s) of the month on which invoicing should run"]),
-        "dayOfMonth_display": StringAttributeClass, //
-        "invoiceFrequency": StringAttributeClass, // Select the invoice frequency."]),
-        "occurrenceOfWeekday": StringAttributeClass, // Specifies which occurrence of a weekday the invoicing job should run if there are multiple occurrences of a weekday in the selected period"]),
-        "occurrenceOfWeekday_display": StringAttributeClass, //
-        "weekday": StringAttributeClass, // Select the weekday of the invoicing job run."]),
-        "weekday_display": StringAttributeClass, //
+        "createdOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who created the record."]),
+        "modifiedOnBehalfBy": UUIDAttribute, //Unique identifier of the delegate user who modified the record."]),
+        "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
+        "stateCode": StringAttribute, // Status of the Invoice Frequency Detail"]),
+        "stateCode_display": StringAttribute, //
+        "statusCode": StringAttribute, // Reason for the status of the Invoice Frequency Detail"]),
+        "statusCode_display": StringAttribute, //
+        "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": TimestampAttribute, //Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "dayOfMonth": StringAttribute, // Specify the day(s) of the month on which invoicing should run"]),
+        "dayOfMonth_display": StringAttribute, //
+        "invoiceFrequency": StringAttribute, // Select the invoice frequency."]),
+        "occurrenceOfWeekday": StringAttribute, // Specifies which occurrence of a weekday the invoicing job should run if there are multiple occurrences of a weekday in the selected period"]),
+        "occurrenceOfWeekday_display": StringAttribute, //
+        "weekday": StringAttribute, // Select the weekday of the invoicing job run."]),
+        "weekday_display": StringAttribute, //
       ])
       .registerPath("crm_invoicefrequencydetails");
   }
