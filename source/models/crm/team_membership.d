@@ -12,8 +12,8 @@ import uim.entities;
 
     this
       .addValues([
-        "systemUserId":OOPUUIDAttribute"datatype":"UUID", "descriptions":{}}`,
-        "teamId":OOPUUIDAttribute"datatype":"UUID", "descriptions":{}}`,
+        "systemUserId":UUIDAttribute"datatype":"UUID", "descriptions":{}}`,
+        "teamId":UUIDAttribute"datatype":"UUID", "descriptions":{}}`,
       ])
       .registerPath("crm_campaigns");
   }
