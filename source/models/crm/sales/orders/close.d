@@ -7,7 +7,7 @@ import uim.entities;
 class DCRMOrderClose : DOOPEntity {
   mixin(EntityThis!("CRMOrderClose"));
 
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
