@@ -8,7 +8,7 @@ class DCRMJournalLineEntity : DOOPEntity {
   mixin(EntityThis!("CRMJournalLineEntity"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

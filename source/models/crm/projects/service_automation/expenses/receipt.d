@@ -8,7 +8,7 @@ class DCRMExpenseReceipt : DOOPEntity {
   mixin(EntityThis!("CRMExpenseReceipt"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

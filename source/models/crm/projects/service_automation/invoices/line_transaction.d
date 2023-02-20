@@ -7,7 +7,7 @@ class DCRMInvoiceLineTransactionEntity : DOOPEntity {
   mixin(EntityThis!("CRMInvoiceLineTransactionEntity"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

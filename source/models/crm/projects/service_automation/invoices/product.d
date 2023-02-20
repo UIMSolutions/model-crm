@@ -8,7 +8,7 @@ class DCRMInvoiceProductEntity : DOOPEntity {
   mixin(EntityThis!("CRMInvoiceProductEntity"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
