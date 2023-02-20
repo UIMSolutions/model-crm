@@ -7,7 +7,7 @@ import uim.entities;
 class DCRMEstimateEntity : DOOPEntity {
   mixin(EntityThis!("CRMEstimateEntity"));
 
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

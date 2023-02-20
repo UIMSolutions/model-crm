@@ -7,7 +7,7 @@ import uim.entities;
 class DCRMRatingValue : DOOPEntity {
   mixin(EntityThis!("CRMRatingValue"));
 
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
