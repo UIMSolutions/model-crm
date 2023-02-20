@@ -8,7 +8,7 @@ class DCRMTransactionCategoryClassificationEntity : DOOPEntity {
   mixin(EntityThis!("CRMTransactionCategoryClassificationEntity"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

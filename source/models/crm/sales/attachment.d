@@ -8,7 +8,7 @@ class DCRMSalesAttachment : DOOPEntity {
   mixin(EntityThis!("CRMSalesAttachment"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

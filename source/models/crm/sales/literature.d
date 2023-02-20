@@ -8,7 +8,7 @@ class DCRMSalesLiterature : DOOPEntity {
   mixin(EntityThis!("CRMSalesLiterature"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

@@ -9,7 +9,7 @@ class DCRMCompetitorAddress : DOOPEntity {
   mixin(EntityThis!("CRMCompetitorAddress"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

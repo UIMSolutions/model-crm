@@ -8,7 +8,7 @@ class DCRMCompetitorProduct : DOOPEntity {
   mixin(EntityThis!("CRMCompetitorProduct"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
