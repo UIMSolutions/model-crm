@@ -8,7 +8,7 @@ class DCRMRatingValue : DOOPEntity {
   mixin(EntityThis!("CRMRatingValue"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

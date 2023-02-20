@@ -8,7 +8,7 @@ class DCRMSiconfig : DOOPEntity {
   mixin(EntityThis!("CRMSiconfig"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

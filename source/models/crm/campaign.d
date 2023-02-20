@@ -8,7 +8,7 @@ class DCRMCampaign : DOOPEntity {
   mixin(EntityThis!("CRMCampaign"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

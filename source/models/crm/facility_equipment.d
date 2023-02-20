@@ -8,11 +8,11 @@ class DCRMFacilityEquipment : DOOPEntity {
   mixin(EntityThis!("CRMFacilityEquipment"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
-        "equipmentId": StringAttribute, // Unique identifier of the facility/equipment."]),
+        "equipmentId": UUIDAttribute, // Unique identifier of the facility/equipment."]),
         "createdOnBehalfBy": StringAttribute, // Unique identifier of the delegate user who created the equipment."]),
         "modifiedOnBehalfBy": StringAttribute, // Unique identifier of the delegate user who last modified the equipment."]),
         "businessUnitId": UUIDAttribute, //Business Unit Id"]),
@@ -20,16 +20,16 @@ class DCRMFacilityEquipment : DOOPEntity {
         "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
         "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
         "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
-        "calendarId": StringAttribute, // Fiscal calendar associated with the facility/equipment."]),
+        "calendarId": UUIDAttribute, // Fiscal calendar associated with the facility/equipment."]),
         "displayInServiceViews": StringAttribute, // For internal use only."]),
         "emailAddress": StringAttribute, // Email address of person to contact about the use of the facility/equipment."]),
         "isDisabled": BooleanAttribute, // Whether the facility/equipment is disabled or operational."]),
-        "organizationId": StringAttribute, // Unique identifier of the parent business unit."]),
-        "siteId": StringAttribute, // Site where the facility/equipment is located."]),
+        "organizationId": UUIDAttribute, // Unique identifier of the parent business unit."]),
+        "siteId": UUIDAttribute, // Site where the facility/equipment is located."]),
         "skills": StringAttribute, // Skills needed to operate the facility/equipment."]),
         "timeZoneCode": StringAttribute, // Local time zone where the facility/equipment is located."]),
         "exchangeRate": StringAttribute, // Exchange rate for the currency associated with the equipment with respect to the base currency."]),
-        "transactionCurrencyId": StringAttribute, // Unique identifier of the currency associated with the equipment."]),
+        "transactionCurrencyId": UUIDAttribute, // Unique identifier of the currency associated with the equipment."]),
       ])
       .registerPath("crm_facilityequipments");
   }

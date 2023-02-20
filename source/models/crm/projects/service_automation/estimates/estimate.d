@@ -8,7 +8,7 @@ class DCRMEstimateEntity : DOOPEntity {
   mixin(EntityThis!("CRMEstimateEntity"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

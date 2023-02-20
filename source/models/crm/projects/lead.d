@@ -8,7 +8,7 @@ class DCRMLeadEntity : DOOPEntity {
   mixin(EntityThis!("CRMLeadEntity"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

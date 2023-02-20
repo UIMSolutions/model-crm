@@ -8,7 +8,7 @@ import uim.entities;
   mixin(EntityThis!("CRMTeamMembership"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

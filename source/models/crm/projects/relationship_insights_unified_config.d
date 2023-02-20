@@ -8,7 +8,7 @@ class DCRMRelationshipInsightsUnifiedConfig : DOOPEntity {
   mixin(EntityThis!("CRMRelationshipInsightsUnifiedConfig"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
