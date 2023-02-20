@@ -8,7 +8,7 @@ class DCRMQuoteProduct : DOOPEntity {
   mixin(EntityThis!("CRMQuoteProduct"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

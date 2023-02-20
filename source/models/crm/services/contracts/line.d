@@ -8,7 +8,7 @@ class DCRMContractLine : DOOPEntity {
   mixin(EntityThis!("CRMContractLine"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
@@ -19,8 +19,8 @@ class DCRMContractLine : DOOPEntity {
         "ownerId": UUIDAttribute, // Owner Id"]),
         "ownerIdType": StringAttribute, // The type of owner, either User or Team."]),
         "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record"]),
-        "owningUserId": StringAttribute, // Unique identifier of the user that owns the activity."]),
-        "owningTeamId": StringAttribute, // Unique identifier for the team that owns the record."]),
+        "owningUserId": UUIDAttribute, // Unique identifier of the user that owns the activity."]),
+        "owningTeamId": UUIDAttribute, // Unique identifier for the team that owns the record."]),
         "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
         "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
         "versionNumber": IntegerAttribute, //Version Number"]),

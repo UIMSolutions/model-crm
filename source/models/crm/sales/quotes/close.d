@@ -8,7 +8,7 @@ class DCRMQuoteClose : DOOPEntity {
   mixin(EntityThis!("CRMQuoteClose"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

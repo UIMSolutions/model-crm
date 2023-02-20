@@ -9,7 +9,7 @@ class DCRMEntitlementProduct : DOOPEntity {
   mixin(EntityThis!("CRMEntitlementProduct"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

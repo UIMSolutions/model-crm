@@ -8,7 +8,7 @@ class DCRMEntitlementContact : DOOPEntity {
   mixin(EntityThis!("CRMEntitlementContact"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
