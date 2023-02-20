@@ -8,7 +8,7 @@ import uim.entities;
 class DCRMResourceSpecification : DOOPEntity {
   mixin(EntityThis!("CRMResourceSpecification"));
 
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
