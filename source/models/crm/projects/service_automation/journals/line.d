@@ -7,7 +7,7 @@ import uim.entities;
 class DCRMJournalLineEntity : DOOPEntity {
   mixin(EntityThis!("CRMJournalLineEntity"));
 
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
