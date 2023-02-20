@@ -8,11 +8,11 @@ class DCRMDiscount : DOOPEntity {
   mixin(EntityThis!("CRMDiscount"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
-        "discountId": StringAttribute, // nique identifier of the discount."]),
+        "discountId": UUIDAttribute, // nique identifier of the discount."]),
         "createdOnBehalfBy": StringAttribute, // nique identifier of the delegate user who created the discount."]),
         "modifiedOnBehalfBy": StringAttribute, // nique identifier of the delegate user who last modified the discount."]),
         "importSequenceNumber": IntegerAttribute, //equence number of the import that created this record."]),
@@ -20,14 +20,14 @@ class DCRMDiscount : DOOPEntity {
         "timeZoneRuleVersionNumber": IntegerAttribute, //or internal use only."]),
         "utcConversionTimeZoneCode": StringAttribute, // ime zone code that was in use when the record was created."]),
         "amount": StringAttribute, // mount of the discount, specified either as a percentage or as a monetary amount."]),
-        "transactionCurrencyId": StringAttribute, // hoose the local currency for the record to make sure budgets are reported in the correct currency."]),
+        "transactionCurrencyId": UUIDAttribute, // hoose the local currency for the record to make sure budgets are reported in the correct currency."]),
         "exchangeRate": StringAttribute, // hows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency."]),
         "amountBase": StringAttribute, // alue of the Amount in base currency."]),
-        "discountTypeId": StringAttribute, // nique identifier of the discount list associated with the discount."]),
+        "discountTypeId": UUIDAttribute, // nique identifier of the discount list associated with the discount."]),
         "highQuantity": StringAttribute, // pper boundary for the quantity range to which a particular discount can be applied."]),
         "isAmountType": BooleanAttribute, // pecifies whether the discount is specified as a monetary amount or a percentage."]),
         "lowQuantity": StringAttribute, // ower boundary for the quantity range to which a particular discount is applied."]),
-        "organizationId": StringAttribute, // nique identifier of the organization associated with the discount."]),
+        "organizationId": UUIDAttribute, // nique identifier of the organization associated with the discount."]),
         "percentage": PercentageAttribute, // ercentage discount value."]),
         "statusCode": StringAttribute, // elect the discount's status."]),
         "statusCode_display": StringAttribute, //

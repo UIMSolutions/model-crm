@@ -8,7 +8,7 @@ class DCRMCompetitorSalesLiterature : DOOPEntity {
   mixin(EntityThis!("CRMCompetitorSalesLiterature"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

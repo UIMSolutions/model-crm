@@ -8,7 +8,7 @@ class DCRMOrderClose : DOOPEntity {
   mixin(EntityThis!("CRMOrderClose"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

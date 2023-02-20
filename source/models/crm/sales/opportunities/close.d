@@ -8,7 +8,7 @@ class DCRMOpportunityClose : DOOPEntity {
   mixin(EntityThis!("CRMOpportunityClose"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

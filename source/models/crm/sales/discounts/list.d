@@ -8,14 +8,14 @@ class DCRMDiscountList : DOOPEntity {
   mixin(EntityThis!("CRMDiscountList"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
-        "discountTypeId": StringAttribute, // Unique identifier of the discount list."]), 
+        "discountTypeId": UUIDAttribute, // Unique identifier of the discount list."]), 
         "createdOnBehalfBy": StringAttribute, // Unique identifier of the delegate user who created the discounttype."]), 
         "modifiedOnBehalfBy": StringAttribute, // Unique identifier of the delegate user who last modified the discounttype."]), 
-        "organizationId": StringAttribute, // Unique identifier for the organization"]), 
+        "organizationId": UUIDAttribute, // Unique identifier for the organization"]), 
         "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]), 
         "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]), 
         "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]), 
@@ -25,7 +25,7 @@ class DCRMDiscountList : DOOPEntity {
         "stateCode_display": StringAttribute, // 
         "statusCode": StringAttribute, // Reason for the status of the discount list."]), 
         "statusCode_display": StringAttribute, // 
-        "transactionCurrencyId": StringAttribute, // Unique identifier of the currency associated with the discount type."]), 
+        "transactionCurrencyId": UUIDAttribute, // Unique identifier of the currency associated with the discount type."]), 
       ])
       .registerPath("crm_discountlists");
   }
