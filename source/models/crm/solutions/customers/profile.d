@@ -8,7 +8,7 @@ class DCRMCustomerProfile : DOOPEntity {
   mixin(EntityThis!("CRMCustomerProfile"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
@@ -16,7 +16,7 @@ class DCRMCustomerProfile : DOOPEntity {
         "modifiedOnBehalfBy": StringAttribute, // Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
         "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
-        "ownerId": StringAttribute, // Owner Id"]),
+        "ownerId": UUIDAttribute, // Owner Id"]),
         "ownerIdType": StringAttribute, // The type of owner, either User or Team."]),
         "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record"]),
         "owningUser": StringAttribute, // Unique identifier of the user that owns the activity."]),
@@ -39,9 +39,9 @@ class DCRMCustomerProfile : DOOPEntity {
         "countryOrRegion": StringAttribute, //
         "culture": StringAttribute, // The culture of the customer."]),
         "currencyName": StringAttribute, //
-        "customerId": StringAttribute, // The customer account or contact to provide a quick link to additional customer details, such as account information, activities, and opportunities."]),
+        "customerId": UUIDAttribute, // The customer account or contact to provide a quick link to additional customer details, such as account information, activities, and opportunities."]),
         "customerIdType": StringAttribute, // The type of customer, either Account or Contact."]),
-        "customerProfileId": StringAttribute, // Unique identifier for entity instances"]),
+        "customerProfileId": UUIDAttribute, // Unique identifier for entity instances"]),
         "department": StringAttribute, // The department or business unit where the customer works in the parent company or business."]),
         "description": StringAttribute, // Additional information to describe the customer, such as an excerpt from the company's website."]),
         "donotBulkEmail": StringAttribute, // Select whether the customer accepts bulk email sent through marketing campaigns or quick campaigns. If Do Not Allow is selected, the customer can be added to marketing lists, but will be excluded from the email."]),
@@ -97,7 +97,7 @@ class DCRMCustomerProfile : DOOPEntity {
         "nickName": StringAttribute, // Nick name of the customer."]),
         "notes": StringAttribute, // Any additional information about the customer."]),
         "numberOfChildren": StringAttribute, // The number of children the customer has for reference in follow-up phone calls and other communications."]),
-        "pinterestId": StringAttribute, // Pinterest identifier of the customer."]),
+        "pinterestId": UUIDAttribute, // Pinterest identifier of the customer."]),
         "POBoxAddress": StringAttribute, // PO Box address of the customer."]),
         "postalCode": StringAttribute, // Postal code of the customer."]),
         "preferredCallTime": TimeAttribute, // 

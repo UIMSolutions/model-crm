@@ -9,7 +9,7 @@ class DCRMResourceSpecification : DOOPEntity {
   mixin(EntityThis!("CRMResourceSpecification"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

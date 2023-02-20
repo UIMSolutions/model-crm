@@ -8,7 +8,7 @@ class DCRMCustomerActivity : DOOPEntity {
   mixin(EntityThis!("CRMCustomerActivity"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
@@ -16,7 +16,7 @@ class DCRMCustomerActivity : DOOPEntity {
         "modifiedOnBehalfBy": StringAttribute, // Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
         "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
-        "ownerId": StringAttribute, // Owner Id"]),
+        "ownerId": UUIDAttribute, // Owner Id"]),
         "ownerIdType": StringAttribute, // The type of owner, either User or Team."]),
         "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record"]),
         "owningUser": StringAttribute, // Unique identifier of the user that owns the activity."]),
@@ -29,8 +29,8 @@ class DCRMCustomerActivity : DOOPEntity {
         "actualStartDate": DateAttribute, // Start time of an activity."]),
         "attachmentReferences": StringAttribute, // References to any attachment(s) for an activity."]),
         "community": StringAttribute, // Activity community."]),
-        "customerActivityId": StringAttribute, // Unique identifier for entity instances"]),
-        "customerProfileId": StringAttribute, //
+        "customerActivityId": UUIDAttribute, // Unique identifier for entity instances"]),
+        "customerProfileId": UUIDAttribute, //
         "mentions": StringAttribute, // Activity mentions."]),
         "message": StringAttribute, // Message."]),
         "numberOfResponses": StringAttribute, // Number of responses for/on an activity, like, number of emails on a thread, number of likes on a LinkedIn, Facebook post etc."]),

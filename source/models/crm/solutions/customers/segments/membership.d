@@ -8,7 +8,7 @@ class DCRMSegmentMembership : DOOPEntity {
   mixin(EntityThis!("CRMSegmentMembership"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
@@ -16,17 +16,17 @@ class DCRMSegmentMembership : DOOPEntity {
         "modifiedOnBehalfBy": StringAttribute, // Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
         "importSequenceNumber": IntegerAttribute, //Sequence number of the import that created this record."]),
-        "ownerId": StringAttribute, // Owner Id"]),
+        "ownerId": UUIDAttribute, // Owner Id"]),
         "ownerIdType": StringAttribute, // The type of owner, either User or Team."]),
         "owningBusinessUnitId": UUIDAttribute, //Unique identifier for the business unit that owns the record"]),
         "owningUser": StringAttribute, // Unique identifier of the user that owns the activity."]),
         "owningTeam": StringAttribute, // Unique identifier for the team that owns the record."]),
         "timeZoneRuleVersionNumber": IntegerAttribute, //For internal use only."]),
         "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
-        "customerProfileId": StringAttribute, // Customer Profile Id"]),
+        "customerProfileId": UUIDAttribute, // Customer Profile Id"]),
         "lastEvaluationDate": DateAttribute, // Latest date when a segment memberships is evaluated/refreshed."]),
-        "segmentId": StringAttribute, // Segment identifiers customers are associated with."]),
-        "segmentMembershipId": StringAttribute, // Unique identifier for entity instances"]),
+        "segmentId": UUIDAttribute, // Segment identifiers customers are associated with."]),
+        "segmentMembershipId": UUIDAttribute, // Unique identifier for entity instances"]),
         "version": StringAttribute, // Denotes latest version of the customer segment membership for manual tracking."]),
         "stateCode": StringAttribute, // Status of the Segment Membership"]),
         "stateCode_display": StringAttribute, //

@@ -8,7 +8,7 @@ class DCRMResource : DOOPEntity {
   mixin(EntityThis!("CRMResource"));
 
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
