@@ -7,7 +7,7 @@ import uim.entities;
 class DCRMEntitlement : DOOPEntity {
   mixin(EntityThis!("CRMEntitlement"));
 
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

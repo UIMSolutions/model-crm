@@ -7,7 +7,7 @@ import uim.entities;
 class DCRMQuoteClose : DOOPEntity {
   mixin(EntityThis!("CRMQuoteClose"));
 
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

@@ -7,7 +7,7 @@ import uim.entities;
 class DCRMQuoteProduct : DOOPEntity {
   mixin(EntityThis!("CRMQuoteProduct"));
 
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
