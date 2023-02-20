@@ -7,7 +7,7 @@ import uim.entities;
 class DCRMTransactionCategoryPriceLevelEntity : DOOPEntity {
   mixin(EntityThis!("CRMTransactionCategoryPriceLevelEntity"));
 
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

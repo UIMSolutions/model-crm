@@ -8,7 +8,7 @@ import uim.entities;
 class DCRMCompetitorAddress : DOOPEntity {
   mixin(EntityThis!("CRMCompetitorAddress"));
 
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

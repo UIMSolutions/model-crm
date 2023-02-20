@@ -6,7 +6,7 @@ import uim.entities;
 class DCRMTransactionCategoryHierarchyElementEntity : DOOPEntity {
   mixin(EntityThis!("CRMTransactionCategoryHierarchyElementEntity"));
 
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
