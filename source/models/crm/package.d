@@ -12,6 +12,9 @@ public import uim.core;
 public import uim.oop;
 public import uim.entities;
 
+public import models.crm.attributes;
+public import models.crm.entities;
+
 public import models.crm.projects;
 public import models.crm.sales;
 public import models.crm.services;

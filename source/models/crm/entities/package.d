@@ -1,0 +1,1 @@
+module models.crm.entities;
