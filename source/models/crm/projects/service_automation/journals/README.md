@@ -1,1 +1,1 @@
-models.crm.projects.serviceautomation.journals
+# Package 📦 models.crm.projects.serviceautomation.journals
