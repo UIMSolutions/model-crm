@@ -4,7 +4,7 @@ module models.crm.projects.service_automation.expenses.receipt;
 import uim.entities;
 
 // Table that contains expense receipt information.
-class DCRMExpenseReceipt : DOOPEntity {
+class DCRMExpenseReceipt : DEntity {
   mixin(EntityThis!("CRMExpenseReceipt"));
 
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.crm.projects.service_automation.transactions.connection;
 import uim.entities;
 
 // TransactionConnection of a user in the hierarchy
-class DCRMTransactionConnectionEntity : DOOPEntity {
+class DCRMTransactionConnectionEntity : DEntity {
   mixin(EntityThis!("CRMTransactionConnectionEntity"));
 
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.crm.projects.service_automation.transactions.categories.category;
 import uim.entities;
 
 // Business transaction categories to classify costs and revenue.
-class DCRMTransactionCategoryEntity : DOOPEntity {
+class DCRMTransactionCategoryEntity : DEntity {
   mixin(EntityThis!("CRMTransactionCategoryEntity"));
 
   override void initialize(DConfigurationValue configSettings = null) {

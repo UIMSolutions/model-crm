@@ -4,7 +4,7 @@ module models.crm.projects.service_automation.journals.journal;
 import uim.entities;
 
 // Unposted business transactions, for example, time and expense.
-class DCRMJournalEntity : DOOPEntity {
+class DCRMJournalEntity : DEntity {
   mixin(EntityThis!("CRMJournalEntity"));
 
   override void initialize(DConfigurationValue configSettings = null) {

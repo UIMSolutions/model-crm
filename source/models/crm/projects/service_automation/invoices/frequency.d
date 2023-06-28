@@ -4,7 +4,7 @@ module models.crm.projects.service_automation.invoices.frequency;
 import uim.entities;
 
 // InvoiceFrequency of a user in the hierarchy
-class DCRMInvoiceFrequencyEntity : DOOPEntity {
+class DCRMInvoiceFrequencyEntity : DEntity {
   mixin(EntityThis!("CRMInvoiceFrequencyEntity"));
 
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.crm.projects.service_automation.journals.line;
 import uim.entities;
 
 // nposted business transaction line details.
-class DCRMJournalLineEntity : DOOPEntity {
+class DCRMJournalLineEntity : DEntity {
   mixin(EntityThis!("CRMJournalLineEntity"));
 
   override void initialize(DConfigurationValue configSettings = null) {

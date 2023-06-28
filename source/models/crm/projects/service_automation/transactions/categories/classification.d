@@ -4,7 +4,7 @@ module models.crm.projects.service_automation.transactions.categories.classifica
 import uim.entities;
 
 // Entity used to associate a category broadly as time, expense or material.
-class DCRMTransactionCategoryClassificationEntity : DOOPEntity {
+class DCRMTransactionCategoryClassificationEntity : DEntity {
   mixin(EntityThis!("CRMTransactionCategoryClassificationEntity"));
 
   override void initialize(DConfigurationValue configSettings = null) {

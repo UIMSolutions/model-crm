@@ -4,7 +4,7 @@ module models.crm.projects.service_automation.expenses.category;
 import uim.entities;
 
 // Main container that holds expense category information.
-class DCRMExpenseCategory : DOOPEntity {
+class DCRMExpenseCategory : DEntity {
   mixin(EntityThis!("CRMExpenseCategory"));
 
   override void initialize(DConfigurationValue configSettings = null) {

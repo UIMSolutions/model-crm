@@ -4,7 +4,7 @@ module models.crm.projects.service_automation.invoices.product;
 import uim.entities;
 
 // Line item in an invoice containing detailed billing information for a product.
-class DCRMInvoiceProductEntity : DOOPEntity {
+class DCRMInvoiceProductEntity : DEntity {
   mixin(EntityThis!("CRMInvoiceProductEntity"));
 
   override void initialize(DConfigurationValue configSettings = null) {
