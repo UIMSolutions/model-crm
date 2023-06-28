@@ -4,7 +4,7 @@ module models.crm.services.contracts.line;
 import uim.entities;
 
 // Line item in a contract that specifies the type of service a customer is entitled to.
-class DCRMContractLine : DOOPEntity {
+class DCRMContractLine : DEntity {
   mixin(EntityThis!("CRMContractLine"));
 
   override void initialize(DConfigurationValue configSettings = null) {

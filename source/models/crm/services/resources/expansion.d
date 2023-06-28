@@ -4,7 +4,7 @@ module models.crm.services.resources.expansion;
 import uim.entities;
 
 // 
-class DCRMResourceExpansion : DOOPEntity {
+class DCRMResourceExpansion : DEntity {
   mixin(EntityThis!("CRMResourceExpansion"));
 
   override void initialize(DConfigurationValue configSettings = null) {

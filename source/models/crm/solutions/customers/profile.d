@@ -4,7 +4,7 @@ module models.crm.solutions.customers.profile;
 import uim.entities;
 
 // A person or organization that either performed or has the potential to engage in a business activity.
-class DCRMCustomerProfile : DOOPEntity {
+class DCRMCustomerProfile : DEntity {
   mixin(EntityThis!("CRMCustomerProfile"));
 
   override void initialize(DConfigurationValue configSettings = null) {

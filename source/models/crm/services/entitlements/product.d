@@ -5,7 +5,7 @@ module models.crm.services.entitlements.product;
 import uim.entities;
 
 // The root entity for portal Ideas.
-class DCRMEntitlementProduct : DOOPEntity {
+class DCRMEntitlementProduct : DEntity {
   mixin(EntityThis!("CRMEntitlementProduct"));
 
   override void initialize(DConfigurationValue configSettings = null) {

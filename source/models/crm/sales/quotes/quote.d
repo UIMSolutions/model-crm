@@ -4,7 +4,7 @@ module models.crm.sales.quotes.quote;
 import uim.entities;
 
 // Formal offer for products and/or services, proposed at specific prices and related payment terms, which is sent to a prospective customer.
-class DCRMQuote : DOOPEntity {
+class DCRMQuote : DEntity {
   mixin(EntityThis!("CRMQuote"));
 
   override void initialize(DConfigurationValue configSettings = null) {

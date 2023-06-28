@@ -4,7 +4,7 @@ module models.crm.services.contracts.contract;
 import uim.entities;
 
 // Agreement to provide customer service during a specified amount of time or number of cases.
-class DCRMContract : DOOPEntity {
+class DCRMContract : DEntity {
   mixin(EntityThis!("CRMContract"));
 
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.crm.services.entitlements.entitlement;
 import uim.entities;
 
 // 
-class DCRMEntitlement : DOOPEntity {
+class DCRMEntitlement : DEntity {
   mixin(EntityThis!("CRMEntitlement"));
 
   override void initialize(DConfigurationValue configSettings = null) {

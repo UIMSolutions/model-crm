@@ -4,7 +4,7 @@ module models.crm.solutions.customers.segments.membership;
 import uim.entities;
 
 // Members participating in a given segment.
-class DCRMSegmentMembership : DOOPEntity {
+class DCRMSegmentMembership : DEntity {
   mixin(EntityThis!("CRMSegmentMembership"));
 
   override void initialize(DConfigurationValue configSettings = null) {

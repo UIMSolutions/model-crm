@@ -4,7 +4,7 @@ module models.crm.services.resources.resource;
 import uim.entities;
 
 // 
-class DCRMResource : DOOPEntity {
+class DCRMResource : DEntity {
   mixin(EntityThis!("CRMResource"));
 
   override void initialize(DConfigurationValue configSettings = null) {

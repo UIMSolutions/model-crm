@@ -4,7 +4,7 @@ module models.crm.sales.orders.close;
 import uim.entities;
 
 // Activity generated automatically when an order is closed.
-class DCRMOrderClose : DOOPEntity {
+class DCRMOrderClose : DEntity {
   mixin(EntityThis!("CRMOrderClose"));
 
   override void initialize(DConfigurationValue configSettings = null) {

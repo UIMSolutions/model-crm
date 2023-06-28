@@ -4,7 +4,7 @@ module models.crm.solutions.customers.segments.segment;
 import uim.entities;
 
 // Defines a group of members that exhibit common traits.
-class DCRMSegment : DOOPEntity {
+class DCRMSegment : DEntity {
   mixin(EntityThis!("CRMSegment"));
 
   override void initialize(DConfigurationValue configSettings = null) {

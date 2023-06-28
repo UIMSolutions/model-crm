@@ -4,7 +4,7 @@ module models.crm.sales.orders.order;
 import uim.entities;
 
 // Quote that has been accepted.
-class DCRMOrder : DOOPEntity {
+class DCRMOrder : DEntity {
   mixin(EntityThis!("CRMOrder"));
 
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.crm.solutions.customers.activity;
 import uim.entities;
 
 // An activity performed by a user that has observational value to the business.
-class DCRMCustomerActivity : DOOPEntity {
+class DCRMCustomerActivity : DEntity {
   mixin(EntityThis!("CRMCustomerActivity"));
 
   override void initialize(DConfigurationValue configSettings = null) {

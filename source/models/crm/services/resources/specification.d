@@ -5,7 +5,7 @@ module models.crm.services.resources.specification;
 import uim.entities;
 
 // Selection rule that allows the scheduling engine to select a number of resources from a pool of resources. The rules can be associated with a service.
-class DCRMResourceSpecification : DOOPEntity {
+class DCRMResourceSpecification : DEntity {
   mixin(EntityThis!("CRMResourceSpecification"));
 
   override void initialize(DConfigurationValue configSettings = null) {
