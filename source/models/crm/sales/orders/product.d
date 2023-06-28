@@ -4,7 +4,7 @@ module models.crm.sales.orders.product;
 import uim.entities;
 
 // Line item in a sales order.
-class DCRMOrderProduct : DOOPEntity {
+class DCRMOrderProduct : DEntity {
   mixin(EntityThis!("CRMOrderProduct"));
 
   override void initialize(DConfigurationValue configSettings = null) {

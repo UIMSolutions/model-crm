@@ -4,7 +4,7 @@ module models.crm.sales.quotes.close;
 import uim.entities;
 
 // Activity generated when a quote is closed.
-class DCRMQuoteClose : DOOPEntity {
+class DCRMQuoteClose : DEntity {
   mixin(EntityThis!("CRMQuoteClose"));
 
   override void initialize(DConfigurationValue configSettings = null) {

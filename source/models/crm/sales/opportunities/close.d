@@ -4,7 +4,7 @@ module models.crm.sales.opportunities.close;
 import uim.entities;
 
 // Activity that is created automatically when an opportunity is closed, containing information such as the description of the closing and actual revenue.
-class DCRMOpportunityClose : DOOPEntity {
+class DCRMOpportunityClose : DEntity {
   mixin(EntityThis!("CRMOpportunityClose"));
 
   override void initialize(DConfigurationValue configSettings = null) {

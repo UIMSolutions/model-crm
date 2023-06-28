@@ -4,7 +4,7 @@ module models.crm.sales.quotes.product;
 import uim.entities;
 
 // Product line item in a quote. The details include such information as product ID, description, quantity, and cost.
-class DCRMQuoteProduct : DOOPEntity {
+class DCRMQuoteProduct : DEntity {
   mixin(EntityThis!("CRMQuoteProduct"));
 
   override void initialize(DConfigurationValue configSettings = null) {

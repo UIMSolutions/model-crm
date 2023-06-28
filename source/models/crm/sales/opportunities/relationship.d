@@ -4,7 +4,7 @@ module models.crm.sales.opportunities.relationship;
 import uim.entities;
 
 // Association between a competitor and a product offered by the competitor.
-class DCRMOpportunityRelationship : DOOPEntity {
+class DCRMOpportunityRelationship : DEntity {
   mixin(EntityThis!("CRMOpportunityRelationship"));
 
   override void initialize(DConfigurationValue configSettings = null) {

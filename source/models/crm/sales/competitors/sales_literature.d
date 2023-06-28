@@ -4,7 +4,7 @@ module models.crm.sales.competitors.sales_literature;
 import uim.entities;
 
 // Association between a competitor and a product offered by the competitor.
-class DCRMCompetitorSalesLiterature : DOOPEntity {
+class DCRMCompetitorSalesLiterature : DEntity {
   mixin(EntityThis!("CRMCompetitorSalesLiterature"));
 
   override void initialize(DConfigurationValue configSettings = null) {

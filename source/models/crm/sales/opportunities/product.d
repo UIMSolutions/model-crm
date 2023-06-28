@@ -4,7 +4,7 @@ module models.crm.sales.opportunities.product;
 import uim.entities;
 
 // Association between an opportunity and a product.
-class DCRMOpportunityProduct : DOOPEntity {
+class DCRMOpportunityProduct : DEntity {
   mixin(EntityThis!("CRMOpportunityProduct"));
 
   override void initialize(DConfigurationValue configSettings = null) {
