@@ -3,7 +3,7 @@ module models.crm.projects.service_automation.invoices.line_transaction;
 import uim.entities;
 
 // Transactions that are associated to an invoice line.
-class DCRMInvoiceLineTransactionEntity : DOOPEntity {
+class DCRMInvoiceLineTransactionEntity : DEntity {
   mixin(EntityThis!("CRMInvoiceLineTransactionEntity"));
 
   override void initialize(DConfigurationValue configSettings = null) {

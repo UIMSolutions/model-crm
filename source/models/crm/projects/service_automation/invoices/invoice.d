@@ -4,7 +4,7 @@ module models.crm.projects.service_automation.invoices.invoice;
 import uim.entities;
 
 // Order that has been billed.
-class DCRMInvoiceEntity : DOOPEntity {
+class DCRMInvoiceEntity : DEntity {
   mixin(EntityThis!("CRMInvoiceEntity"));
 
   override void initialize(DConfigurationValue configSettings = null) {

@@ -3,7 +3,7 @@ module models.crm.projects.service_automation.transactions.categories.hierarchy_
 import uim.entities;
 
 // Hierarchical relationship of the transaction category with a root node.
-class DCRMTransactionCategoryHierarchyElementEntity : DOOPEntity {
+class DCRMTransactionCategoryHierarchyElementEntity : DEntity {
   mixin(EntityThis!("CRMTransactionCategoryHierarchyElementEntity"));
 
   override void initialize(DConfigurationValue configSettings = null) {

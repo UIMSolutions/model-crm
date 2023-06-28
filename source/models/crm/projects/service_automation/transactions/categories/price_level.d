@@ -4,7 +4,7 @@ module models.crm.projects.service_automation.transactions.categories.price_leve
 import uim.entities;
 
 // List of prices by category on a price list.
-class DCRMTransactionCategoryPriceLevelEntity : DOOPEntity {
+class DCRMTransactionCategoryPriceLevelEntity : DEntity {
   mixin(EntityThis!("CRMTransactionCategoryPriceLevelEntity"));
 
   override void initialize(DConfigurationValue configSettings = null) {

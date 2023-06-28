@@ -4,7 +4,7 @@ module models.crm.sales.discounts.discount;
 import uim.entities;
 
 // Price reduction made from the list price of a product or service based on the quantity purchased.
-class DCRMDiscount : DOOPEntity {
+class DCRMDiscount : DEntity {
   mixin(EntityThis!("CRMDiscount"));
 
   override void initialize(DConfigurationValue configSettings = null) {

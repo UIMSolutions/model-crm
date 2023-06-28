@@ -4,7 +4,7 @@ module models.crm.sales.discounts.list;
 import uim.entities;
 
 // Type of discount specified as either a percentage or an amount.
-class DCRMDiscountList : DOOPEntity {
+class DCRMDiscountList : DEntity {
   mixin(EntityThis!("CRMDiscountList"));
 
   override void initialize(DConfigurationValue configSettings = null) {

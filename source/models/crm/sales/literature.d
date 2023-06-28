@@ -4,7 +4,7 @@ module models.crm.sales.literature;
 import uim.entities;
 
 // Storage of sales literature, which may contain one or more documents.
-class DCRMSalesLiterature : DOOPEntity {
+class DCRMSalesLiterature : DEntity {
   mixin(EntityThis!("CRMSalesLiterature"));
 
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.crm.sales.competitors.competitor;
 import uim.entities;
 
 // Business competing for the sale represented by a lead or opportunity.
-class DCRMCompetitor : DOOPEntity {
+class DCRMCompetitor : DEntity {
   mixin(EntityThis!("CRMCompetitor"));
 
   override void initialize(DConfigurationValue configSettings = null) {

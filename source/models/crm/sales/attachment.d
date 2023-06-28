@@ -4,7 +4,7 @@ module models.crm.sales.attachment;
 import uim.entities;
 
 // Item in the sales literature collection.
-class DCRMSalesAttachment : DOOPEntity {
+class DCRMSalesAttachment : DEntity {
   mixin(EntityThis!("CRMSalesAttachment"));
 
   override void initialize(DConfigurationValue configSettings = null) {
