@@ -4,7 +4,7 @@ module models.crm.projects.service_automation.expenses.expense;
 import uim.entities;
 
 // Expense of a user in the hierarchy
-class DCRMExpense : DOOPEntity {
+class DCRMExpense : DEntity {
   mixin(EntityThis!("CRMExpense"));
 
   override void initialize(DConfigurationValue configSettings = null) {

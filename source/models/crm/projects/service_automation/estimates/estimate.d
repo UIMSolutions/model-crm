@@ -4,7 +4,7 @@ module models.crm.projects.service_automation.estimates.estimate;
 import uim.entities;
 
 // Labor, cost, and revenue estimates for a project.
-class DCRMEstimateEntity : DOOPEntity {
+class DCRMEstimateEntity : DEntity {
   mixin(EntityThis!("CRMEstimateEntity"));
 
   override void initialize(DConfigurationValue configSettings = null) {

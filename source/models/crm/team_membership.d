@@ -4,7 +4,7 @@ module models.crm.team_membership;
 import uim.entities;
 
 // TeamMembership that is attached to one or more objects, including other notes.
- /*  class DCRMTeamMembership : DOOPEntity {
+ /*  class DCRMTeamMembership : DEntity {
   mixin(EntityThis!("CRMTeamMembership"));
 
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.crm.projects.relationship_insights_unified_config;
 import uim.entities;
 
 // 
-class DCRMRelationshipInsightsUnifiedConfig : DOOPEntity {
+class DCRMRelationshipInsightsUnifiedConfig : DEntity {
   mixin(EntityThis!("CRMRelationshipInsightsUnifiedConfig"));
 
   override void initialize(DConfigurationValue configSettings = null) {

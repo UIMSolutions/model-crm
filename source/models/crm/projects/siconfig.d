@@ -4,7 +4,7 @@ module models.crm.projects.siconfig;
 import uim.entities;
 
 // 
-class DCRMSiconfig : DOOPEntity {
+class DCRMSiconfig : DEntity {
   mixin(EntityThis!("CRMSiconfig"));
 
   override void initialize(DConfigurationValue configSettings = null) {

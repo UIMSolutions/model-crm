@@ -4,7 +4,7 @@ module models.crm.projects.rating_value;
 import uim.entities;
 
 // A unique value associated with a rating model that allows providing a user friendly rating value..
-class DCRMRatingValue : DOOPEntity {
+class DCRMRatingValue : DEntity {
   mixin(EntityThis!("CRMRatingValue"));
 
   override void initialize(DConfigurationValue configSettings = null) {

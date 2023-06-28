@@ -4,7 +4,7 @@ module models.crm.campaign;
 import uim.entities;
 
 // Container for campaign activities and responses, sales literature, products, and lists to create, plan, execute, and track the results of a specific marketing campaign through its life.
-class DCRMCampaign : DOOPEntity {
+class DCRMCampaign : DEntity {
   mixin(EntityThis!("CRMCampaign"));
 
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.crm.projects.lead;
 import uim.entities;
 
 // Prospect or potential sales opportunity. Leads are converted into accounts, contacts, or opportunities when they are qualified.
-class DCRMLeadEntity : DOOPEntity {
+class DCRMLeadEntity : DEntity {
   mixin(EntityThis!("CRMLeadEntity"));
 
   override void initialize(DConfigurationValue configSettings = null) {

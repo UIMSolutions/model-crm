@@ -4,7 +4,7 @@ module models.crm.facility_equipment;
 import uim.entities;
 
 // Resource that can be scheduled.
-class DCRMFacilityEquipment : DOOPEntity {
+class DCRMFacilityEquipment : DEntity {
   mixin(EntityThis!("CRMFacilityEquipment"));
 
   override void initialize(DConfigurationValue configSettings = null) {

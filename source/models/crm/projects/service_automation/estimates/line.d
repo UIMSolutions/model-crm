@@ -4,7 +4,7 @@ module models.crm.projects.service_automation.estimates.line;
 import uim.entities;
 
 // Estimates on a per day timescale.
-class DCRMEstimateLineEntity : DOOPEntity {
+class DCRMEstimateLineEntity : DEntity {
   mixin(EntityThis!("CRMEstimateLineEntity"));
 
   override void initialize(DConfigurationValue configSettings = null) {
